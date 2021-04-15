@@ -55,7 +55,7 @@ end
 --########################################################--########################################################
 --########################################################--########################################################
 
-local UNLOCKSTATUS = '/sdcard/IZANAGI/UNLOCKER_V1.txt'
+local UNLOCKSTATUS = '/sdcard/UNLOCKER_V1.txt'
 
 function CEKSTATUS()
 if io.open(UNLOCKSTATUS) ~= nil then 
@@ -78,7 +78,7 @@ if not A then
 	return
 else
 	gg.alert("success, all function ENABLED")
-	io.open("/sdcard/IZANAGI/UNLOCKER_V1.txt","w"):write("UNLOCKER V1")
+	io.open("/sdcard/UNLOCKER_V1.txt","w"):write("UNLOCKER V1")
 end
 end
 --########################################################--########################################################
