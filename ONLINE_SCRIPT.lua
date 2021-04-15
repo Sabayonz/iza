@@ -78,7 +78,7 @@ if not A then
 	return
 else
 	gg.alert("success, all function ENABLED")
-	io.open("/sdcard/UNLOCKER_V1.txt","w"):write("UNLOCKER V1")
+	io.open("/sdcard/UNLOCKER_V1.txt","w"):write("IZANAGI UNLOCKER V1. DO NOT REMOVE !")
 end
 end
 --########################################################--########################################################
