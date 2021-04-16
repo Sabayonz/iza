@@ -26,8 +26,8 @@ local menu = gg.choice({
 'EVENT',
 'CUSTOM SCRIPT',
 'BALON SPOT',
-'README !! ( SETUP )',
 'SPEED MOD',
+'README !! ( SETUP )',
 '	',
 '🔑🗝️UNLOCK🔑🗝️',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MAIN MENU')
@@ -39,8 +39,8 @@ elseif menu == 3 then EXTRAMODUNLOCK()
 elseif menu == 4 then NODATA()
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
-elseif menu == 7 then WAITZ()
-elseif menu == 8 then POWERSPEEDMODX()
+elseif menu == 7 then POWERSPEEDMODX()
+elseif menu == 8 then WAITZ()
 elseif menu == 9 then MM()
 elseif menu == 10 then CEKSTATUS()
 end
@@ -1835,10 +1835,219 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63130
 	then BR()
 ---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63110
+	then GUILD()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63227
+	then NINJAFACILITY()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63131
+	then PVP()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63039
+	then CAVECARLA()
+---------------------------------------------
 end
 end
 end
 ---------------------------------------------
+
+
+
+function CAVECARLA() --63039
+local menu = gg.choice({
+'1= EXIT',
+'2= BOSS',
+'3= EVIL EYE',
+'4= LEVELING SPOT',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then CAVECARLAEX()
+elseif menu == 2 then CAVECARLABS()
+elseif menu == 3 then CAVECARLAEYE()
+elseif menu == 4 then CAVECARLALVL()
+end
+end
+
+function CAVECARLAEX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -14224
+elseif v.name == 'LR'	then v.value = 512
+elseif v.name == 'GR'	then v.value = 615
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function CAVECARLABS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6544
+elseif v.name == 'LR'	then v.value = -5056
+elseif v.name == 'GR'	then v.value = 103
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function CAVECARLALVL()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10020
+elseif v.name == 'LR'	then v.value = -3953
+elseif v.name == 'GR'	then v.value = 481
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function CAVECARLAEYE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -11310
+elseif v.name == 'LR'	then v.value = -8765
+elseif v.name == 'GR'	then v.value = 606
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function PVP() --63131
+local menu = gg.choice({
+'1= EXIT',
+'2= PVP NPC',
+'3= NPC ESTEL',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then PVPEX()
+elseif menu == 2 then PVPNPC()
+elseif menu == 3 then PVPESTEL()
+end
+end
+
+function PVPEX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 0
+elseif v.name == 'LR'	then v.value = 4194
+elseif v.name == 'GR'	then v.value = 103
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function PVPNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 57
+elseif v.name == 'LR'	then v.value = 1152
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function PVPESTEL()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1509
+elseif v.name == 'LR'	then v.value = 1453
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+
+
+function NINJAFACILITY() --63227
+local menu = gg.choice({
+'1= EXIT',
+'2= FLOOR 2',
+'3= FLOOR 3',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then NINJAFACILITYEX()
+elseif menu == 2 then NINJAFACILITYF2()
+elseif menu == 3 then NINJAFACILITYF3()
+end
+end
+
+function NINJAFACILITYEX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -128
+elseif v.name == 'LR'	then v.value = 544
+elseif v.name == 'GR'	then v.value = 119
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function NINJAFACILITYF2()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 906
+elseif v.name == 'LR'	then v.value = -4995
+elseif v.name == 'GR'	then v.value = 536
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function NINJAFACILITYF3()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2861
+elseif v.name == 'LR'	then v.value = -1675
+elseif v.name == 'GR'	then v.value = 1044
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+
+function GUILD() --63110
+local menu = gg.choice({
+'1= EXIT',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then GUILDEX()
+end
+end
+
+function GUILDEX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 856
+elseif v.name == 'LR'	then v.value = -868
+elseif v.name == 'GR'	then v.value = 723
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
 
 
 function BR() -- 
@@ -4035,6 +4244,9 @@ local menu = gg.choice({
 '7= NPC WEEKEND DUNGEON',
 '8= NPC RAID',
 '9= NPC PNEUMA/PET',
+'10= NPC KIRKLAND',
+'11= NPC ARDA',
+'12= NPC CAP.BENTON',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -4047,8 +4259,49 @@ elseif menu == 6 then MILITARYNPCGP()
 elseif menu == 7 then MILITARYNPCDUNGEON()
 elseif menu == 8 then MILITARYNPCRAID()
 elseif menu == 9 then MILITARYNPCPET()
+elseif menu == 10 then MILITARYNPCKIRKLAND()
+elseif menu == 11 then MILITARYNPCARDA()
+elseif menu == 12 then MILITARYNPCBENTON()
 end
 end
+
+
+function MILITARYNPCKIRKLAND()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6399
+elseif v.name == 'LR'	then v.value = 1323
+elseif v.name == 'GR'	then v.value = 109
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function MILITARYNPCARDA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2380
+elseif v.name == 'LR'	then v.value = 2952
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function MILITARYNPCBENTON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2634
+elseif v.name == 'LR'	then v.value = 495
+elseif v.name == 'GR'	then v.value = 109
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function MILITARYBWT()
 t = gg.getListItems()
@@ -6206,7 +6459,11 @@ menu = gg.choice({
 '3= SPIDER CAVE',
 '4= WALRUS CAVE',
 '5= HINARI CAVE',
-'5= BWT GATE NPC',
+'6= BWT GATE NPC',
+'7= NPC RECOMENDATION',
+'8= MONSTER - CHICK',
+'9= MONSTER - BIRD',
+'10= MONSTER - TRENGGILING',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then WESTPLAINBWT() end
@@ -6215,7 +6472,13 @@ if menu == 3 then WESTPLAINSPIDER() end
 if menu == 4 then WESTPLAINWALRUS() end
 if menu == 5 then WESTPLAINHINARI() end
 if menu == 6 then WESTPLAINBWTGATE() end
+if menu == 7 then WESTPLAINNPCRECOM() end
+if menu == 8 then WESTPLAINCHICK() end
+if menu == 9 then WESTPLAINBIRD() end
+if menu == 10 then WESTPLAINTRENGGILING() end
 end
+
+
 function WESTPLAINBWT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6283,6 +6546,55 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 7856
 elseif v.name == 'LR'	then v.value = 13280
 elseif v.name == 'GR'	then v.value = 599
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function WESTPLAINNPCRECOM()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7674
+elseif v.name == 'LR'	then v.value = -2496
+elseif v.name == 'GR'	then v.value = 1194
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function WESTPLAINCHICK()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5563
+elseif v.name == 'LR'	then v.value = -9627
+elseif v.name == 'GR'	then v.value = 905.83343505859
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function WESTPLAINBIRD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8033
+elseif v.name == 'LR'	then v.value = 5428
+elseif v.name == 'GR'	then v.value = 934
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function WESTPLAINTRENGGILING()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 335
+elseif v.name == 'LR'	then v.value = -1772
+elseif v.name == 'GR'	then v.value = -870
 end
 end
 gg.setValues(t)
@@ -6468,12 +6780,26 @@ menu = gg.choice({
 '1= ORDO',
 '2= CAVE',
 '3= NPC TRAVIS',
+'4= MONSTER - WOLF',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then OLDWOODORDO() end
 if menu == 2 then OLDWOODCAVE() end
 if menu == 3 then OLDWOODNPC() end
+if menu == 4 then OLDWOODWOLF() end
 end
+
+function OLDWOODWOLF()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9724
+elseif v.name == 'LR'	then v.value = 13
+elseif v.name == 'GR'	then v.value = 1685
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function OLDWOODORDO()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6652,6 +6978,7 @@ menu = gg.choice({
 '6= MARKET',
 '7= REPAIR',
 '8= STORAGE',
+'9= MORIS GRAVE',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then OVOLDWOOD() end
@@ -6662,6 +6989,7 @@ if menu == 5 then OVKUDA() end
 if menu == 6 then OVMARKET() end
 if menu == 7 then OVREPAIR() end
 if menu == 8 then OVSTORAGE() end
+if menu == 9 then BACKORDONPCMORIS() end
 end
 
 function BACKORDOVILLAGE() -- OV
@@ -6673,6 +7001,12 @@ menu = gg.choice({
 '5= MARKET',
 '6= REPAIR',
 '7= STORAGE',
+'    ',
+'9= NPC MORIS',
+'10= NPC JIRO',
+'11= NPC SHADE',
+'12= NPC CAMILLA',
+'13= NPC WILLIE',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then OVOLDWOOD() end
@@ -6682,7 +7016,78 @@ if menu == 4 then OVANCIENTRUIN() end
 if menu == 5 then OVMARKET() end
 if menu == 6 then OVREPAIR() end
 if menu == 7 then OVSTORAGE() end
+if menu == 8 then BACKORDOVILLAGE() end
+if menu == 9 then BACKORDONPCMORIS() end
+if menu == 10 then BACKORDONPCJIRO() end
+if menu == 11 then BACKORDONPCSHADE() end
+if menu == 12 then BACKORDONPCCAMILA() end
+if menu == 13 then BACKORDONPCWILLIE() end
 end
+
+function BACKORDONPCCAMILA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3417
+elseif v.name == 'LR'	then v.value = 7573
+elseif v.name == 'GR'	then v.value = 1406
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function BACKORDONPCJIRO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8997
+elseif v.name == 'LR'	then v.value = 4660
+elseif v.name == 'GR'	then v.value = 884
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function BACKORDONPCWILLIE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7437
+elseif v.name == 'LR'	then v.value = -206
+elseif v.name == 'GR'	then v.value = 736
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function BACKORDONPCMORIS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9133
+elseif v.name == 'LR'	then v.value = -5451
+elseif v.name == 'GR'	then v.value = 1433
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function BACKORDONPCSHADE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8348
+elseif v.name == 'LR'	then v.value = 1051
+elseif v.name == 'GR'	then v.value = 736
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
 
 function OVOLDWOOD()
 t = gg.getListItems()
@@ -6815,7 +7220,9 @@ menu = gg.choice({
 '6= MARKET',
 '7= REPAIR',
 '8= STORAGE',
-'9= NPCMEDAL'
+'9= NPC MEDAL',
+'10= NPC IRMA',
+'11= NPC OLCOT'
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then BWTWESTPLAIN() end
@@ -6827,7 +7234,12 @@ if menu == 6 then BWTMARKET() end
 if menu == 7 then BWTREPAIR() end
 if menu == 8 then BWTSTORAGE() end
 if menu == 9 then BWTNPCMEDAL() end
+if menu == 10 then BWTNPCIRMA() end
+if menu == 11 then BWTNPCOLCOT() end
 end
+
+
+
 function BWTWESTPLAIN()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6838,6 +7250,32 @@ end
 end
 gg.setValues(t)
 end ---------------------------
+
+
+function BWTNPCIRMA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3216
+elseif v.name == 'LR'	then v.value = 2499
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function BWTNPCOLCOT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 102
+elseif v.name == 'LR'	then v.value = 105
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 
 
 
@@ -7515,4 +7953,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---16042021
+--17042021
