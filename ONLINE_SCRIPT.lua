@@ -27,7 +27,7 @@ local menu = gg.choice({
 'CUSTOM SCRIPT',
 'BALON SPOT',
 'README !! ( SETUP )',
-'	',
+'SPEED MOD',
 '	',
 '🔑🗝️UNLOCK🔑🗝️',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MAIN MENU')
@@ -40,7 +40,7 @@ elseif menu == 4 then NODATA()
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then WAITZ()
-elseif menu == 8 then MM()
+elseif menu == 8 then POWERSPEEDMODX()
 elseif menu == 9 then MM()
 elseif menu == 10 then CEKSTATUS()
 end
@@ -59,7 +59,7 @@ local UNLOCKSTATUS = '/sdcard/UNLOCKER_V1.txt'
 
 function CEKSTATUS()
 if io.open(UNLOCKSTATUS) ~= nil then 
-gg.alert('UNLOCK STATUS = ACTIVE ')
+gg.alert('UNLOCK STATUS = ACTIVE \n UNLOCKER VERSION 1.0 a')
 elseif io.open(UNLOCKSTATUS) == nil then
 UNLOCKFULLSCRIPT()
 end
@@ -78,7 +78,7 @@ if not A then
 	return
 else
 	gg.alert("success, all function ENABLED")
-	io.open("/sdcard/UNLOCKER_V1.txt","w"):write("IZANAGI UNLOCKER V1. DO NOT REMOVE !")
+	io.open("/sdcard/UNLOCKER_V1.txt","w"):write("UNLOCKER V1")
 end
 end
 --########################################################--########################################################
@@ -100,7 +100,7 @@ local BALON = '/sdcard/IZANAGI/BALON.lua'
 function WAITZ()
 gg.setVisible(true)
 gg.alert('PINDAH TAB KE BAGIAN SAVEDLIST\nAGAR TELEPORT BISA BERJALAN\nJANGAN LUPA SCAN MAP!')
-gg.sleep('3000')
+gg.sleep('2000')
 end
 
 function BALONSPOT()
@@ -120,7 +120,67 @@ MM() end
 end
 
 --$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+function POWERSPEEDMODX()
+if io.open(UNLOCKSTATUS) ~= nil then POWERSPEEDMOD()
+else
+gg.alert('NO DATA')
+MM() end
+end
 
+function POWERSPEEDMOD()
+menu = gg.choice({
+'1. SPEED X2',
+'2. SPEED X35',
+'3. SPEED X60',
+'4. SPEED NORMAL',
+'MAIN MENU'},Last,' SPEEDMOD ') or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then POWERA()
+elseif menu == 2 then POWERB()
+elseif menu == 3 then POWERC()
+elseif menu == 4 then POWERD()
+elseif menu == 5 then MM()
+end
+end
+	
+function POWERA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'SPD'	then v.value = 2
+end
+end
+gg.setValues(t)
+end
+	
+function POWERB()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'SPD'	then v.value = 35
+end
+end
+gg.setValues(t)
+end
+	
+function POWERC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'SPD'	then v.value = 60
+end
+end
+gg.setValues(t)
+end
+	
+	
+function POWERD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'SPD'	then v.value = 1
+end
+end
+gg.setValues(t)
+end
+
+--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 function BSDUNLOCK()
 if io.open(UNLOCKSTATUS) ~= nil then BSD()
@@ -1571,7 +1631,7 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63078
 	then KASUBA()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 65079
+	elseif v.name == 'MAP' and v.value == 63079
 	then FORTRESS()
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63082
@@ -1693,7 +1753,6 @@ for i, v in ipairs(t) do
 	---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63027
 	then CAVEMOJA()
-	
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63034
 	then CAVEGNOME()
@@ -1727,7 +1786,6 @@ for i, v in ipairs(t) do
 	---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63052
 	then CAVEBACKLIMESTONE()
-	
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63053
 	then CAVEBACKWESTPLAIN()
@@ -1750,10 +1808,266 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63015
 	then CAVESEWERAGE()
 ---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63273
+	then WARZONEONE()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63154
+	then WARZONETWO()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63075
+	then UNKNOWNISLAND()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63084
+	then UNEXPLORERISLAND()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63102
+	then FALLISLAND()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63126
+	then BR()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63127
+	then BR()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63128
+	then BR()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63130
+	then BR()
+---------------------------------------------
 end
 end
 end
 ---------------------------------------------
+
+
+function BR() -- 
+local menu = gg.choice({
+'1= SPOT ATAS',
+'2= AUTO KILL',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then BRATAS()
+elseif menu == 2 then BRAUTO()
+end
+end
+	
+
+function BRSPOTSPIN()
+local a = 1
+local b = 1
+repeat
+SPINBR()
+a = a + 1
+until a > 20
+repeat
+SPINBRA()
+b = b + 1
+until b > 20
+end
+
+	
+function BRSPOT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -620
+elseif v.name == 'LR'	then v.value = -295
+elseif v.name == 'GR'	then v.value = -211
+elseif v.name == 'SPD'	then v.value = 59
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function SPINBR()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'FC'	then v.value = (v.value + 3200)
+end
+end
+gg.setValues(t)
+end
+
+function SPINBRA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'FC'	then v.value = (v.value - 3200)
+end
+end
+gg.setValues(t)
+end
+
+
+	
+function BRAUTO()
+    BRSPOT()
+    repeat
+    BRSPOTSPIN()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+	
+
+	
+function BRATAS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1063
+elseif v.name == 'LR'	then v.value = -1211
+elseif v.name == 'GR'	then v.value = 1307
+elseif v.name == 'SPD'	then v.value = 1
+end
+end
+gg.setValues(t)
+end ---------------------------
+	
+	
+
+
+
+function FALLISLAND() -- 63102
+local menu = gg.choice({
+'1= NPC BOAT',
+'2= FIELD BOSS SERPENT',
+'3= NEXT MAP ( LOCKED )',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then ISLANDNPC()
+elseif menu == 2 then ISLANDSERPEN()
+elseif menu == 3 then ISLANDSMAP()
+end
+end
+	
+
+
+function UNEXPLORERISLAND() -- 63084
+local menu = gg.choice({
+'1= NPC BOAT',
+'2= NEXT MAP ( LOCKED )',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then ISLANDNPC()
+elseif menu == 2 then ISLANDSMAP()
+end
+end
+
+	
+function UNKNOWNISLAND() -- 63075
+local menu = gg.choice({
+'1= NPC BOAT',
+'2= FIELD BOSS',
+'3= NEXT MAP ( LOCKED )',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then ISLANDNPC()
+elseif menu == 2 then ISLANDFIELD()
+elseif menu == 3 then ISLANDSMAP()
+end
+end
+	
+	
+	function ISLANDNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -11224
+elseif v.name == 'LR'	then v.value = 14420
+elseif v.name == 'GR'	then v.value = -12
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function ISLANDFIELD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1293
+elseif v.name == 'LR'	then v.value = 5860
+elseif v.name == 'GR'	then v.value = 2595
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function ISLANDSERPEN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2841
+elseif v.name == 'LR'	then v.value = 3712
+elseif v.name == 'GR'	then v.value = 1504
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function ISLANDSMAP()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -12672
+elseif v.name == 'LR'	then v.value = -448
+elseif v.name == 'GR'	then v.value = 2215
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+
+
+
+
+
+function WARZONETWO() --63015
+local menu = gg.choice({
+'1= SPOT',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then WARZONETWOSPOT()
+end
+end
+
+function WARZONETWOSPOT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 97
+elseif v.name == 'LR'	then v.value = -154
+elseif v.name == 'GR'	then v.value = 497
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function WARZONEONE() --63015
+local menu = gg.choice({
+'1= SPOT',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then WARZONEONESPOT()
+end
+end
+
+function WARZONEONESPOT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -79
+elseif v.name == 'LR'	then v.value = 2986
+elseif v.name == 'GR'	then v.value = 494
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVESEWERAGE() --63015
 local menu = gg.choice({
@@ -6153,7 +6467,7 @@ function OLDWOOD()
 menu = gg.choice({
 '1= ORDO',
 '2= CAVE',
-'3= NPC',
+'3= NPC TRAVIS',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then OLDWOODORDO() end
@@ -7201,4 +7515,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---UPDATE:16042021
+--16042021
