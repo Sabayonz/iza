@@ -6606,7 +6606,7 @@ end ---------------------------
 
 function NORTHDEFENSELINE()
 menu = gg.choice({
-'1= POST / NPC CAP.BENTON',
+'1= POST / NPC LAWTON',
 '2= NORTH PLAIN',
 '3= SPIDER CAVE',
 '4= CERBERUS CAVE',
