@@ -6611,6 +6611,9 @@ menu = gg.choice({
 '3= WESTPLAIN',
 '4= CAVE',
 '5= NPC BILLY',
+'6= NPC DARIO',
+'7= MONSTER - LIZARD',
+'9= MONSTER - SPIDER',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then LIMESTONEBANDIT() end
@@ -6618,6 +6621,9 @@ if menu == 2 then LIMESTONEWATERFALL() end
 if menu == 3 then LIMESTONEWESTPLAIN() end
 if menu == 4 then LIMESTONECAVE() end
 if menu == 5 then LIMESTONEBILLY() end
+if menu == 6 then LIMESTONENPCDARIO() end
+if menu == 7 then LIMESTONESPOTLIZARD() end
+if menu == 8 then LIMESTONESPOTSPIDER() end
 end
 function LIMESTONEBANDIT()
 t = gg.getListItems()
@@ -6631,6 +6637,44 @@ gg.setValues(t)
 end ---------------------------
 
 
+
+function LIMESTONENPCDARIO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8354
+elseif v.name == 'LR'	then v.value = 797
+elseif v.name == 'GR'	then v.value = 815
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function LIMESTONESPOTSPIDER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5653
+elseif v.name == 'LR'	then v.value = -1539
+elseif v.name == 'GR'	then v.value = 193
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+
+
+function LIMESTONESPOTLIZARD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2500
+elseif v.name == 'LR'	then v.value = -7067
+elseif v.name == 'GR'	then v.value = 137
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function LIMESTONEWATERFALL()
 t = gg.getListItems()
@@ -6979,6 +7023,7 @@ menu = gg.choice({
 '7= REPAIR',
 '8= STORAGE',
 '9= MORIS GRAVE',
+'10= MORIS DYING',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then OVOLDWOOD() end
@@ -6990,7 +7035,19 @@ if menu == 6 then OVMARKET() end
 if menu == 7 then OVREPAIR() end
 if menu == 8 then OVSTORAGE() end
 if menu == 9 then BACKORDONPCMORIS() end
+if menu == 10 then BACKORDONPCMORISDIE() end
 end
+
+function ORDOMORISDIE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2212
+elseif v.name == 'LR'	then v.value = -2228
+elseif v.name == 'GR'	then v.value = 178
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function BACKORDOVILLAGE() -- OV
 menu = gg.choice({
@@ -7953,4 +8010,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---17042021
+--18042021
