@@ -2353,13 +2353,26 @@ function CAVEWATERFALL() --63003
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= MOSNTER - FUNGUS',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEWATERFALLEX()
 elseif menu == 2 then CAVEWATERFALLBS()
+elseif menu == 2 then CAVEWATERFALLFUNGUS()
 end
 end
+
+function CAVEWATERFALLFUNGUS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1951
+elseif v.name == 'LR'	then v.value = 4692
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEWATERFALLEX()
 t = gg.getListItems()
@@ -2390,14 +2403,95 @@ local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
 '3= NPC SANCTUM',
+'4= MONSTER - SKELETON ( FARM )',
+'5= MONSTER - SPIDER ( FARM )',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVELIMESTONEEX()
 elseif menu == 2 then CAVELIMESTONEBS()
 elseif menu == 3 then CAVELIMESTONENPC()
+elseif menu == 4 then CAVELIMESTONESKELETONFARM()
+elseif menu == 5 then CAVELIMESTONESPIDERFARM()
 end
 end
+
+
+
+function CAVELIMESTONESPIDERFARM()
+    repeat
+    CAVELIMESTONESPIDER()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVELIMESTONEEX()
+    end
+	
+function CAVELIMESTONESPIDER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4120
+elseif v.name == 'LR'	then v.value = 5245
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1995
+elseif v.name == 'LR'	then v.value = 2018
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1997
+elseif v.name == 'LR'	then v.value = 8442
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('3000')
+end
+end
+end ---------------------------
+
+
+function CAVELIMESTONESKELETONFARM()
+    repeat
+    CAVELIMESTONESKELETON()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVELIMESTONEEX()
+    end
+	
+function CAVELIMESTONESKELETON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6307
+elseif v.name == 'LR'	then v.value = 3101
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4262
+elseif v.name == 'LR'	then v.value = 8853
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -11301
+elseif v.name == 'LR'	then v.value = 3040
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('3000')
+end
+end
+end ---------------------------
+	
+	
 
 function CAVELIMESTONEEX()
 t = gg.getListItems()
@@ -2441,13 +2535,40 @@ function CAVEWESTPLAINSPD() --63005
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= MONSTER - SCORPION',
+'4= MONSTER - SOLDIER SKELETON',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEWESTPLAINSPDEX()
 elseif menu == 2 then CAVEWESTPLAINSPDBS()
+elseif menu == 3 then CAVEWESTPLAINSPDSCP()
+elseif menu == 4 then CAVEWESTPLAINSPDSKELETON()
 end
 end
+
+function CAVEWESTPLAINSPDSKELETON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2022
+elseif v.name == 'LR'	then v.value = 6196
+elseif v.name == 'GR'	then v.value = -1441
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function CAVEWESTPLAINSPDSCP()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -995
+elseif v.name == 'LR'	then v.value = 1103
+elseif v.name == 'GR'	then v.value = -929
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEWESTPLAINSPDEX()
 t = gg.getListItems()
@@ -2595,13 +2716,52 @@ function CAVENORTHPLAIN() --63006
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= MONSTER - GOBLIN (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVENORTHPLAINEX()
 elseif menu == 2 then CAVENORTHPLAINBS()
+elseif menu == 3 then CAVENORTHPLAINGOBLIN()
 end
 end
+
+
+function CAVENORTHPLAINGOBLIN()
+    repeat
+    CAVENORTHPLAINGOBLINX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVENORTHPLAINEX()
+    end
+	
+function CAVENORTHPLAINGOBLINX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 612
+elseif v.name == 'LR'	then v.value = 278
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10594
+elseif v.name == 'LR'	then v.value = -7983
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2896
+elseif v.name == 'LR'	then v.value = -5873
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
 
 function CAVENORTHPLAINEX()
 t = gg.getListItems()
@@ -2625,6 +2785,16 @@ end
 end
 gg.setValues(t)
 end ---------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 function CAVENDLCERBERUS() --63007
@@ -6392,13 +6562,91 @@ menu = gg.choice({
 '2= CAVE',
 '3= NPC SCIENCE',
 '4= NORTH DEFENSELINE',
+'5= MONSTER - WOLF (FARM )',
+'6= MONSTER - TREE (FARM )',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then NORTHPLAINMILITARY() end
 if menu == 2 then NORTHPLAINCAVE() end
 if menu == 3 then NORTHPLAINNPC() end
 if menu == 4 then NORTHPLAINNDL() end
+if menu == 5 then NORTHPLAINWOLFFARM() end
+if menu == 6 then NORTHPLAINTREEFARM() end
 end
+
+
+function NORTHPLAINTREEFARM()
+    repeat
+    NORTHPLAINTREE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	NORTHPLAINMILITARY()
+    end
+	
+function NORTHPLAINTREE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -7228
+elseif v.name == 'LR'	then v.value = 3103
+elseif v.name == 'GR'	then v.value = 124
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2365
+elseif v.name == 'LR'	then v.value = 979
+elseif v.name == 'GR'	then v.value = 235
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -811
+elseif v.name == 'LR'	then v.value = -9719
+elseif v.name == 'GR'	then v.value = 283
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+function NORTHPLAINWOLFFARM()
+    repeat
+    NORTHPLAINWOLF()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	NORTHPLAINMILITARY()
+    end
+	
+function NORTHPLAINWOLF()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9802
+elseif v.name == 'LR'	then v.value = -16587
+elseif v.name == 'GR'	then v.value = -865
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5663
+elseif v.name == 'LR'	then v.value = -10685
+elseif v.name == 'GR'	then v.value = 443
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6831
+elseif v.name == 'LR'	then v.value = -5412
+elseif v.name == 'GR'	then v.value = 270
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
 function NORTHPLAINMILITARY()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6456,7 +6704,7 @@ function WESTPLAIN()
 menu = gg.choice({
 '1= BWT',
 '2= LIMESTONE',
-'3= SPIDER CAVE',
+'3= HOWLING PEAK CAVE',
 '4= WALRUS CAVE',
 '5= HINARI CAVE',
 '6= BWT GATE NPC',
