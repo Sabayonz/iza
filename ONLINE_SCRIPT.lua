@@ -3021,13 +3021,52 @@ function CAVETUNNELONE() --63011
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= MONSTER - LIZARD/GOBLIN (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVETUNNELONEEX()
 elseif menu == 2 then CAVETUNNELONEBS()
+elseif menu == 3 then TUNNELONEMONSTERFARM()
 end
 end
+
+
+
+function TUNNELONEMONSTERFARM()
+    repeat
+    TUNNELONEMONSTER()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+	
+function TUNNELONEMONSTER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8194
+elseif v.name == 'LR'	then v.value = -113
+elseif v.name == 'GR'	then v.value = 1630
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3184
+elseif v.name == 'LR'	then v.value = -5235
+elseif v.name == 'GR'	then v.value = 1118
+gg.setValues(t)
+gg.sleep('7000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3181
+elseif v.name == 'LR'	then v.value = 5251
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('7000')
+end
+end
+end ---------------------------
 
 function CAVETUNNELONEEX()
 t = gg.getListItems()
@@ -6247,6 +6286,8 @@ menu = gg.choice({
 '5= LARGE WETLAND',
 '6= OIL FIELD',
 '7= NPC REPAIR',
+'8= MONSTER - DEMON HUMAN (FARM)',
+'8= MONSTER - GOBLIN (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then PERISMITHYBLACKSMITH() end
@@ -6256,7 +6297,80 @@ if menu == 4 then PERISMITHYCERBERUS() end
 if menu == 5 then PERISMITHYWETLAND() end
 if menu == 6 then PERISMITHYOIL() end
 if menu == 7 then PERISMITHYNPC() end
+if menu == 8 then PERISMITHYDEMONFARM() end
+if menu == 8 then PERISMITHYGOBLINFARM() end
 end
+
+
+
+function PERISMITHYGOBLINFARM()
+    repeat
+    PERISMITHYGOBLIN()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	PERISMITHYNPC()
+    end
+	
+function PERISMITHYGOBLIN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6458
+elseif v.name == 'LR'	then v.value = -1245
+elseif v.name == 'GR'	then v.value = 80
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 634
+elseif v.name == 'LR'	then v.value = -851
+elseif v.name == 'GR'	then v.value = -423
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6183
+elseif v.name == 'LR'	then v.value = -1912
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+function PERISMITHYDEMONFARM()
+    repeat
+    PERISMITHYDEMON()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	PERISMITHYNPC()
+    end
+	
+function PERISMITHYDEMON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -332
+elseif v.name == 'LR'	then v.value = -3728
+elseif v.name == 'GR'	then v.value = 2094
+gg.setValues(t)
+gg.sleep('18000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2230
+elseif v.name == 'LR'	then v.value = -912
+elseif v.name == 'GR'	then v.value = 1080
+gg.setValues(t)
+gg.sleep('18000')
+end
+end
+end ---------------------------
+
+
+
+
+
 function PERISMITHYBLACKSMITH()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6356,6 +6470,9 @@ menu = gg.choice({
 '3= SUBWAY',
 '4= PERISMITHY',
 '5= BLUEBEARLAND',
+'6= MONSTER - WRAITH',
+'7= MONSTER - TURTLE (FARM)',
+'8= NPC BARON',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then RUINCITYNDL() end
@@ -6363,7 +6480,64 @@ if menu == 2 then RUINCITYHIGHWAY() end
 if menu == 3 then RUINCITYSUBWAY() end
 if menu == 4 then RUINCITYPERISMITHY() end
 if menu == 5 then RUINCITYBLUEBEAR() end
+if menu == 6 then RUINCITYWRAITH() end
+if menu == 7 then RUINCITYTURTLEFARM() end
+if menu == 8 then RUINCITYBARON() end
 end
+
+function RUINCITYBARON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10507
+elseif v.name == 'LR'	then v.value = -412
+elseif v.name == 'GR'	then v.value = 118
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function RUINCITYTURTLEFARM()
+    repeat
+    RUINCITYTURTLE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	RUINCITYNDL()
+    end
+	
+function RUINCITYTURTLE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3572
+elseif v.name == 'LR'	then v.value = 4686
+elseif v.name == 'GR'	then v.value = 101
+gg.setValues(t)
+gg.sleep('18000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -250
+elseif v.name == 'LR'	then v.value = -3653
+elseif v.name == 'GR'	then v.value = 107
+gg.setValues(t)
+gg.sleep('18000')
+end
+end
+end ---------------------------
+
+function RUINCITYWRAITH()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1387
+elseif v.name == 'LR'	then v.value = 852
+elseif v.name == 'GR'	then v.value = 508
+end
+end
+gg.setValues(t)
+gg.toast('\n##########\n\nDONT FORGET TO FARM  5 VERMILION CRYSTAL\n\n##########', false )
+end ---------------------------
+
 function RUINCITYNDL()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6440,6 +6614,7 @@ menu = gg.choice({
 '6= RUIN CITY',
 '7= OIL FIELD',
 '8= WIND CAVE',
+'9= MONSTER - SAMURAI SKELETON',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then NDLPOST() end
@@ -6450,7 +6625,21 @@ if menu == 5 then NDLFORTRESS() end
 if menu == 6 then NDLRUINCITY() end
 if menu == 7 then NDLOILFIELD() end
 if menu == 8 then NDLWINDCAVE() end
+if menu == 9 then NDLSAMURAI() end
 end
+
+function NDLSAMURAI()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 443
+elseif v.name == 'LR'	then v.value = 4659
+elseif v.name == 'GR'	then v.value = 86
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
 function NDLPOST()
 t = gg.getListItems()
 for i, v in ipairs(t) do
