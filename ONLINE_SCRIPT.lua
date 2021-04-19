@@ -6028,12 +6028,13 @@ if menu == 6 then KASUBAGRAVE() end
 end
 
 
+
 function KASUBAGRAVE()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -25376
-elseif v.name == 'LR'	then v.value = -6176
-elseif v.name == 'GR'	then v.value = 1319
+	if v.name == 'UD'	then v.value = -12479
+elseif v.name == 'LR'	then v.value = 8260
+elseif v.name == 'GR'	then v.value = 6
 end
 end
 gg.setValues(t)
