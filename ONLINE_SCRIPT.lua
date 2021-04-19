@@ -2538,7 +2538,7 @@ local menu = gg.choice({
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEWATERFALLEX()
 elseif menu == 2 then CAVEWATERFALLBS()
-elseif menu == 2 then CAVEWATERFALLFUNGUS()
+elseif menu == 3 then CAVEWATERFALLFUNGUS()
 end
 end
 
@@ -4737,7 +4737,7 @@ elseif menu == 5 then OUTERWALLTICKET()
 elseif menu == 6 then OUTERWALLTOWER()
 elseif menu == 7 then OUTERWALLTRAINING()
 elseif menu == 8 then OUTERWALLREFINER()
-elseif menu == 8 then OUTERWALLIRMA()
+elseif menu == 9 then OUTERWALLIRMA()
 end
 end
 
