@@ -8228,7 +8228,7 @@ if menu == 6 then OVMARKET() end
 if menu == 7 then OVREPAIR() end
 if menu == 8 then OVSTORAGE() end
 if menu == 9 then BACKORDONPCMORIS() end
-if menu == 10 then BACKORDONPCMORISDIE() end
+if menu == 10 then ORDOMORISDIE() end
 end
 
 function ORDOMORISDIE()
