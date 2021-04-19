@@ -2285,6 +2285,8 @@ local menu = gg.choice({
 '3= MONSTER - WOLF (FARM)',
 '4= MONSTER - SKELETON (FARM)',
 '5= MONSTER - SPIRIT (FARM)',
+'6= NPC YEGORO',
+'7= NPC BILMAN',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -2293,9 +2295,33 @@ elseif menu == 2 then CAVESEWERAGEBS()
 elseif menu == 3 then SEWERAGEWOLFFARM()
 elseif menu == 4 then SEWERAGESKELETONFARM()
 elseif menu == 5 then SEWERAGESPIRITFARM()
+elseif menu == 6 then CAVESEWERAGEYEGORO()
+elseif menu == 7 then CAVESEWERAGEBIRMAN()
 end
 end
 
+
+function CAVESEWERAGEBIRMAN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7544
+elseif v.name == 'LR'	then v.value = 5823
+elseif v.name == 'GR'	then v.value = -940
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function CAVESEWERAGEYEGORO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5838
+elseif v.name == 'LR'	then v.value = 9
+elseif v.name == 'GR'	then v.value = -417
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function SEWERAGESPIRITFARM()
     repeat
@@ -2345,6 +2371,7 @@ function SEWERAGESKELETONFARM()
     SEWERAGESKELETON()
     until gg.isVisible(true)
     gg.setVisible(false)
+	CAVESEWERAGEYEGORO()
     end
 	
 function SEWERAGESKELETON()
@@ -2511,7 +2538,7 @@ local menu = gg.choice({
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEWATERFALLEX()
 elseif menu == 2 then CAVEWATERFALLBS()
-elseif menu == 3 then CAVEWATERFALLFUNGUS()
+elseif menu == 2 then CAVEWATERFALLFUNGUS()
 end
 end
 
@@ -4710,7 +4737,7 @@ elseif menu == 5 then OUTERWALLTICKET()
 elseif menu == 6 then OUTERWALLTOWER()
 elseif menu == 7 then OUTERWALLTRAINING()
 elseif menu == 8 then OUTERWALLREFINER()
-elseif menu == 9 then OUTERWALLIRMA()
+elseif menu == 8 then OUTERWALLIRMA()
 end
 end
 
@@ -8228,7 +8255,7 @@ if menu == 6 then OVMARKET() end
 if menu == 7 then OVREPAIR() end
 if menu == 8 then OVSTORAGE() end
 if menu == 9 then BACKORDONPCMORIS() end
-if menu == 10 then ORDOMORISDIE() end
+if menu == 10 then BACKORDONPCMORISDIE() end
 end
 
 function ORDOMORISDIE()
@@ -9203,4 +9230,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---19042021
+--16042021
