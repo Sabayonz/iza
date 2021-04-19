@@ -2328,7 +2328,6 @@ function SEWERAGESPIRITFARM()
     SEWERAGESPIRIT()
     until gg.isVisible(true)
     gg.setVisible(false)
-	CAVESEWERAGEBIRMAN()
     end
 	
 function SEWERAGESPIRIT()
@@ -6017,6 +6016,7 @@ menu = gg.choice({
 '3= BOSS KASBAH',
 '4= MONSTER - FAKE CAT (FARM)',
 '5= MONSTER - DEMON HUMAN (FARM)',
+'6= NPC GRAVE',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then KASUBAWETLAND() end
@@ -6024,8 +6024,20 @@ if menu == 2 then KASUBASEWERAGE() end
 if menu == 3 then KASUBABOSS() end
 if menu == 4 then KASBAHCATFARM() end
 if menu == 5 then KASBAHDEMONFARM() end
+if menu == 6 then KASUBAGRAVE() end
 end
 
+
+function KASUBAGRAVE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -25376
+elseif v.name == 'LR'	then v.value = -6176
+elseif v.name == 'GR'	then v.value = 1319
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function KASBAHDEMONFARM()
     repeat
