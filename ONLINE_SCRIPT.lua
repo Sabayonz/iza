@@ -2328,6 +2328,7 @@ function SEWERAGESPIRITFARM()
     SEWERAGESPIRIT()
     until gg.isVisible(true)
     gg.setVisible(false)
+	CAVESEWERAGEBIRMAN()
     end
 	
 function SEWERAGESPIRIT()
