@@ -5055,6 +5055,9 @@ local menu = gg.choice({
 '2= MILITARY',
 '3= NPC SHOP',
 '4= NPC CONGRESMAN',
+'5= NPC BAMBER',
+'6= NPC GATE KEEPER',
+'7= NPC DUKE WEISER',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -5062,8 +5065,46 @@ elseif menu == 1 then PRIVILAGEBWT()
 elseif menu == 2 then PRIVILAGEMILITARY()
 elseif menu == 3 then PRIVILAGESHOP()
 elseif menu == 4 then PRIVILAGECONGRESMAN()
+elseif menu == 5 then PRIVILAGEBAMBER()
+elseif menu == 6 then PRIVILAGEGATEKEEPER()
+elseif menu == 7 then PRIVILAGEDUKE()
 end
 end
+
+function PRIVILAGEDUKE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5641
+elseif v.name == 'LR'	then v.value = -7159
+elseif v.name == 'GR'	then v.value = 594
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function PRIVILAGEGATEKEEPER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 11
+elseif v.name == 'LR'	then v.value = -4133
+elseif v.name == 'GR'	then v.value = 594
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function PRIVILAGEBAMBER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 340
+elseif v.name == 'LR'	then v.value = -473
+elseif v.name == 'GR'	then v.value = 594
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 
 function PRIVILAGEBWT()
 t = gg.getListItems()
