@@ -3201,15 +3201,54 @@ local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
 '3= MONSTER - LIZARD/GOBLIN (FARM)',
+'4= NPC ARMAN',
+'5= NPC REBECCA',
+'6= NPC CARTER',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVETUNNELONEEX()
 elseif menu == 2 then CAVETUNNELONEBS()
 elseif menu == 3 then TUNNELONEMONSTERFARM()
+elseif menu == 4 then CAVETUNNELONEARMAN()
+elseif menu == 5 then CAVETUNNELONELADY()
+elseif menu == 6 then CAVETUNNELONECARTER()
 end
 end
 
+function CAVETUNNELONECARTER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10469
+elseif v.name == 'LR'	then v.value = 13322
+elseif v.name == 'GR'	then v.value = -929
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function CAVETUNNELONELADY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6395
+elseif v.name == 'LR'	then v.value = -3278
+elseif v.name == 'GR'	then v.value = -417
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function CAVETUNNELONEARMAN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -13651
+elseif v.name == 'LR'	then v.value = 143
+elseif v.name == 'GR'	then v.value = 1630
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 
 function TUNNELONEMONSTERFARM()
@@ -3619,14 +3658,40 @@ local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
 '3= NPC SANCTUM',
+'4= NPC NOBUNOSUKE',
+'5= NPC SANCTUM',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEHIGHWAYEX()
 elseif menu == 2 then CAVEHIGHWAYBS()
 elseif menu == 3 then CAVEHIGHWAYNPC()
+elseif menu == 4 then CAVEHIGHWAYNOBU()
+elseif menu == 5 then CAVEHIGHWAYSPIDER()
 end
 end
+
+function CAVEHIGHWAYSPIDER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4693
+elseif v.name == 'LR'	then v.value = 3113
+elseif v.name == 'GR'	then v.value = -417
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function CAVEHIGHWAYNOBU()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10032
+elseif v.name == 'LR'	then v.value = 1390
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEHIGHWAYEX()
 t = gg.getListItems()
@@ -3669,13 +3734,149 @@ function CAVERURAL() --63016
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= NPC KIKUNOSUKE',
+'4= MONSTER - SPIRIT(FARM)',
+'5= MONSTER - SLIME(FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVERURALEX()
 elseif menu == 2 then CAVERURALBS()
+elseif menu == 3 then CAVERURALKIKUNOSUKE()
+elseif menu == 4 then CAVERURALSPIRITFARM()
+elseif menu == 5 then CAVERURALSLIMEFARM()
 end
 end
+
+
+function CAVERURALSLIMEFARM()
+    repeat
+    CAVERURALSLIME()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVERURALKIKUNOSUKE()
+    end
+	
+function CAVERURALSLIME()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9022
+elseif v.name == 'LR'	then v.value = -206
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 13372
+elseif v.name == 'LR'	then v.value = -3115
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9949
+elseif v.name == 'LR'	then v.value = -6784
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4074
+elseif v.name == 'LR'	then v.value = -7790
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10275
+elseif v.name == 'LR'	then v.value = 7288
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4331
+elseif v.name == 'LR'	then v.value = 7028
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+function CAVERURALSPIRITFARM()
+    repeat
+    CAVERURALSPIRIT()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVERURALKIKUNOSUKE()
+    end
+	
+function CAVERURALSPIRIT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 15424
+elseif v.name == 'LR'	then v.value = 627
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9985
+elseif v.name == 'LR'	then v.value = -6737
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10338
+elseif v.name == 'LR'	then v.value = -10734
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2628
+elseif v.name == 'LR'	then v.value = -6913
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2591
+elseif v.name == 'LR'	then v.value = 8311
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+
+function CAVERURALKIKUNOSUKE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 245
+elseif v.name == 'LR'	then v.value = 460
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVERURALEX()
 t = gg.getListItems()
@@ -4515,20 +4716,225 @@ function ONIGIRIENTRANCE()
 local menu = gg.choice({
 '1= STONE CANYON',
 '2= ONIGIRI MIDDLE',
+'3= MONSTER - MOLESTAR (FARM)',
+'4= MONSTER - FAKE CAT (FARM)',
+'5= MONSTER - TENGU VANGUARD(FARM)',
+'6= NPC ZEVON SPOT 1',
+'7= NPC ZEVON SPOT 2',
+'8= NPC ZEVON SPOT 3',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then ONIENTRANCECANYON()
 elseif menu == 2 then ONIENTRANCEMID()
+elseif menu == 3 then ONIENTRANCEMOLEFARM()
+elseif menu == 4 then ONIENTRANCEFAKECATFARM()
+elseif menu == 5 then ONIENTRANCEVANGUARDFARM()
+elseif menu == 6 then ONIENTRANCESPT1()
+elseif menu == 7 then ONIENTRANCESPT2()
+elseif menu == 8 then ONIENTRANCESPT3()
 end
 end
+
+
+function ONIENTRANCEVANGUARDFARM()
+    repeat
+    ONIENTRANCEVANGUARD()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ONIENTRANCESPT3()
+    end
+	
+function ONIENTRANCEVANGUARD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5079
+elseif v.name == 'LR'	then v.value = 4933
+elseif v.name == 'GR'	then v.value = -416
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -7243
+elseif v.name == 'LR'	then v.value = -6870
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3145
+elseif v.name == 'LR'	then v.value = -11176
+elseif v.name == 'GR'	then v.value = 1119
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 98
+elseif v.name == 'LR'	then v.value = -110
+elseif v.name == 'GR'	then v.value = 95.13037109375
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3271
+elseif v.name == 'LR'	then v.value = -1071
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+
+
+function ONIENTRANCEFAKECATFARM()
+    repeat
+    ONIENTRANCEFAKECAT()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ONIENTRANCESPT2()
+    end
+	
+function ONIENTRANCEFAKECAT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 168
+elseif v.name == 'LR'	then v.value = 6369
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2352
+elseif v.name == 'LR'	then v.value = 4868
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1210
+elseif v.name == 'LR'	then v.value = -4050
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('3000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1471
+elseif v.name == 'LR'	then v.value = -3579
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('3000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5865
+elseif v.name == 'LR'	then v.value = -144
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+function ONIENTRANCEMOLEFARM()
+    repeat
+    ONIENTRANCEMOLE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ONIENTRANCESPT1()
+    end
+	
+function ONIENTRANCEMOLE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 158
+elseif v.name == 'LR'	then v.value = 7724
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3051
+elseif v.name == 'LR'	then v.value = 4007
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 592
+elseif v.name == 'LR'	then v.value = -5534
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4654
+elseif v.name == 'LR'	then v.value = 706
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+function ONIENTRANCESPT3()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2483
+elseif v.name == 'LR'	then v.value = -15266
+elseif v.name == 'GR'	then v.value = 1630
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function ONIENTRANCESPT2()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -103
+elseif v.name == 'LR'	then v.value = -9614
+elseif v.name == 'GR'	then v.value = 606
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function ONIENTRANCESPT1()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2
+elseif v.name == 'LR'	then v.value = 2684
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function ONIENTRANCECANYON()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 614
 elseif v.name == 'LR'	then v.value = 12979
-elseif v.name == 'GR'	then v.value = -1111
+elseif v.name == 'GR'	then v.value = -900
 end
 end
 gg.setValues(t)
@@ -4552,20 +4958,215 @@ function ONIGIRIMID()
 local menu = gg.choice({
 '1= ONIGIRI ENTRANCE',
 '2= CAMP VILLAGE',
+'3= MONSTER - SPIDER (FARM)',
+'4= MONSTER - TENGU VANGUARD (FARM)',
+'5= MONSTER - TENGU GUNNER (FARM)',
+'6= NPC ZEVON SPOT1',
+'7= NPC ZEVON SPOT2',
+'8= NPC ZEVON SPOT3',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then ONIMIDENTRANCE()
 elseif menu == 2 then ONIMIDCAMP()
+elseif menu == 3 then ONIMIDSPIDERFARM()
+elseif menu == 4 then ONIMIDVANGUARDFARM()
+elseif menu == 5 then ONIMIDGUNNERFARM()
+elseif menu == 6 then ONIMIDSPT1()
+elseif menu == 7 then ONIMIDSPT2()
+elseif menu == 8 then ONIMIDSPT3()
 end
 end
+
+
+
+function ONIMIDGUNNERFARM()
+    repeat
+    ONIMIDGUNNER()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ONIMIDSPT3()
+    end
+	
+function ONIMIDGUNNER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 355
+elseif v.name == 'LR'	then v.value = 4020
+elseif v.name == 'GR'	then v.value = -1441
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4329
+elseif v.name == 'LR'	then v.value = 4494
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6090
+elseif v.name == 'LR'	then v.value = -4423
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3038
+elseif v.name == 'LR'	then v.value = -10297
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('3000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 946
+elseif v.name == 'LR'	then v.value = -12464
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('3000')
+end
+end
+end
+
+function ONIMIDVANGUARDFARM()
+    repeat
+    ONIMIDVANGUARD()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ONIMIDSPT2()
+    end
+	
+function ONIMIDVANGUARD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1444
+elseif v.name == 'LR'	then v.value = 8417
+elseif v.name == 'GR'	then v.value = -2977
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4926
+elseif v.name == 'LR'	then v.value = 3254
+elseif v.name == 'GR'	then v.value = -1953
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1708
+elseif v.name == 'LR'	then v.value = -8144
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6054
+elseif v.name == 'LR'	then v.value = -3999
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 355
+elseif v.name == 'LR'	then v.value = 4020
+elseif v.name == 'GR'	then v.value = -1441
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end
+
+function ONIMIDSPIDERFARM()
+    repeat
+    ONIMIDSPIDER()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ONIMIDSPT1()
+    end
+	
+function ONIMIDSPIDER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5452
+elseif v.name == 'LR'	then v.value = 4828
+elseif v.name == 'GR'	then v.value = -1953
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10449
+elseif v.name == 'LR'	then v.value = 3956
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4761
+elseif v.name == 'LR'	then v.value = -4833
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4302
+elseif v.name == 'LR'	then v.value = -4312
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end
+
+function ONIMIDSPT1()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5592
+elseif v.name == 'LR'	then v.value = 7659
+elseif v.name == 'GR'	then v.value = -2371
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function ONIMIDSPT2()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 85
+elseif v.name == 'LR'	then v.value = -4537
+elseif v.name == 'GR'	then v.value = -422
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function ONIMIDSPT3()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2278
+elseif v.name == 'LR'	then v.value = -16356
+elseif v.name == 'GR'	then v.value = 1118
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function ONIMIDENTRANCE()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 1302
-elseif v.name == 'LR'	then v.value = 15022
-elseif v.name == 'GR'	then v.value = -2968
+	if v.name == 'UD'	then v.value = 1395
+elseif v.name == 'LR'	then v.value = 14848
+elseif v.name == 'GR'	then v.value = -2977
 end
 end
 gg.setValues(t)
@@ -4591,21 +5192,23 @@ local menu = gg.choice({
 '1= CAMP VILLAGE',
 '2= BOSS TENGU MECH',
 '3= NPC TELEPORT',
+'4= MONSTER - SPOT',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then ONINEARTOPCAMP()
 elseif menu == 2 then ONINEARTOPBOSS()
 elseif menu == 3 then ONINEARTOPNPC()
+elseif menu == 4 then ONINEARTOPSPOT()
 end
 end
 
-function ONINEARTOPCAMP()
+function ONINEARTOPSPOT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -945
+	if v.name == 'UD'	then v.value = 9253
 elseif v.name == 'LR'	then v.value = 0
-elseif v.name == 'GR'	then v.value = 125
+elseif v.name == 'GR'	then v.value = 606
 end
 end
 gg.setValues(t)
@@ -6216,12 +6819,190 @@ menu = gg.choice({
 '1= ORDO VILLAGE',
 '2= CATACOMB',
 '3= ESCAPE ROUTE',
+'4= NPC KARAKURI',
+'5= MONSTER - TRENGGILING(FARM)',
+'6= MONSTER - TURTLE (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then ANCIENTORDO() end
 if menu == 2 then ANCIENTCATACOMB() end
 if menu == 3 then ANCIENTROUTE() end
+if menu == 4 then ANCIENTKARAKURI() end
+if menu == 5 then ANCIENRUINTRENGGILINGFARM() end
+if menu == 6 then ANCIENRUINTURTLEFARM() end
 end
+
+
+function ANCIENRUINTRENGGILINGFARM()
+    repeat
+    ANCIENRUINTRENGGILING()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ANCIENTKARAKURI()
+    end
+	
+function ANCIENRUINTRENGGILING()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7794
+elseif v.name == 'LR'	then v.value = 456
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9257
+elseif v.name == 'LR'	then v.value = 11627
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6343
+elseif v.name == 'LR'	then v.value = 16319
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('7000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1739
+elseif v.name == 'LR'	then v.value = 18977
+elseif v.name == 'GR'	then v.value = 1343
+gg.setValues(t)
+gg.sleep('7000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1945
+elseif v.name == 'LR'	then v.value = 18964
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6257
+elseif v.name == 'LR'	then v.value = 16873
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -11489
+elseif v.name == 'LR'	then v.value = 14767
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+
+function ANCIENRUINTURTLEFARM()
+    repeat
+    ANCIENRUINTURTLE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	ANCIENTKARAKURI()
+    end
+	
+function ANCIENRUINTURTLE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10716
+elseif v.name == 'LR'	then v.value = 1680
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -9839
+elseif v.name == 'LR'	then v.value = 9515
+elseif v.name == 'GR'	then v.value = 1321
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10141
+elseif v.name == 'LR'	then v.value = 14450
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('4000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4701
+elseif v.name == 'LR'	then v.value = 14973
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('4000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4777
+elseif v.name == 'LR'	then v.value = 16665
+elseif v.name == 'GR'	then v.value = 1360
+gg.setValues(t)
+gg.sleep('4000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9987
+elseif v.name == 'LR'	then v.value = 14651
+elseif v.name == 'GR'	then v.value = 1357
+gg.setValues(t)
+gg.sleep('4000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9341
+elseif v.name == 'LR'	then v.value = 4948
+elseif v.name == 'GR'	then v.value = 1358
+gg.setValues(t)
+gg.sleep('4000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10286
+elseif v.name == 'LR'	then v.value = 717
+elseif v.name == 'GR'	then v.value = 1356
+gg.setValues(t)
+gg.sleep('4000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -89
+elseif v.name == 'LR'	then v.value = 3310
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+
+
+
+function ANCIENTKARAKURI()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 20
+elseif v.name == 'LR'	then v.value = -8573
+elseif v.name == 'GR'	then v.value = 82
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function ANCIENTORDO()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6341,13 +7122,249 @@ menu = gg.choice({
 '2= BAT CAVE',
 '3= NPC BOAT',
 '4= NPC LADY',
+'5= NPC',
+'6= MONSTER - DRAGONFLY (FARM)',
+'7= MONSTER - PLANT (FARM)',
+'8= MONSTER - SCARECROW',
+'9= MONSTER - FOX (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then RURALHIGHWAY() end
 if menu == 2 then RURALCAVE() end
 if menu == 3 then RURALBOAT() end
 if menu == 4 then RURALLADY() end
+if menu == 5 then RURALNPC() end
+if menu == 6 then RURALDRAGONFLYFARM() end
+if menu == 7 then RURALPLANTFARM() end
+if menu == 8 then RURALSCARECROW() end
+if menu == 9 then RURALFOXFARM() end
 end
+
+
+function RURALFOXFARM()
+    repeat
+    RURALFOX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+	
+function RURALFOX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -495
+elseif v.name == 'LR'	then v.value = -3,984
+elseif v.name == 'GR'	then v.value = 1863
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 291
+elseif v.name == 'LR'	then v.value = -18957
+elseif v.name == 'GR'	then v.value = 2866
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8961
+elseif v.name == 'LR'	then v.value = -15860
+elseif v.name == 'GR'	then v.value = 3062
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 13344
+elseif v.name == 'LR'	then v.value = -9270
+elseif v.name == 'GR'	then v.value = 3062
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6777
+elseif v.name == 'LR'	then v.value = -15483
+elseif v.name == 'GR'	then v.value = 2786
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -15108
+elseif v.name == 'LR'	then v.value = -2716
+elseif v.name == 'GR'	then v.value = 169
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -15174
+elseif v.name == 'LR'	then v.value = 3458
+elseif v.name == 'GR'	then v.value = 452
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+
+function RURALSCARECROW()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1361
+elseif v.name == 'LR'	then v.value = -2816
+elseif v.name == 'GR'	then v.value = 1958
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function RURALPLANTFARM()
+    repeat
+    RURALPLANT()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+	
+function RURALPLANT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 16125
+elseif v.name == 'LR'	then v.value = -19635
+elseif v.name == 'GR'	then v.value = 3956
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 21369
+elseif v.name == 'LR'	then v.value = -11217
+elseif v.name == 'GR'	then v.value = 3738
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 20923
+elseif v.name == 'LR'	then v.value = -5583
+elseif v.name == 'GR'	then v.value = 3479
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2760
+elseif v.name == 'LR'	then v.value = 220
+elseif v.name == 'GR'	then v.value = 1389
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5285
+elseif v.name == 'LR'	then v.value = 6020
+elseif v.name == 'GR'	then v.value = 504
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2659
+elseif v.name == 'LR'	then v.value = -2359
+elseif v.name == 'GR'	then v.value = 1677
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8036
+elseif v.name == 'LR'	then v.value = 1256
+elseif v.name == 'GR'	then v.value = 1505
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+function RURALDRAGONFLYFARM()
+    repeat
+    RURALDRAGONFLY()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+	
+function RURALDRAGONFLY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6125
+elseif v.name == 'LR'	then v.value = 3180
+elseif v.name == 'GR'	then v.value = 2578
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7158
+elseif v.name == 'LR'	then v.value = 6601
+elseif v.name == 'GR'	then v.value = 541
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4778
+elseif v.name == 'LR'	then v.value = 397
+elseif v.name == 'GR'	then v.value = 1671
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 260
+elseif v.name == 'LR'	then v.value = -21233
+elseif v.name == 'GR'	then v.value = 3570
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 62
+elseif v.name == 'LR'	then v.value = 1817
+elseif v.name == 'GR'	then v.value = 486
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+function RURALNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7105
+elseif v.name == 'LR'	then v.value = -17706
+elseif v.name == 'GR'	then v.value = 3039
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function RURALHIGHWAY()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6877,13 +7894,95 @@ function STONECANYON()
 menu = gg.choice({
 '1= HIGHWAY',
 '2= ONIGIRI MOUNTAIN',
-'3= NPC',
+'3= NPC LUCKMANN',
+'4= MONSTER - TREE (FARM)',
+'5= MONSTER - GORGOYLE (FARM)',
+'6= MONSTER - DRAGONFLY',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then STONECANYONHIGHWAY() end
 if menu == 2 then STONECANYONMOUNTAIN() end
 if menu == 3 then STONECANYONNPC() end
+if menu == 4 then STONECANYONTREEFARM() end
+if menu == 5 then STONECANYONGORGOYLEFARM() end
+if menu == 5 then STONECANYONDRAGONFLY() end
 end
+
+function STONECANYONDRAGONFLY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -670
+elseif v.name == 'LR'	then v.value = -1392
+elseif v.name == 'GR'	then v.value = 383
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function STONECANYONGORGOYLEFARM()
+    repeat
+    STONECANYONGORGOYLE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	STONECANYONNPC()
+    end
+	
+function STONECANYONGORGOYLE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10344
+elseif v.name == 'LR'	then v.value = -1813
+elseif v.name == 'GR'	then v.value = 534
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2115
+elseif v.name == 'LR'	then v.value = -7290
+elseif v.name == 'GR'	then v.value = 1712
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+end
+
+function STONECANYONTREEFARM()
+    repeat
+    STONECANYONTREE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	STONECANYONNPC()
+    end
+	
+function STONECANYONTREE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1032
+elseif v.name == 'LR'	then v.value = 3443
+elseif v.name == 'GR'	then v.value = 914
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1739
+elseif v.name == 'LR'	then v.value = -5277
+elseif v.name == 'GR'	then v.value = 1545
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8760
+elseif v.name == 'LR'	then v.value = -7502
+elseif v.name == 'GR'	then v.value = 498
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+end ---------------------------
+
 
 function STONECANYONHIGHWAY()
 t = gg.getListItems()
@@ -6932,12 +8031,53 @@ menu = gg.choice({
 '2= SERPEN CAVE',
 '3= RURAL AREA',
 '4= STONE CANYON',
+'5= NPC YAHEE',
+'6= MONSTER - NPC/KAPPA',
+'7= MONSTER - NAMAHAGE',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')))
 if menu == 1 then HIGHWAYYAMATO() end
 if menu == 2 then HIGHWAYCAVE() end
 if menu == 3 then HIGHWAYRURAL() end
 if menu == 4 then HIGHWAYSTONE() end
+if menu == 5 then HIGHWAYNPC() end
+if menu == 6 then HIGHWAYTREE() end
+if menu == 7 then HIGHWAYNAMAHAGE() end
 end
+
+function HIGHWAYNAMAHAGE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8611
+elseif v.name == 'LR'	then v.value = -7403
+elseif v.name == 'GR'	then v.value = 2440
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function HIGHWAYNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6334
+elseif v.name == 'LR'	then v.value = 273
+elseif v.name == 'GR'	then v.value = 1346
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function HIGHWAYTREE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5209
+elseif v.name == 'LR'	then v.value = -8182
+elseif v.name == 'GR'	then v.value = -344
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function HIGHWAYYAMATO()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -8729,6 +9869,7 @@ menu = gg.choice({
 '4= MARKET',
 '5= REPAIR',
 '6= STORAGE',
+'7= NPC SABURO',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then YVHIGHWAY() end
@@ -8737,7 +9878,21 @@ if menu == 3 then YVKUDA() end
 if menu == 4 then YVMARKET() end
 if menu == 5 then YVREPAIR() end
 if menu == 6 then YVSTORAGE() end
+if menu == 7 then YVSABURO() end
 end
+
+function YVSABURO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -101
+elseif v.name == 'LR'	then v.value = 5593
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
 function YVHIGHWAY()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -9129,13 +10284,27 @@ menu = gg.choice({
 '2= MT NEARTOP',
 '3= KUDA',
 '4= REPAIR',
+'5= NPC CAYMAN',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then CVHALF() end
 if menu == 2 then CVTOP() end
 if menu == 3 then CVKUDA() end
 if menu == 4 then CVREPAIR() end
+if menu == 5 then CVCAYMAN() end
 end
+
+function CVCAYMAN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8907
+elseif v.name == 'LR'	then v.value = 7578
+elseif v.name == 'GR'	then v.value = 7399
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function CVHALF()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -9285,4 +10454,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---16042021
+--21042021
