@@ -107,7 +107,7 @@ function BALONSPOT()
 if io.open(BALON) ~= nil then dofile(BALON)
 else
 gg.alert('NO DATA!\n\n/sdcard/IZANAGI/BALON.lua\n\nFILE TIDAK DITEMUKAN\nBUAT FILE DENGAN NAMA BALON.lua')
-gg.alert("GUNAKAN FORMAT SEBAGAI BERIKUT :\n\nt = gg.getListItems()\nfor i, v in ipairs(t) do\n		if v.name == 'DU'	then v.value = \nelseif v.name == 'LR'	then v.value = \nelseif v.name == 'GR'	then v.value = \nend\nend\ngg.setValues(t)\n\n\nFORMAT DIATAS AKAN OTOMATIS TERCOPY\nPASTE KE FILE UNTUK MEMBUAT SPOT BALON")
+gg.alert("GUNAKAN FORMAT SEBAGAI BERIKUT :\n\nt = gg.getListItems()\nfor i, v in ipairs(t) do\n		if v.name == 'UD'	then v.value = \nelseif v.name == 'LR'	then v.value = \nelseif v.name == 'GR'	then v.value = \nend\nend\ngg.setValues(t)\n\n\nFORMAT DIATAS AKAN OTOMATIS TERCOPY\nPASTE KE FILE UNTUK MEMBUAT SPOT BALON")
 gg.copyText("t =  gg.getListItems()\nfor i, v in ipairs(t) do\n		if v.name == 'DU'	then v.value = \nelseif v.name == 'LR'	then v.value = \nelseif v.name == 'GR'	then v.value = \nend\nend\ngg.setValues(t)", false)
 MM() end
 end
