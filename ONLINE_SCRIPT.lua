@@ -23,7 +23,7 @@ local menu = gg.choice({
 'SCAN DATA = MENU',
 '🔯☯️TELEPORT☯️🔯',
 'EXTRA MOD',
-'EVENT',
+'EVENT - ROCKBITTER',
 'CUSTOM SCRIPT',
 'BALON SPOT',
 'SPEED MOD',
@@ -36,7 +36,7 @@ if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then BSDUNLOCK()
 elseif menu == 2 then TELEPORT()
 elseif menu == 3 then EXTRAMODUNLOCK()
-elseif menu == 4 then NODATA()
+elseif menu == 4 then EVENTGO()
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
@@ -49,6 +49,126 @@ end
 --########################################################--########################################################
 --########################################################--########################################################
 --########################################################--########################################################
+
+-- EVENT 
+
+function ANABELSCAN()
+local gg = gg
+if io.open(VERSIENOL) ~= nil then
+	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP)
+gg.searchNumber('4D;22D;-199~-197;911~912;77~78::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(3)
+				t = gg.getResults(3)
+local r = gg.getResults(3)
+r[1].value = 2495
+r[2].value = -4771
+r[3].value = 94
+gg.setValues(r)
+gg.clearResults()
+elseif io.open(VERSISATU) ~= nil then
+	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
+gg.searchNumber('4D;22D;-199~-197;911~912;77~78::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(3)
+				t = gg.getResults(3)
+local r = gg.getResults(3)
+r[1].value = 2495
+r[2].value = -4771
+r[3].value = 94
+gg.setValues(r)
+gg.clearResults()
+else gg.alert('OPERATION FAILED. NO DATA / NEED UPDATE') 
+end
+end
+
+
+
+function EVENTLBBWT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2495
+elseif v.name == 'LR'	then v.value = -4771
+elseif v.name == 'GR'	then v.value = 94
+elseif v.name == 'SPD'	then v.value = 1
+end
+end
+gg.setValues(t)
+ANABELSCANA()
+end ---------------------------
+
+
+function EVENTLBROCKBITTER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 1214 -- BWT
+	then EVENTLBBWT()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
+	then EVENTLBROCKBITTERA()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 4992 -- MAP C
+	then EVENTLBROCKBITTERB()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 144 -- MAP ROCKBITER
+	then EVENTLBROCKBITTERC()
+	EVENTLBROCKBITTERC()
+	EVENTLBROCKBITTERC()
+---------------------------------------------
+end
+end
+end
+
+
+function EVENTLBROCKBITTERA() -- MAP AWAL
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2128
+elseif v.name == 'LR'	then v.value = 6080
+elseif v.name == 'GR'	then v.value = -430
+elseif v.name == 'SPD'	then v.value = 60
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function EVENTLBROCKBITTERB() -- MAP C
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2816
+elseif v.name == 'LR'	then v.value = -2128
+elseif v.name == 'GR'	then v.value = 92
+elseif v.name == 'SPD'	then v.value = 60
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function EVENTLBROCKBITTERC() -- MAP BOSS
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1301
+elseif v.name == 'LR'	then v.value = -871
+elseif v.name == 'GR'	then v.value = 892
+elseif v.name == 'FC'	then v.value = 31445
+elseif v.name == 'SPD'	then v.value = 60
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function EVENTGO()
+    repeat
+    EVENTLBROCKBITTER()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+
+
 --########################################################--########################################################
 --########################################################--########################################################
 --########################################################--########################################################
@@ -10454,4 +10574,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---21042021
+--28042021
