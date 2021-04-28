@@ -54,32 +54,17 @@ end
 
 function ANABELSCAN()
 local gg = gg
-if io.open(VERSIENOL) ~= nil then
-	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP)
+	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP)
 gg.searchNumber('4D;22D;-199~-197;911~912;77~78::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(3)
-				t = gg.getResults(3)
+t = gg.getResults(3)
 local r = gg.getResults(3)
 r[1].value = 2495
 r[2].value = -4771
 r[3].value = 94
 gg.setValues(r)
 gg.clearResults()
-elseif io.open(VERSISATU) ~= nil then
-	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-gg.searchNumber('4D;22D;-199~-197;911~912;77~78::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(3)
-				t = gg.getResults(3)
-local r = gg.getResults(3)
-r[1].value = 2495
-r[2].value = -4771
-r[3].value = 94
-gg.setValues(r)
-gg.clearResults()
-else gg.alert('OPERATION FAILED. NO DATA / NEED UPDATE') 
-end
 end
 
 
