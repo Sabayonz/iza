@@ -94,7 +94,7 @@ elseif v.name == 'SPD'	then v.value = 1
 end
 end
 gg.setValues(t)
-ANABELSCANA()
+ANABELSCAN()
 end ---------------------------
 
 
