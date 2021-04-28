@@ -65,12 +65,12 @@ r[2].value = -4771
 r[3].value = 94
 gg.setValues(r)
 gg.clearResults()
+EVENTLBBWT()
 end
 
 
 
 function EVENTLBBWT()
-ANABELSCAN()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 2495
@@ -88,7 +88,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
 	if v.name == 'UD' and v.value == 1214 -- BWT
-	then EVENTLBBWT()
+	then ANABELSCAN()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
 	then EVENTLBROCKBITTERA()
