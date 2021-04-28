@@ -70,6 +70,7 @@ end
 
 
 function EVENTLBBWT()
+ANABELSCAN()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 2495
@@ -79,7 +80,6 @@ elseif v.name == 'SPD'	then v.value = 1
 end
 end
 gg.setValues(t)
-ANABELSCAN()
 end ---------------------------
 
 
@@ -98,8 +98,6 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == 144 -- MAP ROCKBITER
 	then EVENTLBROCKBITTERC()
-	EVENTLBROCKBITTERC()
-	EVENTLBROCKBITTERC()
 ---------------------------------------------
 end
 end
