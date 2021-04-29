@@ -1978,7 +1978,7 @@ end
 
 function EVENTLABIRINENTRANCE() --63117
 local menu = gg.choice({
-'1= MAP B (SERPENTINE-MINO-SKELETON)',
+'1= MAP B (MINO-SKELETON)',
 '2= MAP C (FROG-SPIDER-ROCKBITER)',
 '3= MAP D (GOLDCHICK-TENGU-MECH)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
@@ -2048,15 +2048,13 @@ end ---------------------------
 
 function EVENTLABIRINB() --63119
 local menu = gg.choice({
-'1= SERPENTINE BOSS',
-'2= MINO BOSS',
-'3= SHOGUN SKELETON BOSS',
+'1= MINO BOSS',
+'2= SHOGUN SKELETON BOSS',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
-elseif menu == 1 then EVENTLABIRINBSERPEN()
-elseif menu == 2 then EVENTLABIRINBMINO()
-elseif menu == 3 then EVENTLABIRINBSKELETON()
+elseif menu == 1 then EVENTLABIRINBMINO()
+elseif menu == 2 then EVENTLABIRINBSKELETON()
 end
 end
 
@@ -2080,7 +2078,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -1072
 elseif v.name == 'LR'	then v.value = -4624
-elseif v.name == 'GR'	then v.value = 3
+elseif v.name == 'GR'	then v.value = 92
 end
 end
 gg.setValues(t)
@@ -2156,13 +2154,13 @@ end ---------------------------
 function EVENTLABIRIND() --63120
 local menu = gg.choice({
 '1= GOLD CHICK BOSS',
-'2= TENGU LEADER BOSS',
+'2= CYCLOPS BOSS',
 '3= TENGU MECH BOSS',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then EVENTLABIRINDCHICK()
-elseif menu == 2 then EVENTLABIRINDTENGU()
+elseif menu == 2 then EVENTLABIRINDCYCLOPS()
 elseif menu == 3 then EVENTLABIRINDMECH()
 end
 end
@@ -2182,7 +2180,7 @@ end ---------------------------
 
 
 
-function EVENTLABIRINDTENGU()
+function EVENTLABIRINDCYCLOPS()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 7904
