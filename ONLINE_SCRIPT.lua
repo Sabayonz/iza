@@ -1950,11 +1950,250 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63039
 	then CAVECARLA()
 ---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63117
+	then EVENTLABIRINENTRANCE()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63119
+	then EVENTLABIRINB()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63121
+	then EVENTLABIRINC()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63120
+	then EVENTLABIRIND()
+---------------------------------------------
 end
 end
 end
 ---------------------------------------------
 
+function EVENTLABIRINENTRANCE() --63117
+local menu = gg.choice({
+'1= MAP B (SERPENTINE-MINO-SKELETON)',
+'2= MAP C (FROG-SPIDER-ROCKBITER)',
+'3= MAP D (GOLDCHICK-TENGU-MECH)',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then EVENTLABIRINENTRANCEB()
+elseif menu == 2 then EVENTLABIRINENTRANCEC()
+elseif menu == 3 then EVENTLABIRINENTRANCED()
+end
+end
+
+function EVENTLABIRINENTRANCEA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7600
+elseif v.name == 'LR'	then v.value = 1392
+elseif v.name == 'GR'	then v.value = 606
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function EVENTLABIRINENTRANCEB()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -7296
+elseif v.name == 'LR'	then v.value = -6608
+elseif v.name == 'GR'	then v.value = 1089
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function EVENTLABIRINENTRANCEC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2128
+elseif v.name == 'LR'	then v.value = 6080
+elseif v.name == 'GR'	then v.value = -430
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function EVENTLABIRINENTRANCED()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 15328
+elseif v.name == 'LR'	then v.value = 2112
+elseif v.name == 'GR'	then v.value = -1962
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+
+
+
+
+
+
+function EVENTLABIRINB() --63119
+local menu = gg.choice({
+'1= SERPENTINE BOSS',
+'2= MINO BOSS',
+'3= SHOGUN SKELETON BOSS',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then EVENTLABIRINBSERPEN()
+elseif menu == 2 then EVENTLABIRINBMINO()
+elseif menu == 3 then EVENTLABIRINBSKELETON()
+end
+end
+
+
+
+function EVENTLABIRINBSERPEN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4592
+elseif v.name == 'LR'	then v.value = 1536
+elseif v.name == 'GR'	then v.value = -446
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function EVENTLABIRINBMINO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1072
+elseif v.name == 'LR'	then v.value = -4624
+elseif v.name == 'GR'	then v.value = 3
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function EVENTLABIRINBSKELETON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8816
+elseif v.name == 'LR'	then v.value = 6144
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function EVENTLABIRINC() --63121
+local menu = gg.choice({
+'1= FROGG BOSS',
+'2= SPIDER BOSS',
+'3= ROCKBITER BOSS',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then EVENTLABIRINCFROG()
+elseif menu == 2 then EVENTLABIRINCSPIDER()
+elseif menu == 3 then EVENTLABIRINCROCKBITER()
+end
+end
+
+
+
+function EVENTLABIRINCFROG()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4688
+elseif v.name == 'LR'	then v.value = 1056
+elseif v.name == 'GR'	then v.value = -446
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function EVENTLABIRINCSPIDER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1024
+elseif v.name == 'LR'	then v.value = 6144
+elseif v.name == 'GR'	then v.value = -419
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function EVENTLABIRINCROCKBITER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2816
+elseif v.name == 'LR'	then v.value = -2128
+elseif v.name == 'GR'	then v.value = 92
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+
+function EVENTLABIRIND() --63120
+local menu = gg.choice({
+'1= GOLD CHICK BOSS',
+'2= TENGU LEADER BOSS',
+'3= TENGU MECH BOSS',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then EVENTLABIRINDCHICK()
+elseif menu == 2 then EVENTLABIRINDTENGU()
+elseif menu == 3 then EVENTLABIRINDMECH()
+end
+end
+
+
+
+function EVENTLABIRINDCHICK()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5792
+elseif v.name == 'LR'	then v.value = 960
+elseif v.name == 'GR'	then v.value = -446
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function EVENTLABIRINDTENGU()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7904
+elseif v.name == 'LR'	then v.value = 6144
+elseif v.name == 'GR'	then v.value = -1441
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function EVENTLABIRINDMECH()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5600
+elseif v.name == 'LR'	then v.value = 5168
+elseif v.name == 'GR'	then v.value = 92
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 
 function CAVECARLA() --63039
