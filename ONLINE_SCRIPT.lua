@@ -27,8 +27,8 @@ local menu = gg.choice({
 'CUSTOM SCRIPT',
 'BALON SPOT',
 'SPEED MOD',
+'🔯☯️TELEPORT EVENT☯️🔯',
 'README !! ( SETUP )',
-'	',
 '🔑🗝️UNLOCK🔑🗝️',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MAIN MENU')
 )) or nil
@@ -40,8 +40,8 @@ elseif menu == 4 then EVENTGO()
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
-elseif menu == 8 then WAITZ()
-elseif menu == 9 then MM()
+elseif menu == 8 then TELEPORTEVENT()
+elseif menu == 9 then WAITZ()
 elseif menu == 10 then CEKSTATUS()
 end
 end
@@ -1950,7 +1950,16 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63039
 	then CAVECARLA()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63117
+end
+end
+end
+---------------------------------------------
+
+function TELEPORTEVENT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+----------------------------
+	if v.name == 'MAP' and v.value == 63117
 	then EVENTLABIRINENTRANCE()
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63119
@@ -10796,4 +10805,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---28042021
+--29042021
