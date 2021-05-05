@@ -28,6 +28,8 @@ local menu = gg.choice({
 'BALON SPOT',
 'SPEED MOD',
 '🔯☯️TELEPORT EVENT☯️🔯',
+' ',
+'🔯',
 'README !! ( SETUP )',
 '🔑🗝️UNLOCK🔑🗝️',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MAIN MENU')
@@ -41,12 +43,50 @@ elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
 elseif menu == 8 then TELEPORTEVENT()
-elseif menu == 9 then WAITZ()
-elseif menu == 10 then CEKSTATUS()
+elseif menu == 9 then MM()
+elseif menu == 10 then MASTERMENUCEK()
+elseif menu == 11 then WAITZ()
+elseif menu == 12 then CEKSTATUS()
 end
 end
 
 --########################################################--########################################################
+--########################################################--########################################################
+local MASTER = '/sdcard/MASTER.txt'
+
+function CEKMASTER()
+if io.open(MASTER) ~= nil then 
+gg.alert('UNLOCK STATUS = ACTIVE \n MASTER ENABLE')
+elseif io.open(MASTER) == nil then
+MM()
+end
+end
+
+function MASTERMENUCEK()
+if io.open(MASTER) ~= nil then MASTERMENU()
+else
+gg.alert('NO DATA')
+MM()
+end
+end
+
+
+function MASTERMENU()
+menu = gg.choice({
+'1. AUTO - SANCTUM100 FULL',
+'2. NIL',
+'3. NIL',
+'4. NIL',
+'5. NIL'},Last,' MASTER MENU ') or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then AUTOSANC100()
+elseif menu == 2 then NODATA()
+elseif menu == 3 then NODATA()
+elseif menu == 4 then NODATA()
+elseif menu == 5 then NODATA()
+end
+end
+
 --########################################################--########################################################
 --########################################################--########################################################
 
@@ -160,6 +200,7 @@ function EVENTGO()
 
 local UNLOCKSTATUS = '/sdcard/UNLOCKER_V1.txt'
 
+
 function CEKSTATUS()
 if io.open(UNLOCKSTATUS) ~= nil then 
 gg.alert('UNLOCK STATUS = ACTIVE \n UNLOCKER VERSION 1.0 a')
@@ -167,6 +208,8 @@ elseif io.open(UNLOCKSTATUS) == nil then
 UNLOCKFULLSCRIPT()
 end
 end
+
+
 
 
 function UNLOCKFULLSCRIPT()
@@ -11453,10 +11496,253 @@ end ---------------------------
 
 
 
+--########################################################--########################################################
+--########################################################--########################################################
+-- SANCTUM 100 AUTO
 
 
+function AUTOSANC100()
+    repeat
+    SANCTUMFARM()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function SANCTUMFARM() -- MAIN CHUNK
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == -388
+	then
+	UNDERGROUND()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -1792
+	then
+	HIGHWAY()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -8984
+	then
+	INDUSTRIAL()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 5182
+	then
+	MAPATAS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -11632
+	then
+	MAPATAS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 0
+	then
+	gg.sleep("1500")
+	SANCTUMDALAMFAST()
+---------------------------------------------
+end
+end
+end
+
+function TEMPMOVE() 
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -340
+elseif v.name == 'LR'	then v.value = -18000
+elseif v.name == 'GR'		then v.value = -2910
+end
+end
+gg.setValues(t)
+gg.sleep("500")
+end
+
+function TEMPMOVEA() 
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 0
+elseif v.name == 'LR'	then v.value = 1904
+elseif v.name == 'GR'		then v.value = 94
+end
+end
+gg.setValues(t)
+gg.sleep("500")
+end
+
+--############################################--
+function UNDERGROUND() -- UNDERGROUND > HIGHWAY
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 750
+elseif v.name == 'LR'	then v.value = -720
+elseif v.name == 'GR'		then v.value = 352
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+end
+
+function HIGHWAY() -- HIGHWAY > INDUSTRIAL
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -6283
+elseif v.name == 'LR'	then v.value = -29140
+elseif v.name == 'GR'		then v.value = -405
+elseif v.name == 'FC'	then v.value = -16420
+end
+end
+gg.setValues(t)
+end
+
+function INDUSTRIAL() -- INDUSTRIAL > GOA
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -13950
+elseif v.name == 'LR'	then v.value = -2988
+elseif v.name == 'GR'		then v.value = -11
+elseif v.name == 'FC'	then v.value = 31579
+end
+end
+gg.setValues(t)
+end
+
+function MAPATAS() -- ATAS GOA TEMBUS
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 5100
+elseif v.name == 'LR'	then v.value = -8255
+elseif v.name == 'GR'		then v.value = -354
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = -3110
+end
+end
+gg.setValues(t)
+SEARCHNPC()
+end
+
+function SANCTUMDALAMFAST()
+gg.sleep('3000')
+ROCKBITTERREPEAT()
+GIANTREPEAT()
+SLIMEREPEAT()
+end
+
+--############################################--
+function GIANTONE() -- KILL GIANT ONE
+gg.sleep("350")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -96
+elseif v.name == 'LR'	then v.value = -21232
+elseif v.name == 'GR'		then v.value = -4000
+elseif v.name == 'FC'	then v.value = -15967
+end
+end
+gg.setValues(t)
+end
+
+--############################################--
+function GIANTTWO() -- KILL GIANT TWO
+gg.sleep("350")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -96
+elseif v.name == 'LR'	then v.value = -21232
+elseif v.name == 'GR'		then v.value = -4000
+elseif v.name == 'FC'	then v.value = 4970
+end
+end
+gg.setValues(t)
+end
 
 
+--############################################--
+function GIANTTRI() -- KILL GIANT TRI
+gg.sleep("350")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -96
+elseif v.name == 'LR'	then v.value = -21322
+elseif v.name == 'GR'		then v.value = -4000
+elseif v.name == 'FC'	then v.value = 24769
+end
+end
+gg.setValues(t)
+end
+
+--########################################
+function GIANTREPEAT()
+local a = 1
+repeat
+GIANTONE()
+GIANTTWO()
+GIANTTRI()
+a = a + 1
+until a > 55 -- detik
+TEMPMOVEA()
+end
+--############################################--
+
+
+--############################################--
+function SLIME() -- KILL SLIME
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -20
+elseif v.name == 'LR'	then v.value = -5681
+elseif v.name == 'GR'		then v.value = -1000
+elseif v.name == 'FC'	then v.value = -16636
+end
+end
+gg.setValues(t)
+end
+function SLIMEREPEAT()
+local a = 1
+repeat
+SLIME()
+a = a + 1
+until a > 15 -- detik
+end
+--############################################--
+
+
+--############################################--
+function ROCKBITTER() -- ROCKBITTER
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -11
+elseif v.name == 'LR'	then v.value = -11519
+elseif v.name == 'GR'		then v.value = -2500
+elseif v.name == 'FC'	then v.value = -16636
+end
+end
+gg.setValues(t)
+end
+function ROCKBITTERREPEAT()
+local a = 1
+repeat
+ROCKBITTER()
+a = a + 1
+until a > 20 -- detik
+TEMPMOVEA()
+end
+--############################################--
+
+function SEARCHNPC()
+local gg = gg
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP)
+gg.searchNumber('5626~5627;-8452~-8451;-946~-939;0D;32039D::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber('5626~5627;-8452~-8451;-946~-939::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+local z = gg.getResults(3)
+z[1].value = 5100
+z[2].value = -8255
+z[3].value = -354
+gg.setValues(z)
+gg.clearResults()
+end
+
+
+--########################################################--########################################################
+--########################################################--########################################################
 
 
 
@@ -11494,4 +11780,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---02052021
+--05052021
