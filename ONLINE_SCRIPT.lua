@@ -23,7 +23,7 @@ local menu = gg.choice({
 'SCAN DATA = MENU',
 '🔯☯️TELEPORT☯️🔯',
 'EXTRA MOD',
-'EVENT - ROCKBITTER',
+'EVENT - GOLDCHICK',
 'CUSTOM SCRIPT',
 'BALON SPOT',
 'SPEED MOD',
@@ -38,7 +38,7 @@ if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then BSDUNLOCK()
 elseif menu == 2 then TELEPORT()
 elseif menu == 3 then EXTRAMODUNLOCK()
-elseif menu == 4 then EVENTGO()
+elseif menu == 4 then EVENTLBGOLDCHICK() --EVENTGO (ROCKBITTER)
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
@@ -91,6 +91,23 @@ end
 --########################################################--########################################################
 
 -- EVENT 
+
+function EVENTLBGOLDCHICK()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 1214 -- BWT
+	then EVENTLBBWT()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
+	then EVENTLABIRINENTRANCED()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 272 -- MAP C
+	then EVENTLABIRINDCHICK()
+---------------------------------------------
+end
+end
+end
 
 
 function ANABELSCANA()
