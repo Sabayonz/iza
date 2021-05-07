@@ -38,7 +38,7 @@ if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then BSDUNLOCK()
 elseif menu == 2 then TELEPORT()
 elseif menu == 3 then EXTRAMODUNLOCK()
-elseif menu == 4 then EVENTLBGOLDCHICK() --EVENTGO (ROCKBITTER)
+elseif menu == 4 then EVENTLBGOLDCHICKGO() --EVENTGO (ROCKBITTER)
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
@@ -90,7 +90,13 @@ end
 --########################################################--########################################################
 --########################################################--########################################################
 
--- EVENT 
+-- EVENT LABIRIN
+function EVENTLBGOLDCHICKGO()
+    repeat
+    EVENTLBGOLDCHICK()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
 
 function EVENTLBGOLDCHICK()
 t = gg.getListItems()
