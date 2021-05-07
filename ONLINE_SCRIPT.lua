@@ -2062,6 +2062,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 7600
 elseif v.name == 'LR'	then v.value = 1392
 elseif v.name == 'GR'	then v.value = 606
+elseif v.name == 'SPD'	then v.value = 30
 end
 end
 gg.setValues(t)
@@ -2075,6 +2076,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -7296
 elseif v.name == 'LR'	then v.value = -6608
 elseif v.name == 'GR'	then v.value = 1089
+elseif v.name == 'SPD'	then v.value = 30
 end
 end
 gg.setValues(t)
@@ -2088,6 +2090,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -2128
 elseif v.name == 'LR'	then v.value = 6080
 elseif v.name == 'GR'	then v.value = -430
+elseif v.name == 'SPD'	then v.value = 30
 end
 end
 gg.setValues(t)
@@ -2099,6 +2102,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 15328
 elseif v.name == 'LR'	then v.value = 2112
 elseif v.name == 'GR'	then v.value = -1962
+elseif v.name == 'SPD'	then v.value = 30
 end
 end
 gg.setValues(t)
