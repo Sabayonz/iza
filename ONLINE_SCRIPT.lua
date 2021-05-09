@@ -23,7 +23,7 @@ local menu = gg.choice({
 'SCAN DATA = MENU',
 '🔯☯️TELEPORT☯️🔯',
 'EXTRA MOD',
-'EVENT - GOLDCHICK',
+'EVENT - ROCKBITTER',
 'CUSTOM SCRIPT',
 'BALON SPOT',
 'SPEED MOD',
@@ -38,7 +38,7 @@ if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then BSDUNLOCK()
 elseif menu == 2 then TELEPORT()
 elseif menu == 3 then EXTRAMODUNLOCK()
-elseif menu == 4 then EVENTLBGOLDCHICKGO() --EVENTGO (ROCKBITTER)
+elseif menu == 4 then EVENTLBROCKBITTERGO() --EVENTGO (ROCKBITTER)
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
@@ -206,7 +206,7 @@ end
 gg.setValues(t)
 end ---------------------------
 
-function EVENTGO()
+function EVENTLBROCKBITTERGO()
     repeat
     EVENTLBROCKBITTER()
     until gg.isVisible(true)
