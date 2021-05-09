@@ -4901,15 +4901,42 @@ function CAVEOBLIVION() --63033
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
-'3= NPC TELEPORT',
+'3= GARDEN OF JOY',
+'4= NPC QUEST',
+'5= MONSTER - GORGOYLE SPOT',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEOBLIVIONEX()
 elseif menu == 2 then CAVEOBLIVIONBS()
-elseif menu == 3 then CAVEOBLIVIONNPC()
+elseif menu == 3 then CAVEOBLIVIONGARDEN()
+elseif menu == 4 then CAVEOBLIVIONNPC()
+elseif menu == 5 then CAVEOBLIVIONGORGOYLE()
 end
 end
+
+function CAVEOBLIVIONGORGOYLE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 18433
+elseif v.name == 'LR'	then v.value = 3424
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function CAVEOBLIVIONNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 19040
+elseif v.name == 'LR'	then v.value = -550
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEOBLIVIONEX()
 t = gg.getListItems()
@@ -4935,7 +4962,7 @@ gg.setValues(t)
 end ---------------------------
 
 
-function CAVEOBLIVIONNPC()
+function CAVEOBLIVIONGARDEN()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 21486
@@ -4945,7 +4972,6 @@ end
 end
 gg.setValues(t)
 end ---------------------------
-
 
 function CAVEOKUMAN() --63035
 local menu = gg.choice({
