@@ -4372,17 +4372,59 @@ end ---------------------------
 
 
 
+
 function CAVEZOMBIE() --63026
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= NPC ZOMBIE LADY',
+'4= NPC OLDMAN VIRGIN',
+'5= NPC ZOMBIE WORKER',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEZOMBIEEX()
 elseif menu == 2 then CAVEZOMBIEBS()
+elseif menu == 3 then CAVEZOMBIENPCLADY()
+elseif menu == 4 then CAVEZOMBIEOLDMANVIRGIN()
+elseif menu == 5 then CAVEZOMBIENPCWORKER()
 end
 end
+
+function CAVEZOMBIENPCLADY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3091
+elseif v.name == 'LR'	then v.value = -46
+elseif v.name == 'GR'	then v.value = 1112
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function CAVEZOMBIEOLDMANVIRGIN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7407
+elseif v.name == 'LR'	then v.value = 8502
+elseif v.name == 'GR'	then v.value = 258
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function CAVEZOMBIENPCWORKER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10774
+elseif v.name == 'LR'	then v.value = 13478
+elseif v.name == 'GR'	then v.value = -929
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 
 function CAVEZOMBIEEX()
 t = gg.getListItems()
@@ -4407,17 +4449,135 @@ gg.setValues(t)
 end ---------------------------
 
 
+
+
 function CAVEROCKBITTER() --63025
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= NPC ELOISE',
+'4= MONSTER - BIRD (FARM)',
+'5= MONSTER - TRENGGILING (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEROCKBITTEREX()
 elseif menu == 2 then CAVEROCKBITTERBS()
+elseif menu == 3 then CAVEROCKBITTERNPC()
+elseif menu == 4 then CAVEROCKBITTERBIRDGO()
+elseif menu == 5 then CAVEROCKBITTERMANISGO()
 end
 end
+
+
+function CAVEROCKBITTERMANISGO()
+    repeat
+    CAVEROCKBITTERMANIS()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVEROCKBITTERNPC()
+    end
+	
+function CAVEROCKBITTERMANIS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10326
+elseif v.name == 'LR'	then v.value = 7581
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8160
+elseif v.name == 'LR'	then v.value = -193
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('6000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 13217
+elseif v.name == 'LR'	then v.value = -3078
+elseif v.name == 'GR'	then v.value = -417
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10366
+elseif v.name == 'LR'	then v.value = -7048
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4506
+elseif v.name == 'LR'	then v.value = -7020
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+
+
+function CAVEROCKBITTERBIRDGO()
+    repeat
+    CAVEROCKBITTERBIRD()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVEROCKBITTERNPC()
+    end
+	
+function CAVEROCKBITTERBIRD()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10092
+elseif v.name == 'LR'	then v.value = 73
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 13392
+elseif v.name == 'LR'	then v.value = 2980
+elseif v.name == 'GR'	then v.value = -1441
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10018
+elseif v.name == 'LR'	then v.value = 6508
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4554
+elseif v.name == 'LR'	then v.value = 7042
+elseif v.name == 'GR'	then v.value = -2465
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+function CAVEROCKBITTERNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 253
+elseif v.name == 'LR'	then v.value = 485
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEROCKBITTEREX()
 t = gg.getListItems()
@@ -4442,17 +4602,125 @@ gg.setValues(t)
 end ---------------------------
 
 
+
+
 function CAVEMOJA() --63027
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= MONSTER - GOBLIN (FARM)',
+'4= MONSTER - LITCH (FARM)',
+'5= NPC ROBERTO',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEMOJAEX()
 elseif menu == 2 then CAVEMOJABS()
+elseif menu == 3 then CAVEMOJAGOBLINGO()
+elseif menu == 4 then CAVEMOJALITCHGO()
+elseif menu == 5 then CAVEMOJANPC()
 end
 end
+
+
+
+function CAVEMOJALITCHGO()
+    repeat
+    CAVEMOJALITCH()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVEMOJAEX()
+    end
+	
+function CAVEMOJALITCH()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5089
+elseif v.name == 'LR'	then v.value = 10121
+elseif v.name == 'GR'	then v.value = -1441
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10238
+elseif v.name == 'LR'	then v.value = 3177
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8664
+elseif v.name == 'LR'	then v.value = -1199
+elseif v.name == 'GR'	then v.value = -929
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 16455
+elseif v.name == 'LR'	then v.value = -1930
+elseif v.name == 'GR'	then v.value = -1441
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+end
+
+
+function CAVEMOJAGOBLINGO()
+    repeat
+    CAVEMOJAGOBLIN()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVEMOJAEX()
+    end
+	
+function CAVEMOJAGOBLIN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5122
+elseif v.name == 'LR'	then v.value = -7176
+elseif v.name == 'GR'	then v.value = 1118
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10170
+elseif v.name == 'LR'	then v.value = -9344
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 18
+elseif v.name == 'LR'	then v.value = -7153
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 210
+elseif v.name == 'LR'	then v.value = -1121
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5099
+elseif v.name == 'LR'	then v.value = -12227
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end
+
 
 function CAVEMOJAEX()
 t = gg.getListItems()
@@ -4465,6 +4733,16 @@ end
 gg.setValues(t)
 end ---------------------------
 
+function CAVEMOJANPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9869
+elseif v.name == 'LR'	then v.value = 5278
+elseif v.name == 'GR'	then v.value = -929
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEMOJABS()
 t = gg.getListItems()
@@ -4478,17 +4756,122 @@ gg.setValues(t)
 end ---------------------------
 
 
+
 function CAVEGNOME() --63034
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= NPC ROBERTO',
+'4= EXTRACT SPOT',
+'5= MONSTER - FUNGU (FARM)',
+'6= MOSNTER - SLIME (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEGNOMEEX()
 elseif menu == 2 then CAVEGNOMEBS()
+elseif menu == 3 then CAVEGNOMENPC()
+elseif menu == 4 then CAVEGNOMEEXTRACT()
+elseif menu == 5 then CAVEGNOMEFUNGUGO()
+elseif menu == 6 then CAVEGNOMESLIMEGO()
 end
 end
+
+
+
+function CAVEGNOMESLIMEGO()
+    repeat
+    CAVEGNOMESLIME()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVEGNOMENPC()
+    end
+	
+function CAVEGNOMESLIME()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 16441
+elseif v.name == 'LR'	then v.value = 2081
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6146
+elseif v.name == 'LR'	then v.value = 2001
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 205
+elseif v.name == 'LR'	then v.value = -126
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end
+
+function CAVEGNOMEFUNGUGO()
+    repeat
+    CAVEGNOMEFUNGU()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	CAVEGNOMENPC()
+    end
+	
+function CAVEGNOMEFUNGU()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6155
+elseif v.name == 'LR'	then v.value = 2087
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 15923
+elseif v.name == 'LR'	then v.value = 2205
+elseif v.name == 'GR'	then v.value = 606
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 22426
+elseif v.name == 'LR'	then v.value = 2030
+elseif v.name == 'GR'	then v.value = 1118
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+end
+
+function CAVEGNOMEEXTRACT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6451
+elseif v.name == 'LR'	then v.value = -995
+elseif v.name == 'GR'	then v.value = 606
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function CAVEGNOMENPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 25147
+elseif v.name == 'LR'	then v.value = 2286
+elseif v.name == 'GR'	then v.value = 1118
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEGNOMEEX()
 t = gg.getListItems()
@@ -6834,19 +7217,196 @@ end ---------------------------
 
 
 
+
 function FOG()
 menu = gg.choice({
 '1= GRAYTOWN',
 '2= INDUSTRIAL AREA',
 '3= MOJAGGY CAVE',
 '4= GNOME CAVE',
+'5= MONSTER - AXOLOT (FARM) ',
+'6= MONSTER - BAT (FARM) ',
+'7= MONSTER - ZOMBIE (FAMR) ',
+'8= NPC - LYDIA DIE',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
-))
-if menu == 1 then FOGGRAYTOWN() end
-if menu == 2 then FOGINDUSTRIAL() end
-if menu == 3 then FOGMOJAGGY() end
-if menu == 4 then FOGGNOME() end
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then FOGGRAYTOWN()
+elseif menu == 2 then FOGINDUSTRIAL()
+elseif menu == 3 then FOGMOJAGGY()
+elseif menu == 4 then FOGGNOME()
+elseif menu == 5 then FOGAXOLOTGO()
+elseif menu == 6 then FOGBATGO()
+elseif menu == 7 then FOGZOMBIEGO()
+elseif menu == 8 then FOGNPCLYDIA()
 end
+end
+
+
+
+
+function FOGZOMBIEGO()
+    repeat
+    FOGZOMBIE()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	FOGGRAYTOWN()
+    end
+	
+function FOGZOMBIE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2463
+elseif v.name == 'LR'	then v.value = -5979
+elseif v.name == 'GR'	then v.value = 1094
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -400
+elseif v.name == 'LR'	then v.value = -4419
+elseif v.name == 'GR'	then v.value = 939
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3070
+elseif v.name == 'LR'	then v.value = -3812
+elseif v.name == 'GR'	then v.value = 967
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7407
+elseif v.name == 'LR'	then v.value = 1752
+elseif v.name == 'GR'	then v.value = 350
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5406
+elseif v.name == 'LR'	then v.value = -8252
+elseif v.name == 'GR'	then v.value = 1282
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end-----------------------------------
+
+
+function FOGBATGO()
+    repeat
+    FOGBAT()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	FOGGRAYTOWN()
+    end
+	
+function FOGBAT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2860
+elseif v.name == 'LR'	then v.value = 4988
+elseif v.name == 'GR'	then v.value = 349
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -823
+elseif v.name == 'LR'	then v.value = 6097
+elseif v.name == 'GR'	then v.value = 340
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2180
+elseif v.name == 'LR'	then v.value = 4397
+elseif v.name == 'GR'	then v.value = 247
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3709
+elseif v.name == 'LR'	then v.value = 2678
+elseif v.name == 'GR'	then v.value = 794
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 418
+elseif v.name == 'LR'	then v.value = 2091
+elseif v.name == 'GR'	then v.value = 1267
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end------------------------------------------
+
+
+function FOGAXOLOTGO()
+    repeat
+    FOGAXOLOT()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	FOGGRAYTOWN()
+    end
+	
+function FOGAXOLOT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3663
+elseif v.name == 'LR'	then v.value = -64
+elseif v.name == 'GR'	then v.value = 1167
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2648
+elseif v.name == 'LR'	then v.value = 1435
+elseif v.name == 'GR'	then v.value = 1412
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3592
+elseif v.name == 'LR'	then v.value = 6074
+elseif v.name == 'GR'	then v.value = 305
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5078
+elseif v.name == 'LR'	then v.value = 2590
+elseif v.name == 'GR'	then v.value = 864
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+
+function FOGNPCLYDIA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4716
+elseif v.name == 'LR'	then v.value = -11477
+elseif v.name == 'GR'	then v.value = 1283
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function FOGGRAYTOWN()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -6896,6 +7456,8 @@ end
 end
 gg.setValues(t)
 end ---------------------------
+
+
 
 
 
@@ -8448,14 +9010,152 @@ menu = gg.choice({
 '3= NECROSIS VILAGE',
 '4= NPC GRAVE KEEPER',
 '5= NPC MORIS',
+'6= NPC BARBARA',
+'7= MONSTER - LEECH (FARM)',
+'8= MONSTER - SPIRIT (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
-))
-if menu == 1 then OBLIVIONGRAYTOWN() end
-if menu == 2 then OBLIVIONCAVE() end
-if menu == 3 then OBLIVIONNECROSIS() end
-if menu == 4 then OBLIVIONKEEPER() end
-if menu == 5 then OBLIVIONMORIS() end
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then OBLIVIONGRAYTOWN()
+elseif menu == 2 then OBLIVIONCAVE()
+elseif menu == 3 then OBLIVIONNECROSIS()
+elseif menu == 4 then OBLIVIONKEEPER()
+elseif menu == 5 then OBLIVIONMORIS()
+elseif menu == 6 then OBLIVIONBARBARA()
+elseif menu == 7 then OBLIVIONLEECHGO()
+elseif menu == 8 then OBLIVIONSPIRITGO()
 end
+end
+
+
+
+
+
+function OBLIVIONSPIRITGO()
+    repeat
+    OBLIVIONSPIRIT()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	OBLIVIONBARBARA()
+    end
+	
+function OBLIVIONSPIRIT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4573
+elseif v.name == 'LR'	then v.value = -96
+elseif v.name == 'GR'	then v.value = -591
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1760
+elseif v.name == 'LR'	then v.value = 2622
+elseif v.name == 'GR'	then v.value = -608
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7299
+elseif v.name == 'LR'	then v.value = 11896
+elseif v.name == 'GR'	then v.value = -359
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6461
+elseif v.name == 'LR'	then v.value = -10104
+elseif v.name == 'GR'	then v.value = 113
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4000
+elseif v.name == 'LR'	then v.value = -6591
+elseif v.name == 'GR'	then v.value = 250
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end
+
+
+function OBLIVIONLEECHGO()
+    repeat
+    OBLIVIONLEECH()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	OBLIVIONKEEPER()
+    end
+	
+function OBLIVIONLEECH()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 361
+elseif v.name == 'LR'	then v.value = 6848
+elseif v.name == 'GR'	then v.value = -533
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4457
+elseif v.name == 'LR'	then v.value = 7801
+elseif v.name == 'GR'	then v.value = -459
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -547
+elseif v.name == 'LR'	then v.value = 12930
+elseif v.name == 'GR'	then v.value = -473
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7903
+elseif v.name == 'LR'	then v.value = 10072
+elseif v.name == 'GR'	then v.value = 183
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1795
+elseif v.name == 'LR'	then v.value = 538
+elseif v.name == 'GR'	then v.value = 114
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 11170
+elseif v.name == 'LR'	then v.value = 982
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+end ---------------------------
+
+
+function OBLIVIONBARBARA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4803
+elseif v.name == 'LR'	then v.value = 8018
+elseif v.name == 'GR'	then v.value = 787
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function OBLIVIONGRAYTOWN()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -8522,21 +9222,286 @@ end ---------------------------
 
 
 
+
+
 function INDUSTRIAL()
 menu = gg.choice({
 '1= HIGHWAY SITE',
 '2= THICK FOG FORREST',
 '3= FOREMAN CAVE',
-'4= ROCKBITTER CAVE',
-'5= ZOMBIE CAVE',
+'4= ZOMBIE CAVE',
+'5= ROCKBITTER CAVE',
+'6= NPC TIM',
+'7= NPC ELOISE',
+'8= NPC ALBERT',
+'9= MONSTER - CARCAS EATING (FARM)',
+'10= MONSTER - BLOOD SUCKER (FARM)',
+'11= MONSTER - SORROW ARMY (FARM)',
+'12= MONSTER - GOLEM SPOT',
+'13= NPC NANCY',
+'14= NPC JIMMY ZOMBIE',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
-))
-if menu == 1 then INDUSTRIALHIGHWAY() end
-if menu == 2 then INDUSTRIALFORREST() end
-if menu == 3 then INDUSTRIALFOREMAN() end
-if menu == 4 then INDUSTRIALROCKBITTER() end
-if menu == 5 then INDUSTRIALZOMBIE() end
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then INDUSTRIALHIGHWAY()
+elseif menu == 2 then INDUSTRIALFORREST()
+elseif menu == 3 then INDUSTRIALFOREMAN()
+elseif menu == 4 then INDUSTRIALZOMBIE()
+elseif menu == 5 then INDUSTRIALROCKBITTER()
+elseif menu == 6 then INDUSTRIALTIM()
+elseif menu == 7 then INDUSTRIALELOISE()
+elseif menu == 8 then INDUSTRIALALBERT()
+elseif menu == 9 then INDUSTRIALCARCASEATINGGO()
+elseif menu == 10 then INDUSTRIALBLOODSUCKERGO()
+elseif menu == 11 then INDUSTRIALSORROWARMYGO()
+elseif menu == 12 then INDUSTRIALGOLEM()
+elseif menu == 13 then INDUSTRIALNANCY()
+elseif menu == 14 then INDUSTRIALJIMMY()
 end
+end
+
+function INDUSTRIALNANCY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1768
+elseif v.name == 'LR'	then v.value = 13672
+elseif v.name == 'GR'	then v.value = 145
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function INDUSTRIALJIMMY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5023
+elseif v.name == 'LR'	then v.value = 2155
+elseif v.name == 'GR'	then v.value = 100
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function INDUSTRIALGOLEM()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 14430
+elseif v.name == 'LR'	then v.value = 6828
+elseif v.name == 'GR'	then v.value = 662
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function INDUSTRIALSORROWARMYGO()
+    repeat
+    INDUSTRIALSORROWARMY()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	INDUSTRIALELOISE()
+    end
+	
+function INDUSTRIALSORROWARMY()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4991
+elseif v.name == 'LR'	then v.value = 853
+elseif v.name == 'GR'	then v.value = 104
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6779
+elseif v.name == 'LR'	then v.value = 4234
+elseif v.name == 'GR'	then v.value = 106
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8014
+elseif v.name == 'LR'	then v.value = 8095
+elseif v.name == 'GR'	then v.value = 106
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 13562
+elseif v.name == 'LR'	then v.value = 13147
+elseif v.name == 'GR'	then v.value = 98
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 16118
+elseif v.name == 'LR'	then v.value = -8610
+elseif v.name == 'GR'	then v.value = 127
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 13295
+elseif v.name == 'LR'	then v.value = -11198
+elseif v.name == 'GR'	then v.value = 104
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+function INDUSTRIALBLOODSUCKERGO()
+    repeat
+    INDUSTRIALBLOODSUCKER()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	INDUSTRIALALBERT()
+    end
+	
+function INDUSTRIALBLOODSUCKER()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4776
+elseif v.name == 'LR'	then v.value = 8972
+elseif v.name == 'GR'	then v.value = 110
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6242
+elseif v.name == 'LR'	then v.value = 4874
+elseif v.name == 'GR'	then v.value = 100
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -992
+elseif v.name == 'LR'	then v.value = -9743
+elseif v.name == 'GR'	then v.value = 118
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10997
+elseif v.name == 'LR'	then v.value = -3319
+elseif v.name == 'GR'	then v.value = 114
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 16049
+elseif v.name == 'LR'	then v.value = 5738
+elseif v.name == 'GR'	then v.value = 104
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 14955
+elseif v.name == 'LR'	then v.value = 12680
+elseif v.name == 'GR'	then v.value = 127
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
+
+
+function INDUSTRIALCARCASEATINGGO()
+    repeat
+    INDUSTRIALCARCASEATING()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	INDUSTRIALTIM()
+    end
+	
+function INDUSTRIALCARCASEATING()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1411
+elseif v.name == 'LR'	then v.value = 9308
+elseif v.name == 'GR'	then v.value = 107
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -5776
+elseif v.name == 'LR'	then v.value = 8297
+elseif v.name == 'GR'	then v.value = 108
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1936
+elseif v.name == 'LR'	then v.value = 3002
+elseif v.name == 'GR'	then v.value = 105
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4271
+elseif v.name == 'LR'	then v.value = -4484
+elseif v.name == 'GR'	then v.value = 101
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8256
+elseif v.name == 'LR'	then v.value = -5085
+elseif v.name == 'GR'	then v.value = 118
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+
+function INDUSTRIALELOISE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 21472
+elseif v.name == 'LR'	then v.value = 6055
+elseif v.name == 'GR'	then v.value = 148
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function INDUSTRIALALBERT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 14665
+elseif v.name == 'LR'	then v.value = 7191
+elseif v.name == 'GR'	then v.value = 99
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function INDUSTRIALTIM()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1404
+elseif v.name == 'LR'	then v.value = 11967
+elseif v.name == 'GR'	then v.value = 92
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
 function INDUSTRIALHIGHWAY()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -8576,7 +9541,7 @@ end ---------------------------
 
 
 
-function INDUSTRIALROCKBITTER()
+function INDUSTRIALZOMBIE()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 22898
@@ -8589,7 +9554,7 @@ end ---------------------------
 
 
 
-function INDUSTRIALZOMBIE()
+function INDUSTRIALROCKBITTER()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 10493
@@ -8611,14 +9576,182 @@ menu = gg.choice({
 '3= INDUSTRIAL AREA',
 '4= NPC BENJAMIN',
 '5= NPC CLAUDE',
+'6= MONSTER - LIZARD (FARM)',
+'7= MONSTER - CACTUS (FARM)',
+'8= MONSTER - SCORPION (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
-))
-if menu == 1 then HIGHWAYSITEMOTEL() end
-if menu == 2 then HIGHWAYSITERUIN() end
-if menu == 3 then HIGHWAYSITEINDUSTRIAL() end
-if menu == 4 then HIGHWAYSITEBENJAMIN() end
-if menu == 5 then HIGHWAYSITECLAUDE() end
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then HIGHWAYSITEMOTEL()
+elseif menu == 2 then HIGHWAYSITERUIN()
+elseif menu == 3 then HIGHWAYSITEINDUSTRIAL()
+elseif menu == 4 then HIGHWAYSITEBENJAMIN()
+elseif menu == 5 then HIGHWAYSITECLAUDE()
+elseif menu == 6 then HIGHWAYSITELIZARDFARMGO()
+elseif menu == 7 then HIGHWAYSITECACTUSFARMGO()
+elseif menu == 8 then HIGHWAYSITESCORPIONGO()
 end
+end
+
+
+function HIGHWAYSITESCORPIONGO()
+    repeat
+    HIGHWAYSITESCORPION()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	HIGHWAYSITEZERO()
+    end
+	
+function HIGHWAYSITESCORPION()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4806
+elseif v.name == 'LR'	then v.value = 16658
+elseif v.name == 'GR'	then v.value = 173
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8440
+elseif v.name == 'LR'	then v.value = 19421
+elseif v.name == 'GR'	then v.value = 81
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5604
+elseif v.name == 'LR'	then v.value = 13814
+elseif v.name == 'GR'	then v.value = 277
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5879
+elseif v.name == 'LR'	then v.value = 10412
+elseif v.name == 'GR'	then v.value = 214
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2247
+elseif v.name == 'LR'	then v.value = 14725
+elseif v.name == 'GR'	then v.value = 465
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+
+function HIGHWAYSITECACTUSFARMGO()
+    repeat
+    HIGHWAYSITECACTUSFARM()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	HIGHWAYSITEZERO()
+    end
+	
+function HIGHWAYSITECACTUSFARM()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8631
+elseif v.name == 'LR'	then v.value = -22828
+elseif v.name == 'GR'	then v.value = -194
+gg.setValues(t)
+gg.sleep('10000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2727
+elseif v.name == 'LR'	then v.value = -5034
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -446
+elseif v.name == 'LR'	then v.value = 2951
+elseif v.name == 'GR'	then v.value = 112
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6944
+elseif v.name == 'LR'	then v.value = 670
+elseif v.name == 'GR'	then v.value = 235
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3689
+elseif v.name == 'LR'	then v.value = 12291
+elseif v.name == 'GR'	then v.value = 104
+gg.setValues(t)
+gg.sleep('8000')
+end
+end
+end ---------------------------
+
+
+function HIGHWAYSITELIZARDFARMGO()
+    repeat
+    HIGHWAYSITELIZARDFARM()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+	HIGHWAYSITEZERO()
+    end
+	
+function HIGHWAYSITELIZARDFARM()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1802
+elseif v.name == 'LR'	then v.value = 20573
+elseif v.name == 'GR'	then v.value = 117
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 635
+elseif v.name == 'LR'	then v.value = 20547
+elseif v.name == 'GR'	then v.value = 94
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2921
+elseif v.name == 'LR'	then v.value = 17411
+elseif v.name == 'GR'	then v.value = 74
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2120
+elseif v.name == 'LR'	then v.value = 10694
+elseif v.name == 'GR'	then v.value = 61
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2104
+elseif v.name == 'LR'	then v.value = 7458
+elseif v.name == 'GR'	then v.value = 137
+gg.setValues(t)
+gg.sleep('5000')
+end
+end
+end ---------------------------
+
 function HIGHWAYSITEMOTEL()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -8630,6 +9763,16 @@ end
 gg.setValues(t)
 end ---------------------------
 
+function HIGHWAYSITEZERO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1567
+elseif v.name == 'LR'	then v.value = -10974
+elseif v.name == 'GR'	then v.value = -2019
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 
 function HIGHWAYSITERUIN()
@@ -8681,7 +9824,6 @@ end
 end
 gg.setValues(t)
 end ---------------------------
-
 
 
 
@@ -10980,6 +12122,7 @@ menu = gg.choice({
 '5= REPAIR',
 '6= STORAGE',
 '7= NPC SABURO',
+'7= NPC IRMA',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then YVHIGHWAY() end
@@ -10989,7 +12132,20 @@ if menu == 4 then YVMARKET() end
 if menu == 5 then YVREPAIR() end
 if menu == 6 then YVSTORAGE() end
 if menu == 7 then YVSABURO() end
+if menu == 8 then YVIRMA() end
 end
+
+function YVIRMA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2119
+elseif v.name == 'LR'	then v.value = 6038
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 
 function YVSABURO()
 t = gg.getListItems()
@@ -11086,7 +12242,6 @@ end ---------------------------
 
 
 
-
 function GRAYTOWN()
 menu = gg.choice({
 '1= FOG FORREST',
@@ -11095,15 +12250,82 @@ menu = gg.choice({
 '4= MARKET',
 '5= REPAIR',
 '6= STORAGE',
+'7= NPC - HJOHN',
+'8= NPC - ROBERTO',
+'9= NPC - LYDIA',
+'10= NPC - REVOL',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
-))
-if menu == 1 then GTFOGFORREST() end
-if menu == 2 then GTGRAVE() end
-if menu == 3 then GTKUDA() end
-if menu == 4 then GTMARKET() end
-if menu == 5 then GTREPAIR() end
-if menu == 6 then GTSTORAGE() end
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then GTFOGFORREST()
+elseif menu == 2 then GTGRAVE()
+elseif menu == 3 then GTKUDA()
+elseif menu == 4 then GTMARKET()
+elseif menu == 5 then GTREPAIR()
+elseif menu == 6 then GTSTORAGE()
+elseif menu == 7 then GTHJOHN()
+elseif menu == 8 then GTROBERTO()
+elseif menu == 9 then GTLYDIA()
+elseif menu == 10 then GTREVOL()
 end
+end
+
+function GTSTORAGE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2890
+elseif v.name == 'LR'	then v.value = -109
+elseif v.name == 'GR'	then v.value = 856
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function GTREVOL()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 11812
+elseif v.name == 'LR'	then v.value = -6302
+elseif v.name == 'GR'	then v.value = 959
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function GTLYDIA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5226
+elseif v.name == 'LR'	then v.value = -5708
+elseif v.name == 'GR'	then v.value = 959
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function GTHJOHN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2806
+elseif v.name == 'LR'	then v.value = 5274
+elseif v.name == 'GR'	then v.value = 2114
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function GTROBERTO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10234
+elseif v.name == 'LR'	then v.value = -4855
+elseif v.name == 'GR'	then v.value = 985
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 function GTFOGFORREST()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -11166,23 +12388,6 @@ end
 end
 gg.setValues(t)
 end ---------------------------
-
-
-
-function GTSTORAGE()
-t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 2890
-elseif v.name == 'LR'	then v.value = -109
-elseif v.name == 'GR'	then v.value = 856
-end
-end
-gg.setValues(t)
-end ---------------------------
-
-
-
-
 
 
 
@@ -11549,7 +12754,7 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -8984
 	then
-	INDUSTRIAL()
+	INDUSTRIALGOA()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == 5182
 	then
@@ -11618,7 +12823,7 @@ end
 gg.setValues(t)
 end
 
-function INDUSTRIAL() -- INDUSTRIAL > GOA
+function INDUSTRIALGOA() -- INDUSTRIAL > GOA
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'		then v.value = -13950
@@ -11807,4 +13012,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---05052021
+--10052021
