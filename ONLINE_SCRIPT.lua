@@ -5618,6 +5618,7 @@ local menu = gg.choice({
 '3= MONSTER - MOLE (FARM)',
 '4= MONSTER - SLIME (FAMR)',
 '5= MOSNTER - WRAITH (FARM)',
+'6= NPC'
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -5626,8 +5627,11 @@ elseif menu == 2 then CAVEMOUNTAINDEEPBS()
 elseif menu == 3 then DEEPCAVEMOLEGO()
 elseif menu == 4 then DEEPCAVESLIMEGO()
 elseif menu == 5 then DEEPCAVEWRAITHGO()
+elseif menu == 6 then CAVEGIANTNPC()
 end
 end
+
+
 
 
 function DEEPCAVEWRAITHGO()
@@ -5694,6 +5698,7 @@ function DEEPCAVESLIMEGO()
     DEEPCAVESLIME()
     until gg.isVisible(true)
     gg.setVisible(false)
+	CAVEGIANTNPC()
     end
 	
 function DEEPCAVESLIME()
@@ -5745,6 +5750,7 @@ function DEEPCAVEMOLEGO()
     DEEPCAVEMOLE()
     until gg.isVisible(true)
     gg.setVisible(false)
+	CAVEGIANTNPC()
     end
 	
 function DEEPCAVEMOLE()
@@ -6019,13 +6025,13 @@ end
 
 function CAVEMOUNTAINONEDEMONGO()
     repeat
-    CAVEMOUNTAINONEDEMONGO()
+    CAVEMOUNTAINONEDEMON()
     until gg.isVisible(true)
     gg.setVisible(false)
 	CAVEOBLIVIONNPC()
     end
 	
-function CAVEMOUNTAINONEDEMONGO()
+function CAVEMOUNTAINONEDEMON()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 3023
@@ -6184,9 +6190,9 @@ end ---------------------------
 function CAVEGIANTBS()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 9600
-elseif v.name == 'LR'	then v.value = 10800
-elseif v.name == 'GR'	then v.value = -2457
+	if v.name == 'UD'	then v.value = 9502
+elseif v.name == 'LR'	then v.value = 10884
+elseif v.name == 'GR'	then v.value = -2465
 end
 end
 gg.setValues(t)
@@ -7811,13 +7817,43 @@ menu = gg.choice({
 '2= WATERFALL',
 '3= WESTPLAIN',
 '4= CAVE',
+'5= NPC KOGIZO',
+'6= NPC TAMEKICHI',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
-))
-if menu == 1 then BACKLIMESTONEMAX() end
-if menu == 2 then BACKLIMESTONEWATERFALL() end
-if menu == 3 then BACKLIMESTONEWESTPLAIN() end
-if menu == 4 then BACKLIMESTONECAVE() end
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then BACKLIMESTONEMAX()
+elseif menu == 2 then BACKLIMESTONEWATERFALL()
+elseif menu == 3 then BACKLIMESTONEWESTPLAIN()
+elseif menu == 4 then BACKLIMESTONECAVE()
+elseif menu == 5 then BACKLIMESTONEKOGIZO()
+elseif menu == 6 then BACKLIMESTONETAMEKICHI()
 end
+end
+
+function BACKLIMESTONEKOGIZO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4154
+elseif v.name == 'LR'	then v.value = -877
+elseif v.name == 'GR'	then v.value = 1069
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function BACKLIMESTONETAMEKICHI()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3447
+elseif v.name == 'LR'	then v.value = -4798
+elseif v.name == 'GR'	then v.value = 570
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
 function BACKLIMESTONEWATERFALL()
 t = gg.getListItems()
 for i, v in ipairs(t) do
@@ -14530,4 +14566,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---10052021
+--12052021
