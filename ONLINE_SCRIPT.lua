@@ -7029,6 +7029,19 @@ elseif menu == 5 then ONINEARTOPGUNNERFARM()
 end
 end
 
+function ONINEARTOPCAMP()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -768
+elseif v.name == 'LR'	then v.value = 25
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
 function ONINEARTOPGUNNERFARM()
     repeat
     ONINEARTOPGUNNER()
@@ -11657,7 +11670,7 @@ end
 end
 end ---------------------------
 
-function CATACOMBAB()
+function CATACOMBANPC()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -711
