@@ -6147,7 +6147,7 @@ gg.sleep('5000')
 end
 end
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 4,146
+	if v.name == 'UD'	then v.value = 4146
 elseif v.name == 'LR'	then v.value = -7121
 elseif v.name == 'GR'	then v.value = 606
 gg.setValues(t)
