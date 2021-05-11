@@ -14268,7 +14268,7 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -1792
 	then
-	HIGHWAY()
+	HIGHWAYINDUSTRIAL()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -8984
 	then
@@ -14329,7 +14329,7 @@ end
 gg.setValues(t)
 end
 
-function HIGHWAY() -- HIGHWAY > INDUSTRIAL
+function HIGHWAYINDUSTRIAL() -- HIGHWAY > INDUSTRIAL
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'		then v.value = -6283
