@@ -7182,6 +7182,7 @@ function ONIROADCASTERFARM()
     ONIROADCASTER()
     until gg.isVisible(true)
     gg.setVisible(false)
+	ONIROADNPCA
     end
 	
 function ONIROADCASTER()
@@ -7231,6 +7232,16 @@ end
 gg.setValues(t)
 end ---------------------------
 
+function ONIROADNPCA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4222
+elseif v.name == 'LR'	then v.value = -10
+elseif v.name == 'GR'	then v.value = 1630
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 
 function ONIROADTRAIL()
@@ -7266,13 +7277,14 @@ function ONIANIMALGUNNERFARM()
     ONIANIMALGUNNER()
     until gg.isVisible(true)
     gg.setVisible(false)
+	ONIANIMALNPC()
     end
 	
 function ONIANIMALGUNNER()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -5960
-elseif v.name == 'LR'	then v.value = 6034
+elseif v.name == 'LR'	then v.value = -6034
 elseif v.name == 'GR'	then v.value = 3678
 gg.setValues(t)
 gg.sleep('6000')
@@ -7302,6 +7314,17 @@ gg.setValues(t)
 gg.sleep('8000')
 end
 end
+end ---------------------------
+
+function ONIANIMALNPC()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 16329
+elseif v.name == 'LR'	then v.value = -4059
+elseif v.name == 'GR'	then v.value = 5726
+end
+end
+gg.setValues(t)
 end ---------------------------
 
 function ONIANIMALSIDEROAD()
@@ -11399,16 +11422,18 @@ menu = gg.choice({
 '1= CATACOMB F1',
 '2= BOSS KYUBI',
 '3= NPC RODRIGUEZ',
-'4= MONSTER - BOW (FARM)',
-'5= MOSTER - MONK (FARM)',
+'4= NPC RODRIGUEZ SPOT2',
+'5= MONSTER - BOW (FARM)',
+'6= MOSTER - MONK (FARM)',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CATACOMBBA()
 elseif menu == 2 then CATACOMBBBOSS()
 elseif menu == 3 then CATACOMBBNPC()
-elseif menu == 4 then CATACOMBBBOWFARM()
-elseif menu == 5 then CATACOMBBMONKFAMR()
+elseif menu == 4 then CATACOMBBNPCA()
+elseif menu == 5 then CATACOMBBBOWFARM()
+elseif menu == 6 then CATACOMBBMONKFAMR()
 end
 end
 
@@ -11420,7 +11445,7 @@ function CATACOMBBMONKFAMR()
     CATACOMBBMONK()
     until gg.isVisible(true)
     gg.setVisible(false)
-	CATACOMBBNPC()
+	CATACOMBBNPCA()
     end
 	
 function CATACOMBBMONK()
@@ -11506,9 +11531,19 @@ end ---------------------------
 function CATACOMBBNPC()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -1384
-elseif v.name == 'LR'	then v.value = -4073
+	if v.name == 'UD'	then v.value = -1924
+elseif v.name == 'LR'	then v.value = -3957
 elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
+function CATACOMBBNPCA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -7420
+elseif v.name == 'LR'	then v.value = -1674
+elseif v.name == 'GR'	then v.value = -705
 end
 end
 gg.setValues(t)
@@ -11673,8 +11708,8 @@ end ---------------------------
 function CATACOMBANPC()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -711
-elseif v.name == 'LR'	then v.value = -719
+	if v.name == 'UD'	then v.value = -662
+elseif v.name == 'LR'	then v.value = -3064
 elseif v.name == 'GR'	then v.value = 1094
 end
 end
