@@ -9202,7 +9202,7 @@ end ---------------------------
 
 function BATTLEHUMINGBIRDFARM()
     repeat
-    BATTLEHUMINGBIRDFARM()
+    BATTLEHUMINGBIRD()
     until gg.isVisible(true)
     gg.setVisible(false)
 	BATTLEARISTOCRAT()
