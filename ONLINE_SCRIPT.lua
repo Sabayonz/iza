@@ -7182,7 +7182,7 @@ function ONIROADCASTERFARM()
     ONIROADCASTER()
     until gg.isVisible(true)
     gg.setVisible(false)
-	ONIROADNPCA
+	ONIROADNPCA()
     end
 	
 function ONIROADCASTER()
