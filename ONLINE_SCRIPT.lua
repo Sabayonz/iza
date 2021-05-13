@@ -20,30 +20,30 @@ gg.setVisible(true)
 function MM()
 mainmenu = -1
 local menu = gg.choice({
-'SCAN DATA = MENU',
 '🔯☯️TELEPORT☯️🔯',
+'SCAN DATA = MENU',
 'EXTRA MOD',
 'EVENT - ROCKBITTER',
 'CUSTOM SCRIPT',
 'BALON SPOT',
 'SPEED MOD',
 '🔯☯️TELEPORT EVENT☯️🔯',
-' ',
+'MANUAL MOVE',
 '🔯',
 'README !! ( SETUP )',
 '🔑🗝️UNLOCK🔑🗝️',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MAIN MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
-elseif menu == 1 then BSDUNLOCK()
-elseif menu == 2 then TELEPORT()
+elseif menu == 1 then TELEPORT()
+elseif menu == 2 then BSDUNLOCK()
 elseif menu == 3 then EXTRAMODUNLOCK()
-elseif menu == 4 then EVENTLBROCKBITTERGO() --EVENTGO (ROCKBITTER)
+elseif menu == 4 then EVENTLBROCKBITTERGO()
 elseif menu == 5 then CUSTOMSCRIPT()
 elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
 elseif menu == 8 then TELEPORTEVENT()
-elseif menu == 9 then MM()
+elseif menu == 9 then MANUALMOVE()
 elseif menu == 10 then MASTERMENUCEK()
 elseif menu == 11 then WAITZ()
 elseif menu == 12 then CEKSTATUS()
@@ -2294,6 +2294,87 @@ end ---------------------------
 --#####################################################################################
 --#####################################################################################
 --#####################################################################################
+
+
+function MANUALMOVE()
+menu = gg.choice({
+'1. MOVE UP',
+'2. MOVE DOWN',
+'3. MOVE RIGHT',
+'4. MOVE LEFT',
+'5. MOVE GROUND UP',
+'6. MOVE GROUND DOWN'},Last,' MANUAL MOVE ') or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then MANMOVEUP()
+elseif menu == 2 then MANMOVEDOWN()
+elseif menu == 3 then MANMOVERIGHT()
+elseif menu == 4 then MANMOVELEFT()
+elseif menu == 5 then MANMOVEGROUNDUP()
+elseif menu == 6 then MANMOVEGROUNDDOWN()
+end
+end
+	
+	
+function MANMOVEUP()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = (v.value + 500)
+end
+end
+gg.setValues(t)
+MANUALMOVE()
+end
+
+function MANMOVEDOWN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = (v.value - 500)
+end
+end
+gg.setValues(t)
+MANUALMOVE()
+end
+
+function MANMOVERIGHT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'LR'	then v.value = (v.value + 500)
+end
+end
+gg.setValues(t)
+MANUALMOVE()
+end
+
+function MANMOVELEFT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'LR'	then v.value = (v.value - 500)
+end
+end
+gg.setValues(t)
+MANUALMOVE()
+end
+
+function MANMOVEGROUNDUP()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'GR'	then v.value = (v.value + 500)
+end
+end
+gg.setValues(t)
+MANUALMOVE()
+end
+
+function MANMOVEGROUNDDOWN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'GR'	then v.value = (v.value - 500)
+end
+end
+gg.setValues(t)
+MANUALMOVE()
+end
+
 
 function GARDENOFJOYENTRANCE() --63225
 local menu = gg.choice({
@@ -14614,4 +14695,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---12052021
+--13052021
