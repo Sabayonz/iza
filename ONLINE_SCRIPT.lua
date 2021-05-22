@@ -124,8 +124,8 @@ gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(3)
 				t = gg.getResults(3)
 local r = gg.getResults(3)
-r[1].value = 2495
-r[2].value = -4771
+r[1].value = -6799
+r[2].value = 2477
 r[3].value = 94
 gg.setValues(r)
 gg.clearResults()
@@ -135,8 +135,8 @@ end
 function EVENTLBBWT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 2495
-elseif v.name == 'LR'	then v.value = -4771
+	if v.name == 'UD'	then v.value = -6799
+elseif v.name == 'LR'	then v.value = 2477
 elseif v.name == 'GR'	then v.value = 94
 elseif v.name == 'SPD'	then v.value = 1
 end
