@@ -8268,6 +8268,7 @@ menu = gg.choice({
 '11= NPC - TOSHIZO',
 '12= SEARCH NPC - GO (NO ARROW)',
 '13= TOXIC CLAY ETC SPOT',
+' ',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -8284,8 +8285,194 @@ elseif menu == 10 then MOUNTAINASSAULT()
 elseif menu == 11 then MOUNTAINTOSHIZO()
 elseif menu == 12 then MOUNTAINSEARCHNPC()
 elseif menu == 13 then MOUNTAINETCSPOT()
+elseif menu == 14 then SPOTGUNUNGXGO()
 end
 end
+
+
+function SPOTGUNUNGXGO()
+    repeat
+    SPOTGUNUNGX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function spotspingunung()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'FC'	then v.value = (v.value + 3200)
+end
+end
+gg.setValues(t)
+end
+
+function spingunungB()
+local c = 1
+repeat
+spotspingunung()
+gg.sleep('100')
+c = c + 1
+until c > 60
+end
+	
+function SPOTGUNUNGX()
+local a = 1
+repeat
+sptgununga()
+sptgunungb()
+sptgunungc()
+sptgunungd()
+sptgununge()
+sptgunungf()
+sptgunungg()
+sptgunungh()
+sptgunungi()
+sptgunungj()
+a = a + 1
+until a > 9999999999999
+end
+
+function sptgununga() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = -12182
+elseif v.name == 'LR'	then v.value = 566
+elseif v.name == 'GR'		then v.value = 72
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungb() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 428
+elseif v.name == 'LR'	then v.value = -3810
+elseif v.name == 'GR'		then v.value = 1471
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungc() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 6201
+elseif v.name == 'LR'	then v.value = 2137
+elseif v.name == 'GR'		then v.value = 1660
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungd() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 9432
+elseif v.name == 'LR'	then v.value = -2396
+elseif v.name == 'GR'		then v.value = 1634
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgununge() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 7127
+elseif v.name == 'LR'	then v.value = -4545
+elseif v.name == 'GR'		then v.value = 2546
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+
+function sptgunungf() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 12775
+elseif v.name == 'LR'	then v.value = -3440
+elseif v.name == 'GR'		then v.value = 2921
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungg() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 3124
+elseif v.name == 'LR'	then v.value = 5193
+elseif v.name == 'GR'		then v.value = 1474
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungh() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 9672
+elseif v.name == 'LR'	then v.value = -7538
+elseif v.name == 'GR'		then v.value = -150
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungi() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 5450
+elseif v.name == 'LR'	then v.value = -1903
+elseif v.name == 'GR'		then v.value = -262
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungj() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'		then v.value = 10741
+elseif v.name == 'LR'	then v.value = -161
+elseif v.name == 'GR'		then v.value = -997
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
 
 
 function MOUNTAINSEARCHNPC()
@@ -14695,4 +14882,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---13052021
+--28052021
