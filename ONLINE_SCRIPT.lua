@@ -3312,11 +3312,13 @@ function CAVEOLDWOOD() --63002
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+'3= BOSSING'
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEOLDWOODEX()
 elseif menu == 2 then CAVEOLDWOODBS()
+elseif menu == 3 then BOSSTROLLLV10GO()
 end
 end
 
@@ -3338,6 +3340,44 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -10944
 elseif v.name == 'LR'	then v.value = 1168
 elseif v.name == 'GR'	then v.value = -1417
+elseif v.name == 'FC'	then v.value = -21000
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function BOSSTROLLLV10GO()
+    repeat
+    BOSSTROLLLV10()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+
+function BOSSTROLLLV10()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 7447 -- bossspawn-cave
+	then OLDWOODCAVE()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 408 -- oldwoodgoa - boss
+	then CAVEOLDWOODBS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 319 -- dalam boss troll lv10
+	then INSIDEBOSSLV10()
+---------------------------------------------
+end
+end
+end
+
+function INSIDEBOSSLV10()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -157
+elseif v.name == 'LR'	then v.value = -178
+elseif v.name == 'GR'	then v.value = 93
+elseif v.name == 'FC'	then v.value = -5679
 end
 end
 gg.setValues(t)
@@ -13400,6 +13440,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -6832
 elseif v.name == 'LR'	then v.value = -10624
 elseif v.name == 'GR'	then v.value = 2504
+elseif v.name == 'FC'	then v.value = 2000
 end
 end
 gg.setValues(t)
@@ -14882,4 +14923,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---28052021
+--31052021
