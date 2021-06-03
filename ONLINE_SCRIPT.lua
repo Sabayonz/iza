@@ -3388,14 +3388,54 @@ local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
 '3= MOSNTER - FUNGUS',
+'4= BOSSING',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEWATERFALLEX()
 elseif menu == 2 then CAVEWATERFALLBS()
 elseif menu == 3 then CAVEWATERFALLFUNGUS()
+elseif menu == 4 then BOSSMINOGO()
 end
 end
+
+
+function BOSSMINOGO()
+    repeat
+    BOSSMINO()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+
+function BOSSMINO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 5544 -- bossspawn-cave
+	then WATERFALLCAVE()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 416 -- GOAWATERFALL - BOSS
+	then CAVEWATERFALLBS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 379 -- dalam boss MINO
+	then INSIDEBOSSMINO()
+---------------------------------------------
+end
+end
+end
+
+function INSIDEBOSSMINO()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -575
+elseif v.name == 'LR'	then v.value = 362
+elseif v.name == 'GR'	then v.value = 76
+elseif v.name == 'FC'	then v.value = -7233
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEWATERFALLFUNGUS()
 t = gg.getListItems()
@@ -3426,6 +3466,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -12064
 elseif v.name == 'LR'	then v.value = 13920
 elseif v.name == 'GR'	then v.value = -1945
+elseif v.name == 'FC'	then v.value = 27180
 end
 end
 gg.setValues(t)
@@ -14923,4 +14964,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---31052021
+--03062021
