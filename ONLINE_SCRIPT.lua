@@ -13429,6 +13429,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 2704
 elseif v.name == 'LR'	then v.value = -7472
 elseif v.name == 'GR'	then v.value = 904
+elseif v.name == 'FC'	then v.value = -17520
 end
 end
 gg.setValues(t)
