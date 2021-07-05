@@ -14860,7 +14860,7 @@ GIANTONE()
 GIANTTWO()
 GIANTTRI()
 a = a + 1
-until a > 55 -- detik
+until a > 60 -- detik
 TEMPMOVEA()
 end
 --############################################--
