@@ -3754,13 +3754,121 @@ function CAVEWESTPLAINWALRUS() --63046
 local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
+' ',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEWESTPLAINWALRUSEX()
 elseif menu == 2 then CAVEWESTPLAINWALRUSBS()
+elseif menu == 3 then SPOTwalrusXGO()
 end
 end
+
+
+function SPOTwalrusXGO()
+    repeat
+    SPOTwalrusX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function spotspinwalrus()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'FC'	then v.value = (v.value + 3200)
+end
+end
+gg.setValues(t)
+end
+
+function spinwalrusB()
+local c = 1
+repeat
+spotspinwalrus()
+gg.sleep('100')
+c = c + 1
+until c > 80
+end
+	
+function SPOTwalrusX()
+sptwalrusa()
+sptwalrusb()
+sptwalrusc()
+sptwalrusd()
+sptwalruse()
+end
+
+function sptwalrusa() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5121
+elseif v.name == 'LR'	then v.value = 10209
+elseif v.name == 'GR'	then v.value = -1661
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalrusb() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5099
+elseif v.name == 'LR'	then v.value = 5032
+elseif v.name == 'GR'	then v.value = -1661
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalrusc() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10214
+elseif v.name == 'LR'	then v.value = 3033
+elseif v.name == 'GR'	then v.value = -1149
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalrusd() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10292
+elseif v.name == 'LR'	then v.value = -2135
+elseif v.name == 'GR'	then v.value = -1149
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalruse() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -9
+elseif v.name == 'LR'	then v.value = 9
+elseif v.name == 'GR'	then v.value = -125
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+
 
 function CAVEWESTPLAINWALRUSEX()
 t = gg.getListItems()
@@ -8397,8 +8505,6 @@ until c > 60
 end
 	
 function SPOTGUNUNGX()
-local a = 1
-repeat
 sptgununga()
 sptgunungb()
 sptgunungc()
@@ -8409,8 +8515,6 @@ sptgunungg()
 sptgunungh()
 sptgunungi()
 sptgunungj()
-a = a + 1
-until a > 9999999999999
 end
 
 function sptgununga() --1
@@ -14965,4 +15069,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---03062021
+--22072021
