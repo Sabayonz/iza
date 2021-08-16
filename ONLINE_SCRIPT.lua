@@ -2013,6 +2013,9 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63131
 	then PVP()
 ---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 62994
+	then PVP()
+---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63039
 	then CAVECARLA()
 ---------------------------------------------
@@ -2737,12 +2740,127 @@ local menu = gg.choice({
 '1= EXIT',
 '2= PVP NPC',
 '3= NPC ESTEL',
+' ',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then PVPEX()
 elseif menu == 2 then PVPNPC()
 elseif menu == 3 then PVPESTEL()
+elseif menu == 4 then AUTOPVP()
+end
+end
+
+function AUTOPVP()
+    repeat
+    PVPFARM()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+
+function SEARCHNPCPVP()
+local gg = gg
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP)
+gg.searchNumber('156~157;1032~1033;125~126;0D;16384D::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber('156~157;1032~1033;125~126::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+local z = gg.getResults(3)
+z[1].value = 720
+z[2].value = 2540
+z[3].value = 125
+gg.setValues(z)
+gg.clearResults()
+end
+
+function SEARCHNPCPVPB()
+local gg = gg
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP)
+gg.searchNumber('155~158;1031~1034;124~127;0D;16384D::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber('155~158;1031~1034;124~127::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+local z = gg.getResults(3)
+z[1].value = -64
+z[2].value = 3573
+z[3].value = 125
+gg.setValues(z)
+gg.clearResults()
+end
+
+function PVPINA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 0
+elseif v.name == 'LR'	then v.value = -223
+elseif v.name == 'GR'	then v.value = 93
+elseif v.name == 'SPD'	then v.value = 20
+elseif v.name == 'FC'	then v.value = 16384
+end
+end
+gg.setValues(t)
+end
+
+function PVPINB()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 0
+elseif v.name == 'LR'	then v.value = 215
+elseif v.name == 'GR'	then v.value = 94
+elseif v.name == 'SPD'	then v.value = 20
+elseif v.name == 'FC'	then v.value = -16384
+end
+end
+gg.setValues(t)
+end
+
+
+function PVPAREAA()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -66
+elseif v.name == 'LR'	then v.value = 3573
+elseif v.name == 'GR'	then v.value = 94
+elseif v.name == 'SPD'	then v.value = 1
+elseif v.name == 'FC'	then v.value = -16384
+end
+end
+gg.setValues(t)
+SEARCHNPCPVPB()
+end
+
+function PVPAREAB()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 721
+elseif v.name == 'LR'	then v.value = 2540
+elseif v.name == 'GR'	then v.value = 94
+elseif v.name == 'SPD'	then v.value = 1
+end
+end
+gg.setValues(t)
+SEARCHNPCPVP()
+end
+
+
+function PVPFARM() -- MAIN CHUNK
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 4 --INSIDE PVP A
+	then
+	PVPINA()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -19 -- INSIDE PVP B
+	then
+	PVPINB()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 720 -- OUT FROM PVP
+	then
+	PVPAREAB()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -64 -- OUT FROM PVP
+	then
+	PVPAREAA()
+---------------------------------------------
+end
 end
 end
 
@@ -15069,4 +15187,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---22072021
+--16082021
