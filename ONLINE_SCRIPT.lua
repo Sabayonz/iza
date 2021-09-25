@@ -2791,7 +2791,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 0
 elseif v.name == 'LR'	then v.value = -223
 elseif v.name == 'GR'	then v.value = 93
-elseif v.name == 'SPD'	then v.value = 20
+elseif v.name == 'SPD'	then v.value = 35
 elseif v.name == 'FC'	then v.value = 16384
 end
 end
@@ -2804,7 +2804,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 0
 elseif v.name == 'LR'	then v.value = 215
 elseif v.name == 'GR'	then v.value = 94
-elseif v.name == 'SPD'	then v.value = 20
+elseif v.name == 'SPD'	then v.value = 35
 elseif v.name == 'FC'	then v.value = -16384
 end
 end
@@ -13737,6 +13737,8 @@ menu = gg.choice({
 '6= STORAGE',
 '7= STAIRS 1',
 '8= STAIRS 2',
+'9= REPAIR NPC',
+' ',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then MKEXIT() end
@@ -13747,6 +13749,8 @@ if menu == 5 then MKYELLOW() end
 if menu == 6 then MKSTORAGE() end
 if menu == 7 then MKSTA() end
 if menu == 8 then MKSTB() end
+if menu == 9 then MKREPAIR() end
+if menu == 10 then MKSPOT() end
 end
 function MKEXIT()
 t = gg.getListItems()
@@ -13811,7 +13815,16 @@ end
 gg.setValues(t)
 end ---------------------------
 
-
+function MKSPOT()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 0
+elseif v.name == 'LR'	then v.value = -9999
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function MKSTORAGE()
 t = gg.getListItems()
@@ -13824,6 +13837,16 @@ end
 gg.setValues(t)
 end ---------------------------
 
+function MKREPAIR()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 355
+elseif v.name == 'LR'	then v.value = 5440
+elseif v.name == 'GR'	then v.value = 94
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 
 function MKSTA()
@@ -15150,27 +15173,6 @@ end
 
 --########################################################--########################################################
 --########################################################--########################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
