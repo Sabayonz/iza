@@ -259,8 +259,8 @@ end
 --########################################################--########################################################
 --########################################################--########################################################
 
-local VERSIENOL = '/sdcard/Android/obb/com.asobimo.izanagiOfficial/main.780.com.asobimo.izanagiOfficial.obb'
-local VERSISATU = '/sdcard/Android/obb/com.asobimo.izanagiOfficial/main.781.com.asobimo.izanagiOfficial.obb'
+local VERSIENOL = ('/sdcard/Android/obb/com.asobimo.izanagiOfficial/main.780.com.asobimo.izanagiOfficial.obb')
+local VERSISATU = ('/sdcard/Android/obb/com.asobimo.izanagiOfficial/main.781.com.asobimo.izanagiOfficial.obb')
 
 
 local CUSTOM = '/sdcard/IZANAGI/CUSTOM.lua'
