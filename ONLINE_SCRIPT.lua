@@ -8445,6 +8445,7 @@ menu = gg.choice({
 '6= NPC HENDRIK',
 '7= MONSTER - ZOMBIE SPOT',
 '8= MONSTER - PANDARIDER SPOT',
+' ',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -8456,8 +8457,156 @@ elseif menu == 5 then EXTRACTB()
 elseif menu == 6 then NPCHENDRIK()
 elseif menu == 7 then BLUEBEARZOMBIEGO()
 elseif menu == 8 then BLUEBEARPANDAGO()
+elseif menu == 9 then SPOTBLUEBEARXGO()
 end
 end
+
+function SPOTBLUEBEARXGO()
+    repeat
+    SPOTBLUEBEARX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function SPOTBLUEBEARX()
+sptbluebeara()
+sptbluebearb()
+sptbluebearc()
+sptbluebeard()
+sptbluebeare()
+sptbluebearf()
+sptbluebearg()
+sptbluebearh()
+sptbluebeari()
+end
+
+function sptbluebeara()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10907
+elseif v.name == 'LR'	then v.value = 4385
+elseif v.name == 'GR'	then v.value = 864
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebearb()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 9703
+elseif v.name == 'LR'	then v.value = 2102
+elseif v.name == 'GR'	then v.value = 864
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebearc()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5048
+elseif v.name == 'LR'	then v.value = 6790
+elseif v.name == 'GR'	then v.value = 864
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebeard()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3081
+elseif v.name == 'LR'	then v.value = 7078
+elseif v.name == 'GR'	then v.value = -121
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebeare()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6211
+elseif v.name == 'LR'	then v.value = 2650
+elseif v.name == 'GR'	then v.value = -132
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebearf()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2529
+elseif v.name == 'LR'	then v.value = 84
+elseif v.name == 'GR'	then v.value = -132
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebearg()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10623
+elseif v.name == 'LR'	then v.value = -5036
+elseif v.name == 'GR'	then v.value = 130
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebearh()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6599
+elseif v.name == 'LR'	then v.value = -8019
+elseif v.name == 'GR'	then v.value = 364
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptbluebeari()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -8332
+elseif v.name == 'LR'	then v.value = -6734
+elseif v.name == 'GR'	then v.value = 124
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+
 
 function BLUEBEARPANDAGO()
 t = gg.getListItems()
@@ -15189,4 +15338,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---16082021
+--13/2/2022
