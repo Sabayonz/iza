@@ -8492,6 +8492,7 @@ elseif v.name == 'FC'	then v.value = 0
 end
 end
 gg.setValues(t)
+gg.sleep('1000')
 end
 
 function sptbluebeara()
