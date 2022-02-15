@@ -8478,6 +8478,20 @@ sptbluebearf()
 sptbluebearg()
 sptbluebearh()
 sptbluebeari()
+sptbluebearj()
+end
+
+function sptbluebearj()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1276
+elseif v.name == 'LR'	then v.value = -3815
+elseif v.name == 'GR'	then v.value = 1194
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
 end
 
 function sptbluebeara()
