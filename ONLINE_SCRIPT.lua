@@ -379,7 +379,6 @@ end
 
 function GSCAN()
 local gg = gg
-if io.open(VERSIENOL) ~= nil then
 	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP)
 gg.searchNumber('43343;-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::121', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::65', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -392,21 +391,7 @@ t[3].name = 'GR'
 t[4].name = 'SPD'
 			gg.addListItems(t)
 	gg.clearResults()
-elseif io.open(VERSISATU) ~= nil then
-	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-gg.searchNumber('43343;-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::121', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::65', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(4)
-				t = gg.getResults(4)
-t[1].name = 'UD'
-t[2].name = 'LR'
-t[3].name = 'GR'
-t[4].name = 'SPD'
-			gg.addListItems(t)
-	gg.clearResults()
-else gg.alert('OPERATION FAILED. NO DATA / NEED UPDATE') 
-end
+
 end
 
 function DSCAN()
