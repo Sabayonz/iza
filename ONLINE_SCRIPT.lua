@@ -2064,10 +2064,24 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63288
 	then EVENTLABIRIND()
 ---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63384 --BWT
+	then EVENTMENU()
 end
 end
 end
 ---------------------------------------------
+
+function EVENTMENU()
+local menu = gg.choice({
+'1= LABIRIN GOLD CHICK AUTO',
+'2= LABIRIN ROCKBBITTER AUTO',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then EVENTLBGOLDCHICKGO()()
+elseif menu == 2 then EVENTLBROCKBITTERGO()
+end
+end
 
 function EVENTLABIRINENTRANCE() --63117
 local menu = gg.choice({
@@ -15354,4 +15368,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---04/MAY/2022
+--18/MAY/2022
