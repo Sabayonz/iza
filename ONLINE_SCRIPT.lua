@@ -2052,16 +2052,16 @@ function TELEPORTEVENT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 ----------------------------
-	if v.name == 'MAP' and v.value == 63117
+	if v.name == 'MAP' and v.value == 63285
 	then EVENTLABIRINENTRANCE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63119
+	elseif v.name == 'MAP' and v.value == 63287
 	then EVENTLABIRINB()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63121
+	elseif v.name == 'MAP' and v.value == 63289
 	then EVENTLABIRINC()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63120
+	elseif v.name == 'MAP' and v.value == 63288
 	then EVENTLABIRIND()
 ---------------------------------------------
 end
