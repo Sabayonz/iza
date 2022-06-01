@@ -135,6 +135,7 @@ r[2].value = -1415
 r[3].value = 94
 gg.setValues(r)
 gg.clearResults()
+gg.sleep('15000')
 end
 
 
