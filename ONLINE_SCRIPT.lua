@@ -103,7 +103,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
 	if v.name == 'UD' and v.value == 1214 -- BWT
-	then ANABELSCANA()
+	then EVENTLBBWT()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
 	then EVENTLABIRINENTRANCED()
@@ -117,33 +117,36 @@ end
 
 
 function ANABELSCANA()
-POWERD()
+REMOVEANABELGR()
+REMOVEANABELUD()
+REMOVEANABELLR()
 local gg = gg
 	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('4D;-199~-197;911~912;77~99::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(3)
 t = gg.getResults(3)
-local r = gg.getResults(3)
-r[1].value = 1214
-r[2].value = -1415
-r[3].value = 94
-gg.setValues(r)
-gg.sleep('10000')
-r[1].value = 1214
-r[2].value = -1415
-r[3].value = 94
-gg.setValues(r)
+ t[1].value = '1214'
+ t[1].freeze = true
+ t[1].name = 'ANABELUD'
+ t[2].value = '-1415'
+ t[2].freeze = true
+ t[2].name = 'ANABELLR'
+  t[3].value = '94'
+ t[3].freeze = true
+ t[3].name = 'ANABELGR'
+gg.addListItems(t)
 gg.clearResults()
-gg.sleep('15000')
 end
+
+
 
 
 function EVENTLBBWT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -6799
-elseif v.name == 'LR'	then v.value = 2477
+	if v.name == 'UD'	then v.value = 1215
+elseif v.name == 'LR'	then v.value = -1415
 elseif v.name == 'GR'	then v.value = 94
 elseif v.name == 'SPD'	then v.value = 1
 end
@@ -158,7 +161,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
 	if v.name == 'UD' and v.value == 1214 -- BWT
-	then ANABELSCANA()
+	then EVENTLBBWT()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
 	then EVENTLBROCKBITTERA()
@@ -384,6 +387,10 @@ if menu[7] then GSCANSALON() end
 end
 
 function GSCAN()
+REMOVEGR()
+REMOVELR()
+REMOVEUD()
+REMOVESPD()
 local gg = gg
 	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('43434D;-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::121', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -401,6 +408,10 @@ t[4].name = 'SPD'
 end
 
 function GSCANSALON()
+REMOVEGR()
+REMOVELR()
+REMOVEUD()
+REMOVESPD()
 local gg = gg
 	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('43F;-90F;94F~95F;0;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -418,6 +429,7 @@ end
 
 
 function DSCAN()
+REMOVEFC()
 local gg = gg
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('4;51F;363.5F;125F;0F;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;16974080;9::69', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -432,7 +444,7 @@ end
 
 function AIMON()
 local gg = gg
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('467D;0;2500;100;180;0::21', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('0;2500;100;180;0::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('100;180::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -447,7 +459,7 @@ end
 
 function AIMONDUAL()
 local gg = gg
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('155D;0D;365;300;180;0D::21', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('365;300;180::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 local r = gg.getResults(4)
@@ -462,7 +474,7 @@ end
 function CTCD()
 local gg = gg
 	gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_OTHER )
 	gg.searchNumber('1~256;1~256;256;1~256;256;0::11', gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1)
 	gg.getResults(2)
 	gg.editAll('-512', gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -479,6 +491,7 @@ gg.clearResults()
 end
 
 function MSCAN() -- 			END BASIC SCAN
+REMOVEMAP()
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('63200~63500;0F;0F;0F;0F;0F;5F;0F~1F;5F;0F::50', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('63200~63500', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -15356,6 +15369,97 @@ gg.setValues(z)
 gg.clearResults()
 end
 
+function REMOVEANABELUD()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'ANABELUD' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVEANABELLR()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'ANABELLR' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVEANABELGR()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'ANABELGR' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+
+
+function REMOVEMAP()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'MAP' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVEFC()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'FC' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVEUD()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'UD' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVELR()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'LR' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVEGR()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'GR' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
+
+function REMOVESPD()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name ~= 'SPD' then
+	t[i] = nil
+end
+end
+gg.removeListItems(t)
+end
 
 --########################################################--########################################################
 --########################################################--########################################################
@@ -15375,4 +15479,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---18/MAY/2022
+--1/JUNE/2022
