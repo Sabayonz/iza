@@ -128,6 +128,11 @@ r[1].value = -6799
 r[2].value = 2477
 r[3].value = 94
 gg.setValues(r)
+	gg.sleep('5000')
+r[1].value = -6799
+r[2].value = 2477
+r[3].value = 94
+gg.setValues(r)
 gg.clearResults()
 end
 
