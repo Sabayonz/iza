@@ -103,7 +103,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
 	if v.name == 'UD' and v.value == 1214 -- BWT
-	then EVENTLBBWT()
+	then ANABELSCANA()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
 	then EVENTLABIRINENTRANCED()
@@ -117,18 +117,19 @@ end
 
 
 function ANABELSCANA()
+POWERD()
 local gg = gg
 	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP)
 gg.searchNumber('4D;-199~-197;911~912;77~99::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(3)
-				t = gg.getResults(3)
+t = gg.getResults(3)
 local r = gg.getResults(3)
 r[1].value = -6799
 r[2].value = 2477
 r[3].value = 94
 gg.setValues(r)
-	gg.sleep('5000')
+gg.sleep('5000')
 r[1].value = -6799
 r[2].value = 2477
 r[3].value = 94
@@ -156,7 +157,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
 	if v.name == 'UD' and v.value == 1214 -- BWT
-	then EVENTLBBWT()
+	then ANABELSCANA()
 ---------------------------------------------
 	elseif v.name == 'UD' and v.value == -128 -- MAP AWAL
 	then EVENTLBROCKBITTERA()
