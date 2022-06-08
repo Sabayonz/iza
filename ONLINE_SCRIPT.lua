@@ -14343,7 +14343,8 @@ menu = gg.choice({
 '8= STORAGE',
 '9= NPC MEDAL',
 '10= NPC IRMA',
-'11= NPC OLCOT'
+'11= NPC OLCOT',
+'12= NPC ANABEL'
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then BWTWESTPLAIN() end
@@ -14357,7 +14358,21 @@ if menu == 8 then BWTSTORAGE() end
 if menu == 9 then BWTNPCMEDAL() end
 if menu == 10 then BWTNPCIRMA() end
 if menu == 11 then BWTNPCOLCOT() end
+if menu == 12 then BWTNPCANABEL() end
 end
+
+function BWTNPCANABEL()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -155
+elseif v.name == 'LR'	then v.value = 847
+elseif v.name == 'GR'	then v.value = 105
+elseif v.name == 'SPD'	then v.value = 1
+elseif v.name == 'FC'	then v.value = 24228
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 
 
