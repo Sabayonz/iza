@@ -474,7 +474,7 @@ end
 function CTCD()
 local gg = gg
 	gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_OTHER )
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_BSS)
 	gg.searchNumber('1~256;1~256;256;1~256;256;0::11', gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1)
 	gg.getResults(2)
 	gg.editAll('-512', gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1)
