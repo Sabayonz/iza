@@ -15373,7 +15373,7 @@ end
 
 function SEARCHNPC()
 local gg = gg
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber('5626~5627;-8452~-8451;-946~-939;0D;32039D::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber('5626~5627;-8452~-8451;-946~-939::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 local z = gg.getResults(3)
@@ -15494,4 +15494,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---1/JUNE/2022
+--12/JULY/2022
