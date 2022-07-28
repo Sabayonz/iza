@@ -13990,6 +13990,7 @@ menu = gg.choice({
 '8= MONSTER - CHICK',
 '9= MONSTER - BIRD',
 '10= MONSTER - TRENGGILING',
+'11= EVENT TREASURE HUNT',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then WESTPLAINBWT() end
@@ -14002,6 +14003,7 @@ if menu == 7 then WESTPLAINNPCRECOM() end
 if menu == 8 then WESTPLAINCHICK() end
 if menu == 9 then WESTPLAINBIRD() end
 if menu == 10 then WESTPLAINTRENGGILING() end
+if menu == 11 then ETHWPGO() end
 end
 
 
