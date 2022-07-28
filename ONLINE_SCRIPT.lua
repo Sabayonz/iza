@@ -2244,7 +2244,7 @@ t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -9528
 elseif v.name == 'LR'	then v.value = 46
-elseif v.name == 'GR'	then v.value = 1400
+elseif v.name == 'GR'	then v.value = 1630
 elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 220
 end
