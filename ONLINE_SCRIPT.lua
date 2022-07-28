@@ -2470,10 +2470,10 @@ function EVWPF2425()
 gg.sleep("1000")
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 4115
-elseif v.name == 'LR'	then v.value = 6060
-elseif v.name == 'GR'	then v.value = 386
-elseif v.name == 'FC'	then v.value = -17546
+	if v.name == 'UD'	then v.value = 3347
+elseif v.name == 'LR'	then v.value = 4266
+elseif v.name == 'GR'	then v.value = 836
+elseif v.name == 'FC'	then v.value = 6424
 end
 end
 gg.setValues(t)
