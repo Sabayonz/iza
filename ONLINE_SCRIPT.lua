@@ -2432,7 +2432,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 2742
 elseif v.name == 'LR'	then v.value = 5135
 elseif v.name == 'GR'	then v.value = 376
-elseif v.name == 'FC'	then v.value = -31840
+elseif v.name == 'FC'	then v.value = -25512
 end
 end
 gg.setValues(t)
@@ -15983,4 +15983,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---12/JULY/2022
+--28/JULY/2022
