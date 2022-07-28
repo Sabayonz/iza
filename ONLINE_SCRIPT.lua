@@ -2090,18 +2090,505 @@ end
 end
 end
 ---------------------------------------------
-
 function EVENTMENU()
 local menu = gg.choice({
 '1= LABIRIN GOLD CHICK AUTO',
 '2= LABIRIN ROCKBBITTER AUTO',
+'3= TREASURE HUNT WESTPLAIN AUTO',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
-elseif menu == 1 then EVENTLBGOLDCHICKGO()()
+elseif menu == 1 then EVENTLBGOLDCHICKGO()
 elseif menu == 2 then EVENTLBROCKBITTERGO()
+elseif menu == 3 then ETHWPGO()
 end
 end
+
+function ETHWPGO()
+    repeat
+    EVENTTREASUREHUNTWESTPLAIN()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function EVENTTREASUREHUNTWESTPLAIN() --ETHWP
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == -10321
+	then
+	ETHWPNPC()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63423
+	then
+	REPEVWPX()
+	REPEVWPY()
+	REPEVWPZ()
+	REPEVWPA23()
+	REPEVWPB23()
+	REPEVWPC23()
+	REPEVWPD23()
+	REPEVWPE23()
+	REPEVWPF23()
+	REPEVWPG23()
+	REPBOSSEVWPH2324()
+	gg.sleep("30000")
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63424
+	then
+	REPEVWPX()
+	REPEVWPY()
+	REPEVWPZ()
+	REPEVWPA2425()
+	REPEVWPB2425()
+	REPEVWPC2425()
+	REPEVWPD2425()
+	REPEVWPE2425()
+	REPEVWPF2425()
+	REPEVWPG2425()
+	REPBOSSEVWPH2324()
+	gg.sleep("30000")
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63425
+	then
+	REPEVWPX()
+	REPEVWPY()
+	REPEVWPZ()
+	REPEVWPA2425()
+	REPEVWPB2425()
+	REPEVWPC2425()
+	REPEVWPD2425()
+	REPEVWPE2425()
+	REPEVWPF2425()
+	REPEVWPG2425()
+	REPBOSSEVWPH25()
+	gg.sleep("30000")
+---------------------------------------------
+end
+end
+end
+
+function ETHWPNPC() -- MOVE NPC
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -10320
+elseif v.name == 'LR'	then v.value = -16669
+elseif v.name == 'GR'	then v.value = 1157
+elseif v.name == 'SPD'	then v.value = 1
+elseif v.name == 'FC'	then v.value = 14330
+end
+end
+gg.setValues(t)
+SEARCHNPCWESTPLAIN()
+end
+
+
+function SEARCHNPCWESTPLAIN()
+local gg = gg
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
+gg.searchNumber('-11068~-11066;-16398~-16396;1256~1257;0D;62441D::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber('-11068~-11066;-16398~-16396;1256~1257::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+local z = gg.getResults(3)
+z[1].value = -10320
+z[2].value = -16669
+z[3].value = 1157
+gg.setValues(z)
+gg.clearResults()
+end
+
+function EVWPX()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -12901
+elseif v.name == 'LR'	then v.value = 566
+elseif v.name == 'GR'	then v.value = 1400
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = -24156
+end
+end
+gg.setValues(t)
+end
+function REPEVWPX()
+local a = 1
+repeat
+EVWPX()
+a = a + 1
+until a > 17 -- detik
+end
+
+function EVWPY()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -11262
+elseif v.name == 'LR'	then v.value = -67
+elseif v.name == 'GR'	then v.value = 1400
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 1817
+end
+end
+gg.setValues(t)
+end
+function REPEVWPY()
+local a = 1
+repeat
+EVWPY()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPZ()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -9528
+elseif v.name == 'LR'	then v.value = 46
+elseif v.name == 'GR'	then v.value = 1400
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 220
+end
+end
+gg.setValues(t)
+end
+function REPEVWPZ()
+local a = 1
+repeat
+EVWPZ()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+function EVWPA2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3296
+elseif v.name == 'LR'	then v.value = -1203
+elseif v.name == 'GR'	then v.value = 1144
+elseif v.name == 'FC'	then v.value = 19744
+end
+end
+gg.setValues(t)
+end
+function REPEVWPA2425()
+local a = 1
+repeat
+EVWPA2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPA23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3090
+elseif v.name == 'LR'	then v.value = 1173
+elseif v.name == 'GR'	then v.value = 1083
+elseif v.name == 'FC'	then v.value = -16456
+end
+end
+gg.setValues(t)
+end
+function REPEVWPA23()
+local a = 1
+repeat
+EVWPA23()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+function EVWPB2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3333
+elseif v.name == 'LR'	then v.value = 2252
+elseif v.name == 'GR'	then v.value = 555
+elseif v.name == 'FC'	then v.value = 17500
+end
+end
+gg.setValues(t)
+end
+function REPEVWPB2425()
+local a = 1
+repeat
+EVWPB2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+function EVWPB23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -2992
+elseif v.name == 'LR'	then v.value = -1653
+elseif v.name == 'GR'	then v.value = 898
+elseif v.name == 'FC'	then v.value = -14662
+end
+end
+gg.setValues(t)
+end
+function REPEVWPB23()
+local a = 1
+repeat
+EVWPB23()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPC2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3052
+elseif v.name == 'LR'	then v.value = 4358
+elseif v.name == 'GR'	then v.value = 386
+elseif v.name == 'FC'	then v.value = 16207
+end
+end
+gg.setValues(t)
+end
+function REPEVWPC2425()
+local a = 1
+repeat
+EVWPC2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPC23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -3033
+elseif v.name == 'LR'	then v.value = -3768
+elseif v.name == 'GR'	then v.value = 898
+elseif v.name == 'FC'	then v.value = -15343
+end
+end
+gg.setValues(t)
+end
+function REPEVWPC23()
+local a = 1
+repeat
+EVWPC23()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+function EVWPD2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -1165
+elseif v.name == 'LR'	then v.value = 5027
+elseif v.name == 'GR'	then v.value = 391
+elseif v.name == 'FC'	then v.value = -3056
+end
+end
+gg.setValues(t)
+end
+function REPEVWPD2425()
+local a = 1
+repeat
+EVWPD2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPD23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -716
+elseif v.name == 'LR'	then v.value = -5028
+elseif v.name == 'GR'	then v.value = 823
+elseif v.name == 'FC'	then v.value = 2492
+end
+end
+gg.setValues(t)
+end
+function REPEVWPD23()
+local a = 1
+repeat
+EVWPD23()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+
+function EVWPE2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 2742
+elseif v.name == 'LR'	then v.value = 5135
+elseif v.name == 'GR'	then v.value = 376
+elseif v.name == 'FC'	then v.value = -31840
+end
+end
+gg.setValues(t)
+end
+function REPEVWPE2425()
+local a = 1
+repeat
+EVWPE2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPE23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1241
+elseif v.name == 'LR'	then v.value = -5042
+elseif v.name == 'GR'	then v.value = 327
+elseif v.name == 'FC'	then v.value = 2492
+end
+end
+gg.setValues(t)
+end
+function REPEVWPE23()
+local a = 1
+repeat
+EVWPE23()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+function EVWPF2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4115
+elseif v.name == 'LR'	then v.value = 6060
+elseif v.name == 'GR'	then v.value = 386
+elseif v.name == 'FC'	then v.value = -17546
+end
+end
+gg.setValues(t)
+end
+function REPEVWPF2425()
+local a = 1
+repeat
+EVWPF2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPF23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 3261
+elseif v.name == 'LR'	then v.value = -5041
+elseif v.name == 'GR'	then v.value = -134
+elseif v.name == 'FC'	then v.value = 2492
+end
+end
+gg.setValues(t)
+end
+function REPEVWPF23()
+local a = 1
+repeat
+EVWPF23()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+
+function EVWPG2425()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6117
+elseif v.name == 'LR'	then v.value = 1948
+elseif v.name == 'GR'	then v.value = -646
+elseif v.name == 'FC'	then v.value = 12736
+end
+end
+gg.setValues(t)
+end
+function REPEVWPG2425()
+local a = 1
+repeat
+EVWPG2425()
+a = a + 1
+until a > 12 -- detik
+end
+
+function EVWPG23()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 6144
+elseif v.name == 'LR'	then v.value = -2554
+elseif v.name == 'GR'	then v.value = -647
+elseif v.name == 'FC'	then v.value = -15928
+end
+end
+gg.setValues(t)
+end
+function REPEVWPG23()
+local a = 1
+repeat
+EVWPG23()
+a = a + 1
+until a > 12 -- detik
+end
+
+
+function BOSSEVWPH2324()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 7325
+elseif v.name == 'LR'	then v.value = -1230
+elseif v.name == 'GR'	then v.value = -640
+elseif v.name == 'FC'	then v.value = 20925
+end
+end
+gg.setValues(t)
+end
+function REPBOSSEVWPH2324()
+local a = 1
+repeat
+BOSSEVWPH2324()
+a = a + 1
+until a > 12 -- detik
+end
+
+function BOSSEVWPH25()
+gg.sleep("1000")
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4188
+elseif v.name == 'LR'	then v.value = 6853
+elseif v.name == 'GR'	then v.value = 376
+elseif v.name == 'FC'	then v.value = 15940
+end
+end
+gg.setValues(t)
+end
+function REPBOSSEVWPH25()
+local a = 1
+repeat
+BOSSEVWPH25()
+a = a + 1
+until a > 12 -- detik
+end
+
 
 function EVENTLABIRINENTRANCE() --63117
 local menu = gg.choice({
