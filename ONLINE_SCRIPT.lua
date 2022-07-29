@@ -2553,10 +2553,10 @@ function BOSSEVWPH2324()
 gg.sleep("1000")
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 7325
-elseif v.name == 'LR'	then v.value = -1230
+	if v.name == 'UD'	then v.value = 5066
+elseif v.name == 'LR'	then v.value = -927
 elseif v.name == 'GR'	then v.value = -640
-elseif v.name == 'FC'	then v.value = 20925
+elseif v.name == 'FC'	then v.value = 2808
 end
 end
 gg.setValues(t)
