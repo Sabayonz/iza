@@ -2171,11 +2171,11 @@ end
 function ETHWPNPC() -- MOVE NPC
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -10320
-elseif v.name == 'LR'	then v.value = -16669
-elseif v.name == 'GR'	then v.value = 1157
+	if v.name == 'UD'	then v.value = -3053
+elseif v.name == 'LR'	then v.value = -1986
+elseif v.name == 'GR'	then v.value = -856
 elseif v.name == 'SPD'	then v.value = 1
-elseif v.name == 'FC'	then v.value = 14330
+elseif v.name == 'FC'	then v.value = -926
 end
 end
 gg.setValues(t)
@@ -2189,9 +2189,9 @@ gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REG
 gg.searchNumber('-11068~-11066;-16398~-16396;1256~1257;0D;62441D::17', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber('-11068~-11066;-16398~-16396;1256~1257::', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 local z = gg.getResults(3)
-z[1].value = -10320
-z[2].value = -16669
-z[3].value = 1157
+z[1].value = -3053
+z[2].value = -1986
+z[3].value = -856
 gg.setValues(z)
 gg.clearResults()
 end
