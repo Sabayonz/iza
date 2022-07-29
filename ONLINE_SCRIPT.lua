@@ -2512,10 +2512,10 @@ function EVWPG2425()
 gg.sleep("1000")
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 6117
-elseif v.name == 'LR'	then v.value = 1948
-elseif v.name == 'GR'	then v.value = -646
-elseif v.name == 'FC'	then v.value = 12736
+	if v.name == 'UD'	then v.value = 5504
+elseif v.name == 'LR'	then v.value = 3596
+elseif v.name == 'GR'	then v.value = 0
+elseif v.name == 'FC'	then v.value = 63183
 end
 end
 gg.setValues(t)
@@ -2532,10 +2532,10 @@ function EVWPG23()
 gg.sleep("1000")
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 6144
-elseif v.name == 'LR'	then v.value = -2554
-elseif v.name == 'GR'	then v.value = -647
-elseif v.name == 'FC'	then v.value = -15928
+	if v.name == 'UD'	then v.value = 5673
+elseif v.name == 'LR'	then v.value = -3251
+elseif v.name == 'GR'	then v.value = -414
+elseif v.name == 'FC'	then v.value = 63183
 end
 end
 gg.setValues(t)
