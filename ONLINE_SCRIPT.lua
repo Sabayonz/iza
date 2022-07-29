@@ -2573,10 +2573,10 @@ function BOSSEVWPH25()
 gg.sleep("1000")
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 4188
-elseif v.name == 'LR'	then v.value = 6853
-elseif v.name == 'GR'	then v.value = 376
-elseif v.name == 'FC'	then v.value = 15940
+	if v.name == 'UD'	then v.value = 6870
+elseif v.name == 'LR'	then v.value = -496
+elseif v.name == 'GR'	then v.value = -640
+elseif v.name == 'FC'	then v.value = 26991
 end
 end
 gg.setValues(t)
@@ -2588,6 +2588,9 @@ BOSSEVWPH25()
 a = a + 1
 until a > 12 -- detik
 end
+
+--===============================================================
+--================================================================
 
 
 function EVENTLABIRINENTRANCE() --63117
