@@ -6554,6 +6554,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 13712
 elseif v.name == 'LR'	then v.value = 4160
 elseif v.name == 'GR'	then v.value = -1945
+elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 11000
 end
 end
