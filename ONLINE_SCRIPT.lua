@@ -6496,9 +6496,45 @@ local menu = gg.choice({
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEDEATHEX()
-elseif menu == 2 then CAVEDEATHBS()
+elseif menu == 2 then DIRTYHETEROPODAFARM()
 end
 end
+
+function DIRTYHETEROPODAFARM()
+CAVEDEATHBS()
+    repeat
+    DIRTYHETEROPODA()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+
+function DIRTYHETEROPODA() -- MAIN CHUNK
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 13283
+	then
+	CAVEDEATHBS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 1520
+	then
+	DIRTYHETEROBOS()
+---------------------------------------------
+end
+end
+end
+
+function DIRTYHETEROBOS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 1521
+elseif v.name == 'LR'	then v.value = 676
+elseif v.name == 'GR'	then v.value = 544
+end
+end
+gg.setValues(t)
+end ---------------------------
 
 function CAVEDEATHEX()
 t = gg.getListItems()
@@ -6518,6 +6554,7 @@ for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = 13712
 elseif v.name == 'LR'	then v.value = 4160
 elseif v.name == 'GR'	then v.value = -1945
+elseif v.name == 'FC'	then v.value = 11000
 end
 end
 gg.setValues(t)
