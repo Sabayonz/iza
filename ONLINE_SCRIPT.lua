@@ -4430,7 +4430,7 @@ repeat
 spotspinwalrus()
 gg.sleep('100')
 c = c + 1
-until c > 80
+until c > 100
 end
 	
 function SPOTwalrusX()
@@ -4439,14 +4439,19 @@ sptwalrusb()
 sptwalrusc()
 sptwalrusd()
 sptwalruse()
+sptwalrusf()
+sptwalrusg()
+sptwalrush()
+sptwalrusi()
+sptwalrusj()
 end
 
 function sptwalrusa() --1
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 5121
-elseif v.name == 'LR'	then v.value = 10209
-elseif v.name == 'GR'	then v.value = -1661
+	if v.name == 'UD'	then v.value = -5122
+elseif v.name == 'LR'	then v.value = -7181
+elseif v.name == 'GR'	then v.value = 888
 elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 0
 end
@@ -4458,9 +4463,9 @@ end
 function sptwalrusb() --1
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 5099
-elseif v.name == 'LR'	then v.value = 5032
-elseif v.name == 'GR'	then v.value = -1661
+	if v.name == 'UD'	then v.value = -10226
+elseif v.name == 'LR'	then v.value = -9133
+elseif v.name == 'GR'	then v.value = 372
 elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 0
 end
@@ -4472,9 +4477,9 @@ end
 function sptwalrusc() --1
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 10214
-elseif v.name == 'LR'	then v.value = 3033
-elseif v.name == 'GR'	then v.value = -1149
+	if v.name == 'UD'	then v.value = -259
+elseif v.name == 'LR'	then v.value = -7245
+elseif v.name == 'GR'	then v.value = 376
 elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 0
 end
@@ -4486,9 +4491,9 @@ end
 function sptwalrusd() --1
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = 10292
-elseif v.name == 'LR'	then v.value = -2135
-elseif v.name == 'GR'	then v.value = -1149
+	if v.name == 'UD'	then v.value = -54
+elseif v.name == 'LR'	then v.value = -149
+elseif v.name == 'GR'	then v.value = -125
 elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 0
 end
@@ -4500,8 +4505,8 @@ end
 function sptwalruse() --1
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -9
-elseif v.name == 'LR'	then v.value = 9
+	if v.name == 'UD'	then v.value = 5093
+elseif v.name == 'LR'	then v.value = -11270
 elseif v.name == 'GR'	then v.value = -125
 elseif v.name == 'SPD'	then v.value = 60
 elseif v.name == 'FC'	then v.value = 0
@@ -4510,6 +4515,79 @@ end
 gg.setValues(t)
 spinwalrusB()
 end
+
+function sptwalrusf() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10283
+elseif v.name == 'LR'	then v.value = -7221
+elseif v.name == 'GR'	then v.value = -1149
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalrusg() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10312
+elseif v.name == 'LR'	then v.value = -2129
+elseif v.name == 'GR'	then v.value = -1149
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalrush() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 10214
+elseif v.name == 'LR'	then v.value = 3061
+elseif v.name == 'GR'	then v.value = -1149
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+function sptwalrusi() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5129
+elseif v.name == 'LR'	then v.value = 5143
+elseif v.name == 'GR'	then v.value = -1661
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+
+function sptwalrusj() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5085
+elseif v.name == 'LR'	then v.value = 10161
+elseif v.name == 'GR'	then v.value = -1661
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spinwalrusB()
+end
+
+
 
 
 
@@ -16024,4 +16102,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---28/JULY/2022
+--23/SEPTEMBER/2022
