@@ -9440,6 +9440,9 @@ sptgunungg()
 sptgunungh()
 sptgunungi()
 sptgunungj()
+sptgunungk()
+sptgunungl()
+sptgunungm()
 end
 
 function sptgununga() --1
@@ -9583,6 +9586,47 @@ gg.setValues(t)
 spingunungB()
 end
 
+function sptgunungk() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 4044
+elseif v.name == 'LR'	then v.value = 310
+elseif v.name == 'GR'	then v.value = 1547
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungl() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 8310
+elseif v.name == 'LR'	then v.value = -1201
+elseif v.name == 'GR'	then v.value = 1530
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
+
+function sptgunungm() --1
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 11043
+elseif v.name == 'LR'	then v.value = -5401
+elseif v.name == 'GR'	then v.value = 2777
+elseif v.name == 'SPD'	then v.value = 60
+elseif v.name == 'FC'	then v.value = 0
+end
+end
+gg.setValues(t)
+spingunungB()
+end
 
 
 function MOUNTAINSEARCHNPC()
