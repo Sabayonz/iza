@@ -9426,7 +9426,7 @@ repeat
 spotspingunung()
 gg.sleep('100')
 c = c + 1
-until c > 60
+until c > 50
 end
 	
 function SPOTGUNUNGX()
