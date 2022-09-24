@@ -73,13 +73,13 @@ end
 
 function MASTERMENU()
 menu = gg.choice({
-'1. AUTO - SANCTUM100 FULL',
+'1. NIL',
 '2. NIL',
 '3. NIL',
 '4. NIL',
 '5. NIL'},Last,' MASTER MENU ') or nil
 if menu == nil then gg.setVisible(false) return nil
-elseif menu == 1 then AUTOSANC100()
+elseif menu == 1 then NODATA()
 elseif menu == 2 then NODATA()
 elseif menu == 3 then NODATA()
 elseif menu == 4 then NODATA()
@@ -4430,7 +4430,7 @@ repeat
 spotspinwalrus()
 gg.sleep('100')
 c = c + 1
-until c > 50
+until c > 100
 end
 	
 function SPOTwalrusX()
@@ -5735,12 +5735,14 @@ local menu = gg.choice({
 '1= EXIT',
 '2= BOSS',
 '3= NPC SANCTUM',
+'			',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
 elseif menu == 1 then CAVEFOREMANEX()
 elseif menu == 2 then CAVEFOREMANBS()
 elseif menu == 3 then CAVEFOREMANNPC()
+elseif menu == 4 then AUTOSANC100()
 end
 end
 
@@ -16102,4 +16104,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---23/SEPTEMBER/2022
+--24/september/2022
