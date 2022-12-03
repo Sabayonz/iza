@@ -398,7 +398,7 @@ REMOVEFC()
 REMOVEMAP()
 local gg = gg
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber(";0D;0D;1.0F;1.0F;1.0F;1.0F::93", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("6.08752079e-41F;0D;0D;1.0F;1.0F;1.0F;1.0F::93", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 
 local t = gg.getResults(9999, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'UD'
