@@ -10,6 +10,12 @@ if game ~= 'com.asobimo.izanagiOfficial' then
     gg.alert(' JOKE LOL\nRELAX 🤣🤣😆😆😆 ','EXIT➡️')
     os.exit()
 end
+local v = gg.getTargetInfo() -- version 2.8.3
+if v.versionCode ~= 810 then
+    gg.alert('EXPIRED VERSION, NEED UPDATE')
+    os.exit()
+end
+
 --######################################################
 --main menu 
 gg.toast('CONNECTION SUCCESS')
@@ -368,43 +374,60 @@ end
 
 function BSD() --				START BASIC SCAN
 menu = gg.multiChoice({
-'1. GROUND SCAN',
-'2. DIRECTION SCAN',
-'3. GUN AIMBOT',
-'4. DUALWIELD AIMBOT',
-'5. DISABLE CT CD',
-'6. MAP SCAN',
-'7. GROUND SCAN SALON',
+'1. BASIC SCAN (MANDATORY)',
+'2. GUN AIMBOT',
+'3. DUALWIELD AIMBOT',
+'4. DISABLE CT CD',
+'5. GROUND SCAN SALON',
 },info,'BASIC SCAN DATA') or nil
 if menu == nil then gg.setVisible(false) return nil end
-if menu[1] then GSCAN() end
-if menu[2] then DSCAN() end
+if menu[1] then BASICSCAN() end
 if menu[3] then AIMON() end
 if menu[4] then AIMONDUAL() end
 if menu[5] then CTCD() end
-if menu[6] then MSCAN() end
 if menu[7] then GSCANSALON() end
 end
 
-function GSCAN()
+function BASICSCAN()
 REMOVEGR()
 REMOVELR()
 REMOVEUD()
 REMOVESPD()
+REMOVEFC()
+REMOVEMAP()
 local gg = gg
-	gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber('43442D;-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::121', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('-50000F~50000F;-50000F~50000F;-50000F~50000F;0;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;33751297;9::65', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('-50000~50000', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(4)
-				t = gg.getResults(4)
-t[1].name = 'UD'
-t[2].name = 'LR'
-t[3].name = 'GR'
-t[4].name = 'SPD'
-			gg.addListItems(t)
-	gg.clearResults()
+gg.searchNumber(";0D;0D;1.0F;1.0F;1.0F;1.0F::93", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 
+local t = gg.getResults(9999, nil, nil, nil, nil, nil, nil, nil, nil)
+ t[1].name = 'UD'
+ t[2].name = 'LR'
+ t[2].flags = gg.TYPE_FLOAT
+ t[3].name = 'GR'
+ t[3].flags = gg.TYPE_FLOAT
+ t[4].name = 'SPD'
+ t[5].name = 'FC'
+ t[5].flags = gg.TYPE_DWORD
+ t[6].name = 'MAP'
+ t[6].flags = gg.TYPE_DWORD
+ t[7].name = 'WALK'
+gg.addListItems(t)
+t = nil
+gg.clearResults()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+if v.name == 'UD' then v.address = v.address + 0x38
+elseif v.name == 'LR' then v.address = v.address + 0xfffffffffffffff8
+elseif v.name == 'GR' then v.address = v.address + 0xfffffffffffffff4
+elseif v.name == 'SPD' then v.address = v.address + 0x20
+elseif v.name == 'FC' then v.address = v.address + 0x3790bf4
+elseif v.name == 'MAP' then v.address = v.address + 0x1d898d0
+elseif v.name == 'WALK' then v.address = v.address + 0x2c0
+elseif copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+t = nil
+copy = nil
 end
 
 function GSCANSALON()
@@ -427,20 +450,6 @@ t[4].name = 'SPD'
 
 end
 
-
-function DSCAN()
-REMOVEFC()
-local gg = gg
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber('4;51F;363.5F;125F;0F;-32768~32768;0;1065353216;1065353216;1065353216;1065353216;0;0;0;0;1F;16974080;9::69', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('51F;363.5F;125F;0F;-32768~32768::17', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('-32768~32768', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(1)
-				t = gg.getResults(1)
-t[1].name = 'FC'
-			gg.addListItems(t)
-	gg.clearResults()
-end
 
 function AIMON()
 local gg = gg
@@ -490,17 +499,7 @@ gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_BSS)
 gg.clearResults()
 end
 
-function MSCAN() -- 			END BASIC SCAN
-REMOVEMAP()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber('63200~63500;0F;0F;0F;0F;0F;5F;0F~1F;5F;0F::50', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.refineNumber('63200~63500', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(1)
-				t = gg.getResults(1)
-t[1].name = 'MAP'
-			gg.addListItems(t)
-	gg.clearResults()
-end
+
 ---###############################################################################################
 function NODATA()
 gg.alert('NO DATA,YET')
@@ -625,39 +624,40 @@ end
 
 
 function WALKA()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-			gg.searchNumber('666~999;650.0;800.0;200.0;4096.0;800.0;420.0;40.0;0~1;1.0~4.0;1.0~4.0::41', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-				gg.searchNumber('1~4', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(2)
-gg.editAll('2', gg.TYPE_FLOAT)
-	gg.clearResults()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'WALK'	then v.value = 2
+end
+end
+gg.setValues(t)
 end
 
+
 function WALKB()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-			gg.searchNumber('655~990;650;800;200;4096;800;420;40;0~1;1~4;1~4;0~1;1200::49', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-				gg.searchNumber('1~4', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(2)
-gg.editAll('3', gg.TYPE_FLOAT)
-	gg.clearResults()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'WALK'	then v.value = 3
+end
+end
+gg.setValues(t)
 end
 
 function WALKC()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-			gg.searchNumber('655~990;650;800;200;4096;800;420;40;0~1;1~4;1~4;0~1;1200::49', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-				gg.searchNumber('1~4', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(2)
-gg.editAll('4', gg.TYPE_FLOAT)
-	gg.clearResults()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'WALK'	then v.value = 4
+end
+end
+gg.setValues(t)
 end
 
 function WALKD()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-			gg.searchNumber('655~990;650;800;200;4096;800;420;40;0~1;1~4;1~4;0~1;1200::49', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-				gg.searchNumber('2~4', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(2)
-gg.editAll('1', gg.TYPE_FLOAT)
-	gg.clearResults()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'WALK'	then v.value = 1
+end
+end
+gg.setValues(t)
 end
 
 function WALKSPEEDMOD()
@@ -16148,4 +16148,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---24/september/2022
+--4/DESEmber/2022
