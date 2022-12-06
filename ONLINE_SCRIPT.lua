@@ -395,6 +395,8 @@ REMOVELR()
 REMOVEUD()
 REMOVESPD()
 REMOVEWALK()
+REMOVEJOB()
+REMOVEJOB1()
 local gg = gg
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("6.08752079e-41F;0D;0D;1.0F;1.0F;1.0F;1.0F::93", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -415,6 +417,7 @@ gg.addListItems(t)
 t = nil
 gg.clearResults()
 REMOVEFC()
+REMOVEMAP()
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("5.60519386e-45F;51.0F;363.5F;125.0F;0.0F;0.0F::25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -424,7 +427,6 @@ local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
 t = nil
 gg.clearResults()
 
-REMOVEMAP()
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("-750F;-750F;0F;1F;0F::17", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -434,8 +436,7 @@ local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
 t = nil
 gg.clearResults()
 	
-REMOVEJOB()
-REMOVEJOB1()
+
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("0F;200F;0F;0F;0F;0F;0F;0F;0F;0F;0F;5.60519386e-45F;0F;0F::53", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(2, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -16214,4 +16215,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---4/DESEmber/2022
+--6/DESEmber/2022
