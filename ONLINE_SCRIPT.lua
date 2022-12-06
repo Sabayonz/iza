@@ -394,8 +394,6 @@ REMOVEGR()
 REMOVELR()
 REMOVEUD()
 REMOVESPD()
-REMOVEFC()
-REMOVEMAP()
 REMOVEWALK()
 local gg = gg
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
@@ -416,6 +414,26 @@ local t = gg.getResults(9999, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.addListItems(t)
 t = nil
 gg.clearResults()
+REMOVEFC()
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
+gg.searchNumber("5.60519386e-45F;51.0F;363.5F;125.0F;0.0F;0.0F::25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+ t[1].name = 'FC'
+ t[1].flags = gg.TYPE_DWORD
+ gg.addListItems(t)
+t = nil
+gg.clearResults()
+
+REMOVEMAP()
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
+gg.searchNumber("-750F;-750F;0F;1F;0F::17", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+ t[1].name = 'MAP'
+ t[1].flags = gg.TYPE_DWORD
+ gg.addListItems(t)
+t = nil
+gg.clearResults()
+ 
 local t = gg.getListItems()
 if not copy then gg.removeListItems(t) end
 for i, v in ipairs(t) do
@@ -423,8 +441,8 @@ if v.name == 'UD' then v.address = v.address + 0x38
 elseif v.name == 'LR' then v.address = v.address + 0xfffffffffffffff8
 elseif v.name == 'GR' then v.address = v.address + 0xfffffffffffffff4
 elseif v.name == 'SPD' then v.address = v.address + 0x20
-elseif v.name == 'FC' then v.address = v.address + 0x3790bf4
-elseif v.name == 'MAP' then v.address = v.address + 0x1d898d0
+elseif v.name == 'FC' then v.address = v.address + 0x14
+elseif v.name == 'MAP' then v.address = v.address + 0xb4
 elseif v.name == 'WALK' then v.address = v.address + 0x2c0
 elseif copy then v.name = v.name..' #2' end
 end
