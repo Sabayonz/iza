@@ -395,8 +395,6 @@ REMOVELR()
 REMOVEUD()
 REMOVESPD()
 REMOVEWALK()
-REMOVEJOB()
-REMOVEJOB1()
 local gg = gg
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("6.08752079e-41F;0D;0D;1.0F;1.0F;1.0F;1.0F::93", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -418,11 +416,17 @@ t = nil
 gg.clearResults()
 REMOVEFC()
 REMOVEMAP()
+REMOVEJOB()
+REMOVEJOB1()
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("5.60519386e-45F;51.0F;363.5F;125.0F;0.0F;0.0F::25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
+local t = gg.getResults(3, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'FC'
  t[1].flags = gg.TYPE_DWORD
+ t[2].name = 'JOB'
+ t[2].flags = gg.TYPE_DWORD
+ t[3].name = 'JOB1'
+ t[3].flags = gg.TYPE_DWORD
  gg.addListItems(t)
 t = nil
 gg.clearResults()
@@ -435,18 +439,7 @@ local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
  gg.addListItems(t)
 t = nil
 gg.clearResults()
-	
 
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber("0F;200F;0F;0F;0F;0F;0F;0F;0F;0F;0F;5.60519386e-45F;0F;0F::53", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(2, nil, nil, nil, nil, nil, nil, nil, nil)
- t[1].name = 'JOB'
- t[1].flags = gg.TYPE_DWORD
- t[2].name = 'JOB1'
- t[2].flags = gg.TYPE_DWORD
-gg.addListItems(t)
-t = nil
-gg.clearResults()
  
 local t = gg.getListItems()
 if not copy then gg.removeListItems(t) end
@@ -458,8 +451,8 @@ elseif v.name == 'SPD' then v.address = v.address + 0x20
 elseif v.name == 'FC' then v.address = v.address + 0x14
 elseif v.name == 'MAP' then v.address = v.address + 0xb4
 elseif v.name == 'WALK' then v.address = v.address + 0x2c0
-elseif v.name == 'JOB' then v.address = v.address + 0x1f0
-elseif v.name == 'JOB1' then v.address = v.address + 0x25c
+elseif v.name == 'JOB' then v.address = v.address + 0x8C8
+elseif v.name == 'JOB1' then v.address = v.address + 0x934
 elseif copy then v.name = v.name..' #2' end
 end
 gg.addListItems(t)
