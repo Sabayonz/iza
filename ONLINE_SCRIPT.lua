@@ -383,10 +383,10 @@ menu = gg.multiChoice({
 },info,'BASIC SCAN DATA') or nil
 if menu == nil then gg.setVisible(false) return nil end
 if menu[1] then BASICSCAN() end
-if menu[3] then AIMON() end
-if menu[4] then AIMONDUAL() end
-if menu[5] then CTCD() end
-if menu[7] then GSCANSALON() end
+if menu[2] then AIMON() end
+if menu[3] then AIMONDUAL() end
+if menu[4] then CTCD() end
+if menu[5] then GSCANSALON() end
 end
 
 function BASICSCAN()
