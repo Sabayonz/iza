@@ -11,7 +11,7 @@ if game ~= 'com.asobimo.izanagiOfficial' then
     os.exit()
 end
 local v = gg.getTargetInfo() -- version 2.8.3
-if v.versionCode >= 812 then
+if v.versionCode >= 902 then
     gg.alert('EXPIRED VERSION, NEED UPDATE')
     os.exit()
 end
