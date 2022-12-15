@@ -390,35 +390,54 @@ if menu[5] then GSCANSALON() end
 end
 
 function BASICSCAN()
+GROUNDCSCAN()
+FCJOBSCAN()
+MAPSCAN()
+end
+
+function GROUNDCSCAN()
 REMOVEGR()
 REMOVELR()
 REMOVEUD()
 REMOVESPD()
 REMOVEWALK()
-local gg = gg
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber("6.08752079e-41F;0D;0D;1.0F;1.0F;1.0F;1.0F::93", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-
-local t = gg.getResults(9999, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
+gg.searchNumber("43629D;8D;0D;0D;1065353216D:81", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+local t = gg.getResults(5, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'UD'
+ t[1].flags = gg.TYPE_FLOAT
  t[2].name = 'LR'
  t[2].flags = gg.TYPE_FLOAT
  t[3].name = 'GR'
  t[3].flags = gg.TYPE_FLOAT
  t[4].name = 'SPD'
- t[5].name = 'FC'
- t[5].flags = gg.TYPE_DWORD
- t[6].name = 'MAP'
- t[6].flags = gg.TYPE_DWORD
- t[7].name = 'WALK'
+ t[4].flags = gg.TYPE_FLOAT
+ t[5].name = 'WALK'
+ t[5].flags = gg.TYPE_FLOAT
 gg.addListItems(t)
 t = nil
 gg.clearResults()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+if v.name == 'UD' then v.address = v.address + 0x38
+elseif v.name == 'LR' then v.address = v.address + 0x1c
+elseif v.name == 'GR' then v.address = v.address + 0x-4
+elseif v.name == 'SPD' then v.address = v.address + 0x24
+elseif v.name == 'WALK' then v.address = v.address + 0x2cc
+elseif copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+t = nil
+copy = nil
+end
+
+
+function FCJOBSCAN()
 REMOVEFC()
-REMOVEMAP()
 REMOVEJOB()
 REMOVEJOB1()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("5.60519386e-45F;51.0F;363.5F;125.0F;0.0F;0.0F::25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(3, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'FC'
@@ -430,8 +449,22 @@ local t = gg.getResults(3, nil, nil, nil, nil, nil, nil, nil, nil)
  gg.addListItems(t)
 t = nil
 gg.clearResults()
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	if v.name == 'FC' then v.address = v.address + 0x14
+elseif v.name == 'JOB' then v.address = v.address + 0x8D8
+elseif v.name == 'JOB1' then v.address = v.address + 0x944
+elseif copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+t = nil
+copy = nil
+end
 
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_JAVA_HEAP | gg.REGION_C_HEAP | gg.REGION_OTHER)
+function MAPSCAN()
+REMOVEMAP()
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
 gg.searchNumber("-750F;-750F;0F;1F;0F::17", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'MAP'
@@ -439,20 +472,10 @@ local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
  gg.addListItems(t)
 t = nil
 gg.clearResults()
-
- 
 local t = gg.getListItems()
 if not copy then gg.removeListItems(t) end
 for i, v in ipairs(t) do
-if v.name == 'UD' then v.address = v.address + 0x38
-elseif v.name == 'LR' then v.address = v.address + 0xfffffffffffffff8
-elseif v.name == 'GR' then v.address = v.address + 0xfffffffffffffff4
-elseif v.name == 'SPD' then v.address = v.address + 0x20
-elseif v.name == 'FC' then v.address = v.address + 0x14
-elseif v.name == 'MAP' then v.address = v.address + 0xb4
-elseif v.name == 'WALK' then v.address = v.address + 0x2c0
-elseif v.name == 'JOB' then v.address = v.address + 0x8C8
-elseif v.name == 'JOB1' then v.address = v.address + 0x934
+if v.name == 'MAP' then v.address = v.address + 0xb4
 elseif copy then v.name = v.name..' #2' end
 end
 gg.addListItems(t)
@@ -1749,12 +1772,13 @@ function TELEPORT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
-	if v.name == 'MAP' and v.value == 63264 -- MARKET
+	if v.name == 'MAP' and v.value == 63565	--v3.0.0
 	then MARKET()
+---------------------------------------------
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63384 -- ORDO
 	then BACKORDOVILLAGE()
-	---------------------------------------------
+---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63385 -- ORDO
 	then ORDOVILLAGE()
 ---------------------------------------------
@@ -1781,6 +1805,7 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63396 -- MOTEL
 	then MOTELUNDERGROUND()
+---------------------------------------------
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63228
 	then OLDWOOD()
@@ -2043,6 +2068,7 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63274
 	then FALLISLAND()
 ---------------------------------------------
+---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63298
 	then BR()
 ---------------------------------------------
@@ -2055,6 +2081,7 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63302
 	then BR()
 ---------------------------------------------
+---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63282
 	then GUILD()
 ---------------------------------------------
@@ -2066,6 +2093,7 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63166
 	then PVP()
+---------------------------------------------
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63211
 	then CAVECARLA()
@@ -16208,4 +16236,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---6/DESEmber/2022
+--15/DESEmber/2022
