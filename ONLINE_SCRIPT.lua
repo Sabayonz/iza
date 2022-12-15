@@ -1,3 +1,4 @@
+ gg.alert('TELEPORT NOT WORK, YET')
 --#####################################################
 -- STATUS : ENABLE
 -- game detection --
