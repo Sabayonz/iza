@@ -11556,18 +11556,32 @@ end ---------------------------
 function WIND()
 menu = gg.choice({
 '1= WIND CAVE',
-'2= KING GOLEM',
+'2= MIST FOREST',
+'3= KING GOLEM',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 ))
 if menu == 1 then WINDCAVE() end
-if menu == 2 then WINDGOLEM() end
+if menu == 2 then WINDMIST() end
+if menu == 3 then WINDGOLEM() end
 end
+		
 function WINDCAVE()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -15984
 elseif v.name == 'LR'	then v.value = -18304
 elseif v.name == 'GR'	then v.value = 6231
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function WINDMIST()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 11000
+elseif v.name == 'LR'	then v.value = -5300
+elseif v.name == 'GR'	then v.value = 6612
 end
 end
 gg.setValues(t)
