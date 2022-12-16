@@ -3228,7 +3228,8 @@ end
 function MISTFORESTBOSS()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'GR'	then v.value = 550
+	if v.name == 'UD'	then v.value = -879
+elseif v.name == 'GR'	then v.value = 550
 elseif v.name == 'SPD'	then v.value = 60
 end
 end
