@@ -1805,7 +1805,7 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63699
 	then MOTELUNDERGROUND()
-	elseif v.name == 'MAP' and v.value == 68680
+	elseif v.name == 'MAP' and v.value == 68168
 	then MISTFOREST()
 ---------------------------------------------
 ---------------------------------------------
