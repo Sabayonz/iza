@@ -3132,8 +3132,8 @@ end ---------------------------
 function MISTFORESTSTORAGE()
 t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.name == 'UD'	then v.value = -6915
-elseif v.name == 'LR'	then v.value = 1953
+	if v.name == 'UD'	then v.value = -6891
+elseif v.name == 'LR'	then v.value = 2889
 elseif v.name == 'GR'	then v.value = 668
 end
 end
