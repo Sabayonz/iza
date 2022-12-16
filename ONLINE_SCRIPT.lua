@@ -1805,6 +1805,8 @@ for i, v in ipairs(t) do
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63699
 	then MOTELUNDERGROUND()
+	elseif v.name == 'MAP' and v.value == 68680
+	then MISTFOREST()
 ---------------------------------------------
 ---------------------------------------------
 ---------------------------------------------
@@ -3074,6 +3076,246 @@ end
 end
 gg.setValues(t)
 end ---------------------------
+
+	
+function MISTFOREST() --63013
+local menu = gg.choice({
+'1= WIND VALEY',
+'2= NPC G4',
+'3= NPC STORAGE',
+'4= NPC REPAIR',
+'5= NPC MEDAL',
+'6= PEGASUS',
+'7= GRIFFIN',
+'8= PHOENIX',
+'9= DRAGON',
+},Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
+)) or nil
+if menu == nil then gg.setVisible(false) return nil
+elseif menu == 1 then MISTFORESTWIND()
+elseif menu == 2 then MISTFORESTG4()
+elseif menu == 3 then MISTFORESTSTORAGE()
+elseif menu == 4 then MISTFORESTREPAIR()
+elseif menu == 5 then MISTFORESTMEDAL()
+elseif menu == 6 then MISTFORESTPEGASUSGO()
+elseif menu == 7 then MISTFORESTGRIFINGO()
+elseif menu == 8 then MISTFORESTPEGASUSGO()
+elseif menu == 9 then MISTFORESTDRAGONGO()
+end
+end
+
+function MISTFORESTWIND()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 14998
+elseif v.name == 'LR'	then v.value = -13454
+elseif v.name == 'GR'	then v.value = 198
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function MISTFORESTG4()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -4237
+elseif v.name == 'LR'	then v.value = 2678
+elseif v.name == 'GR'	then v.value = 260.3
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function MISTFORESTSTORAGE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -6915
+elseif v.name == 'LR'	then v.value = 1953
+elseif v.name == 'GR'	then v.value = 668
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function MISTFORESTREPAIR()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -7744
+elseif v.name == 'LR'	then v.value = -1012
+elseif v.name == 'GR'	then v.value = 1417
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function MISTFORESTMEDAL()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -686
+elseif v.name == 'LR'	then v.value = -1079
+elseif v.name == 'GR'	then v.value = 247
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+
+function MISTFORESTDRAGON()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 5377
+elseif v.name == 'LR'	then v.value = -2900
+elseif v.name == 'GR'	then v.value = 170.5
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function MISTFORESTDRAGONGO()
+MISTFORESTDRAGON()
+    repeat
+    MISTFORESTDRAGONX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function MISTFORESTDRAGONX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == -4237 -- EXITBOSS
+	then MISTFORESTDRAGON()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -878 -- INSIDE
+	then MISTFORESTBOSS()
+---------------------------------------------
+end
+end
+end
+
+
+function MISTFORESTGRIFINGO()
+MISTFORESTGRIFIN()
+    repeat
+    MISTFORESTGRIFINX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function MISTFORESTGRIFINX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == -4237 -- EXITBOSS
+	then MISTFORESTGRIFIN()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -878 -- INSIDE
+	then MISTFORESTBOSS()
+---------------------------------------------
+end
+end
+end
+
+function MISTFORESTBOSS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'GR'	then v.value = 550
+elseif v.name == 'SPD'	then v.value = 60
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+function MISTFORESTGRIFIN()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -11598
+elseif v.name == 'LR'	then v.value = -11283
+elseif v.name == 'GR'	then v.value = 182.2
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+--
+
+function MISTFORESTPHOENIXGO()
+MISTFORESTPHOENIX()
+    repeat
+    MISTFORESTPHOENIXX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function MISTFORESTPHOENIXX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == -4237 -- EXITBOSS
+	then MISTFORESTPHOENIX()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -878 -- INSIDE
+	then MISTFORESTBOSS()
+---------------------------------------------
+end
+end
+end
+
+function MISTFORESTPHOENIX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = -15343
+elseif v.name == 'LR'	then v.value = 108778
+elseif v.name == 'GR'	then v.value = 167.6
+end
+end
+gg.setValues(t)
+end ---------------------------
+
+
+function MISTFORESTPEGASUSGO()
+MISTFORESTPEGASUS()
+    repeat
+    MISTFORESTPEGASUSX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+function MISTFORESTPEGASUSX()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == -4237 -- EXITBOSS
+	then MISTFORESTPEGASUS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -878 -- INSIDE
+	then MISTFORESTBOSS()
+---------------------------------------------
+end
+end
+end
+
+
+function MISTFORESTPEGASUS()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 11747
+elseif v.name == 'LR'	then v.value = 11567
+elseif v.name == 'GR'	then v.value = 185.2
+end
+end
+gg.setValues(t)
+end ---------------------------
+
 
 
 
