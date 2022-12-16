@@ -51,7 +51,7 @@ elseif menu == 6 then BALONSPOT()
 elseif menu == 7 then POWERSPEEDMODX()
 elseif menu == 8 then TELEPORTEVENT()
 elseif menu == 9 then MANUALMOVE()
-elseif menu == 10 then MASTERMENUCEK()
+elseif menu == 10 then MISTFOREST()
 elseif menu == 11 then WAITZ()
 elseif menu == 12 then CEKSTATUS()
 end
