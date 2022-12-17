@@ -3275,7 +3275,7 @@ function MISTFORESTPHOENIX()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 	if v.name == 'UD'	then v.value = -15343
-elseif v.name == 'LR'	then v.value = 108778
+elseif v.name == 'LR'	then v.value = 10877
 elseif v.name == 'GR'	then v.value = 167.6
 end
 end
