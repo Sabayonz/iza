@@ -3099,7 +3099,7 @@ elseif menu == 4 then MISTFORESTREPAIR()
 elseif menu == 5 then MISTFORESTMEDAL()
 elseif menu == 6 then MISTFORESTPEGASUSGO()
 elseif menu == 7 then MISTFORESTGRIFINGO()
-elseif menu == 8 then MISTFORESTPEGASUSGO()
+elseif menu == 8 then MISTFORESTPHOENIXGO()
 elseif menu == 9 then MISTFORESTDRAGONGO()
 end
 end
