@@ -1908,7 +1908,7 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63561
 	then NECROSIS()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63864
+	elseif v.name == 'MAP' and v.value == 63563
 	then MOUNTAIN()
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63564
