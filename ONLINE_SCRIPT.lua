@@ -402,7 +402,7 @@ REMOVEUD()
 REMOVESPD()
 REMOVEWALK()
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber("43629D;8D;0D;0D;1065353216D:81", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("43630D;8D;0D;0D;1065353216D:81", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(5, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'UD'
  t[1].flags = gg.TYPE_FLOAT
