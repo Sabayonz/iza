@@ -1772,319 +1772,316 @@ function TELEPORT()
 t = gg.getListItems()
 for i, v in ipairs(t) do
 ---------------------------------------------
-	if v.name == 'MAP' and v.value == 63565	--v3.0.0
+	if v.name == 'MAP' and v.value == 63566
 	then MARKET()
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63687
+	elseif v.name == 'MAP' and v.value == 63688
 	then BACKORDOVILLAGE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63688
+	elseif v.name == 'MAP' and v.value == 63689
 	then ORDOVILLAGE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63691
+	elseif v.name == 'MAP' and v.value == 63692
 	then BWT()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63693
+	elseif v.name == 'MAP' and v.value == 63694
 	then YAMATOVILLAGE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63694
+	elseif v.name == 'MAP' and v.value == 63695
 	then GRAYTOWN()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63695
+	elseif v.name == 'MAP' and v.value == 63696
 	then NORTHPOST()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63696
+	elseif v.name == 'MAP' and v.value == 63697
 	then BLACKSMITHVILLAGE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63697
+	elseif v.name == 'MAP' and v.value == 63698
 	then BANDITVILLAGE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63698
+	elseif v.name == 'MAP' and v.value == 63699
 	then CAMPVILLAGE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63699
+	elseif v.name == 'MAP' and v.value == 63700
 	then MOTELUNDERGROUND()
-	elseif v.name == 'MAP' and v.value == 68168
+	elseif v.name == 'MAP' and v.value == 68169
 	then MISTFOREST()
 ---------------------------------------------
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63690
+	elseif v.name == 'MAP' and v.value == 63691
 	then OUTERWALL()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63689
+	elseif v.name == 'MAP' and v.value == 63690
 	then MILITARY()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63692
+	elseif v.name == 'MAP' and v.value == 63693
 	then PRIVILAGE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63702
+	elseif v.name == 'MAP' and v.value == 63703
 	then NINJAFACILITY()
 ---------------------------------------------
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63529
+	elseif v.name == 'MAP' and v.value == 63530
 	then OLDWOOD()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63530
+	elseif v.name == 'MAP' and v.value == 63531
 	then WATERFALL()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63271
+	elseif v.name == 'MAP' and v.value == 63272
 	then BACKWATERFALL() --BACKWATERFALL
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63531
+	elseif v.name == 'MAP' and v.value == 63532
 	then LIMESTONE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63532
+	elseif v.name == 'MAP' and v.value == 63533
 	then WESTPLAIN()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63533
+	elseif v.name == 'MAP' and v.value == 63534
 	then NORTHPLAIN()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63534--63233
+	elseif v.name == 'MAP' and v.value == 63535
 	then NORTHDEFENSELINE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63535--63234
+	elseif v.name == 'MAP' and v.value == 63536
 	then RUINCITY()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63536
+	elseif v.name == 'MAP' and v.value == 63537
 	then PERISMITHY()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63537
+	elseif v.name == 'MAP' and v.value == 63538
 	then WETLAND()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63538
+	elseif v.name == 'MAP' and v.value == 63539
 	then HIGHWAY()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63539
+	elseif v.name == 'MAP' and v.value == 63540
 	then STONECANYON()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63540
+	elseif v.name == 'MAP' and v.value == 63541
 	then CATACOMBA()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63541
+	elseif v.name == 'MAP' and v.value == 63542
 	then CATACOMBB()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63542
+	elseif v.name == 'MAP' and v.value == 63543
 	then HIGHWAYSITE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63543
+	elseif v.name == 'MAP' and v.value == 63544
 	then INDUSTRIAL()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63544
+	elseif v.name == 'MAP' and v.value == 63545
 	then OBLIVION()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63545
+	elseif v.name == 'MAP' and v.value == 63546
 	then OIL()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63546
+	elseif v.name == 'MAP' and v.value == 63547
 	then RURAL()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63547
+	elseif v.name == 'MAP' and v.value == 63548
 	then SUBWAY()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63549
+	elseif v.name == 'MAP' and v.value == 63550
 	then WIND()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63550
+	elseif v.name == 'MAP' and v.value == 63551
 	then ANCIENT()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63551
+	elseif v.name == 'MAP' and v.value == 63552
 	then KASUBA()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63552
+	elseif v.name == 'MAP' and v.value == 63553
 	then FORTRESS()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63555
+	elseif v.name == 'MAP' and v.value == 63556
 	then BATTLE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63556
+	elseif v.name == 'MAP' and v.value == 63557
 	then WAREHOUSE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63559
+	elseif v.name == 'MAP' and v.value == 63560
 	then FOG()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63561
+	elseif v.name == 'MAP' and v.value == 63562
 	then NECROSIS()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63563
+	elseif v.name == 'MAP' and v.value == 63564
 	then MOUNTAIN()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63564
+	elseif v.name == 'MAP' and v.value == 63565
 	then BLUEBEAR()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63571
+	elseif v.name == 'MAP' and v.value == 63572
 	then BACKOLDWOOD()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63594
+	elseif v.name == 'MAP' and v.value == 63595
 	then BACKORDO()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63573
+	elseif v.name == 'MAP' and v.value == 63574
 	then BACKLIMESTONE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63574
+	elseif v.name == 'MAP' and v.value == 63575
 	then BACKWESTPLAIN()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63491
+	elseif v.name == 'MAP' and v.value == 63492
 	then ONIGIRIENTRANCE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63492
+	elseif v.name == 'MAP' and v.value == 63493
 	then ONIGIRIMID()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63493
+	elseif v.name == 'MAP' and v.value == 63494
 	then ONIGIRINEARTOP()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63495
+	elseif v.name == 'MAP' and v.value == 63496
 	then ONIGIRISIDEROAD()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63496
+	elseif v.name == 'MAP' and v.value == 63497
 	then ONIGIRIANIMALTRAIL()
 ---------------------------------------------
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63474
+	elseif v.name == 'MAP' and v.value == 63475
 	then CAVEOLDWOOD()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63475
+	elseif v.name == 'MAP' and v.value == 63476
 	then CAVEWATERFALL()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63476
+	elseif v.name == 'MAP' and v.value == 63477
 	then CAVELIMESTONE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63477
+	elseif v.name == 'MAP' and v.value == 63478
 	then CAVEWESTPLAINSPD()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63481
+	elseif v.name == 'MAP' and v.value == 63482
 	then CAVEWESTPLAINHINARI()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63518
+	elseif v.name == 'MAP' and v.value == 63519
 	then CAVEWESTPLAINWALRUS()
 	---------------------------------------------
 	elseif v.name == 'MAP' and v.value ==  63478
 	then CAVENORTHPLAIN()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63479
+	elseif v.name == 'MAP' and v.value == 63480
 	then CAVENDLCERBERUS()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63480
+	elseif v.name == 'MAP' and v.value == 63481
 	then CAVENDLSPIDER()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63482
+	elseif v.name == 'MAP' and v.value == 63483
 	then CAVENDLWIND()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63512
+	elseif v.name == 'MAP' and v.value == 63513
 	then CAVEBLUEBEAR()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63513
+	elseif v.name == 'MAP' and v.value == 63514
 	then CAVEPELICAN()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63483
+	elseif v.name == 'MAP' and v.value == 63484
 	then CAVETUNNELONE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63484
+	elseif v.name == 'MAP' and v.value == 63485
 	then CAVETUNNELTWO()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63486
+	elseif v.name == 'MAP' and v.value == 63487
 	then CAVEOILFIELD()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63485
+	elseif v.name == 'MAP' and v.value == 63486
 	then CAVEWETLAND()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63489
+	elseif v.name == 'MAP' and v.value == 63490
 	then CAVEHIGHWAY()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63488
+	elseif v.name == 'MAP' and v.value == 63489
 	then CAVERURAL()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63496
+	elseif v.name == 'MAP' and v.value == 63497
 	then CAVEFOREMAN()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63498
+	elseif v.name == 'MAP' and v.value == 63499
 	then CAVEZOMBIE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63497
+	elseif v.name == 'MAP' and v.value == 63498
 	then CAVEROCKBITTER()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63499
+	elseif v.name == 'MAP' and v.value == 63500
 	then CAVEMOJA()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63506
+	elseif v.name == 'MAP' and v.value == 63507
 	then CAVEGNOME()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63505
+	elseif v.name == 'MAP' and v.value == 63506
 	then CAVEOBLIVION()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63507
+	elseif v.name == 'MAP' and v.value == 63508
 	then CAVEOKUMAN()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63508
+	elseif v.name == 'MAP' and v.value == 63509
 	then CAVEDEATH()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63509
+	elseif v.name == 'MAP' and v.value == 63510
 	then CAVEMOUNTAINDEEP()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63510
+	elseif v.name == 'MAP' and v.value == 63511
 	then CAVEFROG()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63514
+	elseif v.name == 'MAP' and v.value == 63515
 	then CAVEMOUNTAINONE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63515
+	elseif v.name == 'MAP' and v.value == 63516
 	then CAVEGIANT()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63519
+	elseif v.name == 'MAP' and v.value == 63520
 	then CAVEBACKOLDWOOD()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63523
+	elseif v.name == 'MAP' and v.value == 63524
 	then CAVEBACKWATERFALL()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63524
+	elseif v.name == 'MAP' and v.value == 63525
 	then CAVEBACKLIMESTONE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63525
+	elseif v.name == 'MAP' and v.value == 63526
 	then CAVEBACKWESTPLAIN()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63526
+	elseif v.name == 'MAP' and v.value == 63527
 	then CAVEBACKGNOME()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63493
+	elseif v.name == 'MAP' and v.value == 63494
 	then CAVEESCAPEROUTE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63520
+	elseif v.name == 'MAP' and v.value == 63521
 	then CAVEBLUESKYONE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63521
+	elseif v.name == 'MAP' and v.value == 63522
 	then CAVEBLUESKYTWO()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63522
+	elseif v.name == 'MAP' and v.value == 63523
 	then CAVEBLUESKYTRI()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63487
+	elseif v.name == 'MAP' and v.value == 63488
 	then CAVESEWERAGE()
 	---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63629
+	elseif v.name == 'MAP' and v.value == 63630
 	then WARZONETWO()
 ---------------------------------------------
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63752
+	elseif v.name == 'MAP' and v.value == 63753
 	then WARZONEONE()
 ---------------------------------------------
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63548
+	elseif v.name == 'MAP' and v.value == 63549
 	then UNKNOWNISLAND()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63557
+	elseif v.name == 'MAP' and v.value == 63558
 	then UNEXPLORERISLAND()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63575
+	elseif v.name == 'MAP' and v.value == 63576
 	then FALLISLAND()
 ---------------------------------------------
----------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63601
-	then BR()
 ---------------------------------------------
 	elseif v.name == 'MAP' and v.value == 63602
 	then BR()
@@ -2092,45 +2089,49 @@ for i, v in ipairs(t) do
 	elseif v.name == 'MAP' and v.value == 63603
 	then BR()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63605
+	elseif v.name == 'MAP' and v.value == 63604
+	then BR()
+---------------------------------------------
+	elseif v.name == 'MAP' and v.value == 63606
 	then BR()
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63282
+	elseif v.name == 'MAP' and v.value == 63283
 	then GUILD()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63303
+	elseif v.name == 'MAP' and v.value == 63304
 	then PVP()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63166
+	elseif v.name == 'MAP' and v.value == 63167
 	then PVP()
 ---------------------------------------------
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63511
+	elseif v.name == 'MAP' and v.value == 63512
 	then CAVECARLA()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63700
+	elseif v.name == 'MAP' and v.value == 63701
 	then GARDENOFJOYENTRANCE()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63500
+	elseif v.name == 'MAP' and v.value == 63501
 	then GOJ1()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63501
+	elseif v.name == 'MAP' and v.value == 63502
 	then GOJ2()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63502
+	elseif v.name == 'MAP' and v.value == 63503
 	then GOJ3()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63503
+	elseif v.name == 'MAP' and v.value == 63504
 	then GOJ4()
 ---------------------------------------------
-	elseif v.name == 'MAP' and v.value == 63504
+	elseif v.name == 'MAP' and v.value == 63505
 	then GOJ5()
 ---------------------------------------------
 end
 end
 end
 ---------------------------------------------
+
 
 --#####################################################################################
 --#####################################################################################
