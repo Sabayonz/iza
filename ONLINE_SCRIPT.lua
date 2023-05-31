@@ -401,8 +401,8 @@ REMOVELR()
 REMOVEUD()
 REMOVESPD()
 REMOVEWALK()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber("43630D;8D;0D;0D;1065353216D:81", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_OTHER)
+gg.searchNumber("43630D;8D;0D;0D;1065353216D::81", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(5, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'UD'
  t[1].flags = gg.TYPE_FLOAT
@@ -420,11 +420,11 @@ gg.clearResults()
 local t = gg.getListItems()
 if not copy then gg.removeListItems(t) end
 for i, v in ipairs(t) do
-if v.name == 'UD' then v.address = v.address + 0x38
-elseif v.name == 'LR' then v.address = v.address + 0x1c
+if v.name == 'UD' then v.address = v.address + 0x28
+elseif v.name == 'LR' then v.address = v.address + 0x18
 elseif v.name == 'GR' then v.address = v.address + 0x-4
 elseif v.name == 'SPD' then v.address = v.address + 0x24
-elseif v.name == 'WALK' then v.address = v.address + 0x2cc
+elseif v.name == 'WALK' then v.address = v.address + 0x244
 elseif copy then v.name = v.name..' #2' end
 end
 gg.addListItems(t)
@@ -433,11 +433,12 @@ copy = nil
 end
 
 
+
 function FCJOBSCAN()
 REMOVEFC()
 REMOVEJOB()
 REMOVEJOB1()
-gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_OTHER)
 gg.searchNumber("5.60519386e-45F;51.0F;363.5F;125.0F;0.0F;0.0F::25", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(3, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'FC'
@@ -453,8 +454,8 @@ local t = gg.getListItems()
 if not copy then gg.removeListItems(t) end
 for i, v in ipairs(t) do
 	if v.name == 'FC' then v.address = v.address + 0x14
-elseif v.name == 'JOB' then v.address = v.address + 0x8D8
-elseif v.name == 'JOB1' then v.address = v.address + 0x944
+elseif v.name == 'JOB' then v.address = v.address + 0x6F8
+elseif v.name == 'JOB1' then v.address = v.address + 0x75C
 elseif copy then v.name = v.name..' #2' end
 end
 gg.addListItems(t)
@@ -462,10 +463,11 @@ t = nil
 copy = nil
 end
 
+
 function MAPSCAN()
 REMOVEMAP()
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_HEAP | gg.REGION_OTHER)
-gg.searchNumber("-750F;-750F;0F;1F;0F::17", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber("-750F;-750F;0F;1F;0F::29", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(1, nil, nil, nil, nil, nil, nil, nil, nil)
  t[1].name = 'MAP'
  t[1].flags = gg.TYPE_DWORD
@@ -475,7 +477,7 @@ gg.clearResults()
 local t = gg.getListItems()
 if not copy then gg.removeListItems(t) end
 for i, v in ipairs(t) do
-if v.name == 'MAP' then v.address = v.address + 0xb4
+if v.name == 'MAP' then v.address = v.address + 0x7C
 elseif copy then v.name = v.name..' #2' end
 end
 gg.addListItems(t)
@@ -542,12 +544,14 @@ gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_C_BSS)
 	gg.editAll('-512', gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1)
 	gg.getResults(2)
 		t = gg.getResults(2)
-		t[1].value = '-512'
-		t[1].freeze = true
+ t[1].value = '-512'
+ t[1].freeze = true
  t[1].name = 'Casting Data'
  t[2].value = '-512'
+ t[1].flags = gg.TYPE_WORD
  t[2].freeze = true
  t[2].name = 'Cooldown Data'
+ t[2].flags = gg.TYPE_WORD
 		gg.addListItems(t)
 gg.clearResults()
 end
@@ -5681,6 +5685,7 @@ local menu = gg.choice({
 '2= BOSS',
 '3= MONSTER - AXOLOT (FARM)',
 '4= MONSTER - TRENGGILING (FARM)',
+'5= BOSS FARM',
 },Last,(os.date('[%A] %d-%m-%Y                                  Jam:%H:%M:%S\n                    MENU')
 )) or nil
 if menu == nil then gg.setVisible(false) return nil
@@ -5688,7 +5693,44 @@ elseif menu == 1 then CAVEWETLANDEX()
 elseif menu == 2 then CAVEWETLANDBS()
 elseif menu == 3 then CAVEWETLANDAXOLOTFARM()
 elseif menu == 4 then CAVEWETLANDTRENGGILINGFARM()
+elseif menu == 5 then CAVEWETLANDBSFARM()
 end
+end
+
+function CAVEWETLANDBSFARM()
+    repeat
+    CAVEWETLANDBSFARMX()
+    until gg.isVisible(true)
+    gg.setVisible(false)
+    end
+
+
+function CAVEWETLANDBSFARMX() --999XX
+t = gg.getListItems()
+for i, v in ipairs(t) do
+---------------------------------------------
+	if v.name == 'UD' and v.value == 13777 -- WETLAND
+	then WETLANDCAVE()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == -5019 -- CAVE
+	then CAVEWETLANDBS()
+---------------------------------------------
+	elseif v.name == 'UD' and v.value == 319 -- BOSS
+	then CAVEWETLANDBSINSIDE()
+---------------------------------------------
+end
+end
+end
+
+function CAVEWETLANDBSINSIDE()
+t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.name == 'UD'	then v.value = 318
+elseif v.name == 'LR'	then v.value = -622
+elseif v.name == 'GR'	then v.value = 494
+elseif v.name == 'SPD'	then v.value = 60
+gg.setValues(t)
+gg.sleep('1000')
 end
 
 
@@ -16504,4 +16546,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---15/DESEmber/2022
+--31/may/2023
