@@ -5730,9 +5730,10 @@ elseif v.name == 'LR'	then v.value = -622
 elseif v.name == 'GR'	then v.value = 494
 elseif v.name == 'SPD'	then v.value = 60
 gg.setValues(t)
-gg.sleep('1000')
 end
-
+gg.sleep('100')
+end
+end
 
 
 function CAVEWETLANDAXOLOTFARM()
@@ -16546,4 +16547,4 @@ mainmenu = 1
 end 
 if mainmenu == 1 then MM() end
 end
---31/may/2023
+--02/JUNE/2023
